@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Civil Group - Civil Contractor Geelong | Earthworks, Concrete & Retaining Walls</title>
+  <meta name="description" content="Select Civil Group delivers professional earthworks, concrete driveways, retaining walls and site cuts across Geelong, Bellarine Peninsula and Torquay. Call today for a free quote.">
+  <link rel="canonical" href="https://selectcivilgroup.com.au/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Select Civil Group - Civil Contractor Geelong">
+  <meta property="og:description" content="Professional earthworks, concrete driveways, retaining walls and site cuts across Geelong, Bellarine Peninsula and surrounding regions.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://selectcivilgroup.com.au/">
+  <meta property="og:image" content="https://selectcivilgroup.com.au/Assets/Logo%20PNG.png">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dark: {
+              950: '#0a0a0a',
+              900: '#111111',
+              800: '#1a1a1a',
+              700: '#242424',
+              600: '#2e2e2e',
+            },
+            brand: {
+              500: '#d4912a',
+              400: '#e8a840',
+            }
+          },
+          fontFamily: {
+            heading: ['"Inter"', 'system-ui', 'sans-serif'],
+            body: ['"Inter"', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://selectcivilgroup.com.au/#business",
+    "name": "Select Civil Group Pty Ltd",
+    "description": "Professional civil contracting services including earthworks, concrete driveways, retaining walls, site cuts and concrete slabs across Geelong, Bellarine Peninsula and surrounding regions in Victoria.",
+    "url": "https://selectcivilgroup.com.au",
+    "logo": "https://selectcivilgroup.com.au/Assets/Logo%20PNG.png",
+    "image": "https://selectcivilgroup.com.au/Assets/Logo%20PNG.png",
+    "email": "selectcivilgroupvic@outlook.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Geelong",
+      "addressRegion": "VIC",
+      "postalCode": "3226",
+      "addressCountry": "AU"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Geelong" },
+      { "@type": "Place", "name": "Bellarine Peninsula" },
+      { "@type": "City", "name": "Torquay" }
+    ],
+    "openingHours": "Mo-Fr 07:00-17:00",
+    "priceRange": "$$",
+    "sameAs": [],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Civil Contracting Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Retaining Walls" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Concrete Raft Slabs" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Concrete Driveways" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Earthworks" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Site Cuts" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Concrete Paving" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Detail Excavation" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Factory Tilt Panels" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Concrete Seating" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Concrete Bench Drops" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Removal of Excess Oil" } }
+      ]
+    }
+  }
+  </script>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    /* Sharp, bold heading style */
+    .heading-xl {
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      line-height: 0.95;
+      text-transform: uppercase;
+    }
+    .heading-lg {
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+    .heading-md {
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+
+    /* Body text */
+    .body-text {
+      line-height: 1.7;
+      color: #a0a0a0;
+    }
+
+    /* Hard-edge button */
+    .btn-fill {
+      background: #d4912a;
+      color: #0a0a0a;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+    .btn-fill:hover { transform: translateY(-2px); opacity: 0.9; }
+    .btn-fill:active { transform: translateY(0); }
+    .btn-fill:focus-visible { outline: 2px solid #e8a840; outline-offset: 2px; }
+
+    .btn-outline {
+      border: 2px solid #d4912a;
+      color: #d4912a;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+    }
+    .btn-outline:hover { background: #d4912a; color: #0a0a0a; transform: translateY(-2px); }
+    .btn-outline:active { transform: translateY(0); }
+    .btn-outline:focus-visible { outline: 2px solid #e8a840; outline-offset: 2px; }
+
+    /* Image overlay for text readability */
+    .img-darken {
+      position: relative;
+    }
+    .img-darken::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+    }
+
+    /* Service card hover */
+    .service-card img {
+      transition: transform 0.5s ease;
+    }
+    .service-card:hover img {
+      transform: scale(1.06);
+    }
+
+    /* Nav link */
+    .nav-link {
+      transition: color 0.2s ease;
+    }
+    .nav-link:hover { color: #d4912a; }
+
+    /* Mobile nav */
+    .mobile-menu {
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+    }
+    .mobile-menu.open {
+      transform: translateX(0);
+    }
+
+    /* Fade in on scroll */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Yellow accent bar */
+    .accent-bar {
+      width: 48px;
+      height: 4px;
+      background: #d4912a;
+    }
+
+    /* Stripe pattern overlay for texture */
+    .stripe-texture::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 3px,
+        rgba(255,255,255,0.015) 3px,
+        rgba(255,255,255,0.015) 4px
+      );
+      pointer-events: none;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body class="bg-dark-950 text-white font-body">
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-dark-950/95 backdrop-blur-sm border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="/" class="flex items-center gap-3">
+          <img src="Assets/Logo PNG.png" alt="Select Civil Group logo" class="h-12 w-12">
+          <span class="font-heading font-bold text-white text-lg tracking-tight hidden sm:block">SELECT CIVIL GROUP</span>
+        </a>
+
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="#services" class="nav-link text-gray-400 text-sm font-semibold uppercase tracking-wider">Services</a>
+          <a href="#about" class="nav-link text-gray-400 text-sm font-semibold uppercase tracking-wider">About</a>
+          <a href="#projects" class="nav-link text-gray-400 text-sm font-semibold uppercase tracking-wider">Projects</a>
+          <a href="#contact" class="btn-fill px-6 py-2.5 text-sm">Get a Quote</a>
+        </div>
+
+        <button onclick="toggleMobileMenu()" class="lg:hidden p-2 text-gray-400 hover:text-white focus-visible:outline-2 focus-visible:outline-brand-500" aria-label="Open menu">
+          <svg id="hamburger-icon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+          <svg id="close-icon" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="mobile-menu fixed top-20 right-0 bottom-0 w-72 bg-dark-900 border-l border-white/5 p-8 lg:hidden z-50">
+      <div class="flex flex-col gap-6">
+        <a href="#services" onclick="toggleMobileMenu()" class="text-gray-300 text-lg font-bold uppercase tracking-wider hover:text-brand-500" style="transition: color 0.2s ease;">Services</a>
+        <a href="#about" onclick="toggleMobileMenu()" class="text-gray-300 text-lg font-bold uppercase tracking-wider hover:text-brand-500" style="transition: color 0.2s ease;">About</a>
+        <a href="#projects" onclick="toggleMobileMenu()" class="text-gray-300 text-lg font-bold uppercase tracking-wider hover:text-brand-500" style="transition: color 0.2s ease;">Projects</a>
+        <a href="#contact" onclick="toggleMobileMenu()" class="btn-fill text-center px-6 py-3 mt-4">Get a Quote</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ========== HERO ========== -->
+  <section class="relative min-h-screen flex items-end pt-20">
+    <!-- Full-bleed background image -->
+    <div class="absolute inset-0">
+      <img src="Assets/site-cuts.jpeg" alt="Excavator performing a site cut on a construction project in Geelong" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-black/55"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/30 to-transparent"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 lg:pb-24 w-full">
+      <p class="text-brand-500 text-sm font-bold uppercase tracking-widest mb-4">Geelong - Bellarine Peninsula - Torquay</p>
+
+      <h1 class="heading-xl text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white mb-6 max-w-5xl">
+        Earthworks.<br>
+        Concrete.<br>
+        <span class="text-brand-500">Done right.</span>
+      </h1>
+
+      <p class="text-gray-300 text-lg max-w-xl mb-8" style="line-height: 1.7;">
+        Select Civil Group is a locally owned civil contracting business delivering retaining walls, concrete driveways, site cuts, and earthworks across the Geelong region. Reliable work, honest pricing, no shortcuts.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="#contact" class="btn-fill px-8 py-4 text-base text-center">Request a Free Quote</a>
+        <a href="#services" class="btn-outline px-8 py-4 text-base text-center">Our Services</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== STATS BAR ========== -->
+  <section class="bg-dark-800 border-y border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/5">
+        <div class="py-8 lg:py-10 px-4 lg:px-8">
+          <p class="text-3xl lg:text-4xl font-black text-white tracking-tight">100+</p>
+          <p class="text-gray-500 text-sm font-medium uppercase tracking-wider mt-1">Projects Delivered</p>
+        </div>
+        <div class="py-8 lg:py-10 px-4 lg:px-8">
+          <p class="text-3xl lg:text-4xl font-black text-white tracking-tight">10+</p>
+          <p class="text-gray-500 text-sm font-medium uppercase tracking-wider mt-1">Years in the Industry</p>
+        </div>
+        <div class="py-8 lg:py-10 px-4 lg:px-8">
+          <p class="text-3xl lg:text-4xl font-black text-brand-500 tracking-tight">Geelong</p>
+          <p class="text-gray-500 text-sm font-medium uppercase tracking-wider mt-1">Locally Owned</p>
+        </div>
+        <div class="py-8 lg:py-10 px-4 lg:px-8">
+          <p class="text-3xl lg:text-4xl font-black text-white tracking-tight">Mon-Fri</p>
+          <p class="text-gray-500 text-sm font-medium uppercase tracking-wider mt-1">7:00 AM - 5:00 PM</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== SERVICES ========== -->
+  <section id="services" class="bg-dark-950 py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-14">
+        <div class="accent-bar mb-4"></div>
+        <h2 class="heading-lg text-3xl sm:text-4xl lg:text-5xl text-white mb-4">What We Do</h2>
+        <p class="body-text text-lg max-w-2xl">
+          Comprehensive civil contracting for residential, commercial, and industrial projects. From preparing the ground to pouring the concrete, we handle the heavy work so your build stays on track.
+        </p>
+      </div>
+
+      <!-- Primary Services Grid - large image cards -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-1">
+
+        <a href="#contact" class="service-card relative overflow-hidden block group" style="aspect-ratio: 4/3;">
+          <img src="Assets/retaining-walls.jpeg" alt="Concrete retaining wall construction by Select Civil Group in the Geelong area" class="absolute inset-0 w-full h-full object-cover">
+          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/30" style="transition: background 0.3s ease;"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-6 z-10">
+            <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-1">Service</p>
+            <h3 class="heading-md text-xl sm:text-2xl text-white">Retaining Walls</h3>
+          </div>
+        </a>
+
+        <a href="#contact" class="service-card relative overflow-hidden block group" style="aspect-ratio: 4/3;">
+          <img src="Assets/concrete-driveways.jpeg" alt="Freshly poured concrete driveway by Select Civil Group" class="absolute inset-0 w-full h-full object-cover">
+          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/30" style="transition: background 0.3s ease;"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-6 z-10">
+            <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-1">Service</p>
+            <h3 class="heading-md text-xl sm:text-2xl text-white">Concrete Driveways</h3>
+          </div>
+        </a>
+
+        <a href="#contact" class="service-card relative overflow-hidden block group" style="aspect-ratio: 4/3;">
+          <img src="Assets/concrete-raft-slabs.jpeg" alt="Large concrete raft slab being poured for a new build in Geelong" class="absolute inset-0 w-full h-full object-cover">
+          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/30" style="transition: background 0.3s ease;"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-6 z-10">
+            <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-1">Service</p>
+            <h3 class="heading-md text-xl sm:text-2xl text-white">Concrete Raft Slabs</h3>
+          </div>
+        </a>
+
+        <a href="#contact" class="service-card relative overflow-hidden block group" style="aspect-ratio: 4/3;">
+          <img src="Assets/earthworks.jpeg" alt="Earthworks and land clearing on a residential site near Geelong" class="absolute inset-0 w-full h-full object-cover">
+          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/30" style="transition: background 0.3s ease;"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-6 z-10">
+            <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-1">Service</p>
+            <h3 class="heading-md text-xl sm:text-2xl text-white">Earthworks</h3>
+          </div>
+        </a>
+
+        <a href="#contact" class="service-card relative overflow-hidden block group" style="aspect-ratio: 4/3;">
+          <img src="Assets/site-cuts.jpeg" alt="Detail excavation and site cut in progress by Select Civil Group" class="absolute inset-0 w-full h-full object-cover">
+          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/30" style="transition: background 0.3s ease;"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-6 z-10">
+            <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-1">Service</p>
+            <h3 class="heading-md text-xl sm:text-2xl text-white">Site Cuts</h3>
+          </div>
+        </a>
+
+        <a href="#contact" class="service-card relative overflow-hidden block group" style="aspect-ratio: 4/3;">
+          <img src="Assets/concrete-paving.jpeg" alt="Concrete paving work completed by Select Civil Group" class="absolute inset-0 w-full h-full object-cover">
+          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/30" style="transition: background 0.3s ease;"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-6 z-10">
+            <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-1">Service</p>
+            <h3 class="heading-md text-xl sm:text-2xl text-white">Concrete Paving</h3>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- Additional Services -->
+      <div class="mt-8 border border-white/10 p-8 bg-dark-900">
+        <h3 class="heading-md text-lg text-white mb-5">We Also Do</h3>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-3">
+          <p class="text-gray-400 text-sm font-medium">Detail Excavation</p>
+          <p class="text-gray-400 text-sm font-medium">Factory Tilt Panels</p>
+          <p class="text-gray-400 text-sm font-medium">Concrete Seating</p>
+          <p class="text-gray-400 text-sm font-medium">Concrete Bench Drops</p>
+          <p class="text-gray-400 text-sm font-medium">Removal of Excess Oil</p>
+          <p class="text-gray-400 text-sm font-medium">Concrete Crossovers</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== ABOUT ========== -->
+  <section id="about" class="bg-dark-900 py-20 lg:py-28 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-0">
+
+        <!-- Left: Image -->
+        <div class="relative lg:pr-8">
+          <div class="relative overflow-hidden" style="aspect-ratio: 4/3;">
+            <img src="Assets/concrete-slabs.jpeg" alt="Select Civil Group concrete slab pour on Bellarine Peninsula" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/15"></div>
+          </div>
+          <!-- Brand stamp -->
+          <div class="absolute bottom-6 left-6 bg-brand-500 px-5 py-3">
+            <p class="text-dark-950 text-xs font-black uppercase tracking-widest">Est. Geelong</p>
+          </div>
+        </div>
+
+        <!-- Right: Content -->
+        <div class="lg:pl-8 lg:border-l lg:border-white/10 flex flex-col justify-center">
+          <div class="accent-bar mb-4"></div>
+          <h2 class="heading-lg text-3xl sm:text-4xl text-white mb-6">Built on Hard Work</h2>
+
+          <div class="space-y-4 body-text">
+            <p>
+              Select Civil Group is a locally owned and operated civil contracting business based in Geelong, Victoria. Founded by Andrew Sterling, we specialise in earthworks, concrete services, and site preparation for residential and commercial projects across the Bellarine Peninsula, Torquay, and surrounding regions.
+            </p>
+            <p>
+              With over a decade of hands-on experience in the industry, our team brings the knowledge, equipment, and work ethic needed to get jobs done right. Whether you are a homeowner looking to pour a new driveway, a builder needing site cuts for a new build, or a developer planning a larger-scale project, we have the capability and commitment to deliver.
+            </p>
+            <p>
+              We pride ourselves on clear communication, reliable timelines, and quality workmanship. Every job, large or small, gets the same attention to detail. That is the standard we hold ourselves to, and it is why our clients keep coming back.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 gap-6 mt-8 pt-8 border-t border-white/10">
+            <div>
+              <p class="text-white text-sm font-bold uppercase tracking-wider">Fully Insured</p>
+              <p class="text-gray-500 text-sm mt-1">Liability and workers comp on every job.</p>
+            </div>
+            <div>
+              <p class="text-white text-sm font-bold uppercase tracking-wider">Owner on Site</p>
+              <p class="text-gray-500 text-sm mt-1">Andrew runs the jobs. No middlemen.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== PROJECT GALLERY ========== -->
+  <section id="projects" class="bg-dark-950 py-20 lg:py-28 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-14">
+        <div class="accent-bar mb-4"></div>
+        <h2 class="heading-lg text-3xl sm:text-4xl lg:text-5xl text-white mb-4">Recent Work</h2>
+        <p class="body-text text-lg max-w-2xl">
+          A selection of completed civil and concrete projects from across the Geelong and Bellarine regions.
+        </p>
+      </div>
+
+      <!-- Asymmetric grid for visual impact -->
+      <div class="grid md:grid-cols-2 gap-1">
+        <!-- Large feature image -->
+        <div class="relative overflow-hidden md:row-span-2" style="min-height: 400px;">
+          <img src="Assets/concrete-crossover.jpeg" alt="Concrete crossover driveway completed for a residential property in Geelong" class="absolute inset-0 w-full h-full object-cover">
+          <div class="absolute inset-0 bg-black/35"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-6 z-10">
+            <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-1">Concrete Crossover</p>
+            <h3 class="heading-md text-2xl text-white">Residential Driveway - Geelong</h3>
+          </div>
+        </div>
+
+        <div class="relative overflow-hidden" style="min-height: 250px;">
+          <img src="Assets/concrete-slabs.jpeg" alt="Large concrete slab pour on Bellarine Peninsula" class="absolute inset-0 w-full h-full object-cover">
+          <div class="absolute inset-0 bg-black/35"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-6 z-10">
+            <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-1">Concrete Slab</p>
+            <h3 class="heading-md text-xl text-white">Slab Pour - Bellarine Peninsula</h3>
+          </div>
+        </div>
+
+        <div class="relative overflow-hidden" style="min-height: 250px;">
+          <img src="Assets/site-cuts.jpeg" alt="Site cut and excavation work for a new build in Geelong" class="absolute inset-0 w-full h-full object-cover">
+          <div class="absolute inset-0 bg-black/35"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-6 z-10">
+            <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-1">Site Cut</p>
+            <h3 class="heading-md text-xl text-white">Excavation - New Build</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== WHY US ========== -->
+  <section class="bg-dark-800 py-20 lg:py-28 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div>
+          <div class="accent-bar mb-4"></div>
+          <h2 class="heading-lg text-3xl sm:text-4xl text-white mb-6">Why Work With Us</h2>
+          <p class="body-text text-lg mb-10 max-w-xl">
+            We are not the biggest civil contractor in the region. But we consistently deliver the kind of work and service that earns repeat business.
+          </p>
+
+          <div class="space-y-6">
+            <div class="border-l-4 border-brand-500 pl-6">
+              <p class="text-white font-bold text-base uppercase tracking-wide">On Time, Every Time</p>
+              <p class="text-gray-500 text-sm mt-1">We show up when we say we will and keep your project on schedule.</p>
+            </div>
+            <div class="border-l-4 border-brand-500 pl-6">
+              <p class="text-white font-bold text-base uppercase tracking-wide">Owner Operated</p>
+              <p class="text-gray-500 text-sm mt-1">Andrew is on the tools and on-site. You deal directly with the person running the job.</p>
+            </div>
+            <div class="border-l-4 border-brand-500 pl-6">
+              <p class="text-white font-bold text-base uppercase tracking-wide">No Surprises</p>
+              <p class="text-gray-500 text-sm mt-1">Clear quotes, honest timelines, no hidden costs. We say what we mean.</p>
+            </div>
+            <div class="border-l-4 border-brand-500 pl-6">
+              <p class="text-white font-bold text-base uppercase tracking-wide">Quality Workmanship</p>
+              <p class="text-gray-500 text-sm mt-1">Every pour, every cut, every level - checked twice. We take pride in getting it right.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative overflow-hidden" style="aspect-ratio: 3/4;">
+          <img src="Assets/concrete-raft-slabs.jpeg" alt="Select Civil Group team pouring concrete on a large residential project" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-black/15"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== SERVICE AREA ========== -->
+  <section class="bg-dark-950 py-20 lg:py-28 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-start">
+        <div>
+          <div class="accent-bar mb-4"></div>
+          <h2 class="heading-lg text-3xl sm:text-4xl text-white mb-6">Where We Work</h2>
+          <p class="body-text text-lg mb-8">
+            Based in Geelong, Select Civil Group covers the wider region. Whether your project is in town, on the coast, or somewhere in between, we have the gear and the crew to get it done. Not sure if we come to you? Just ask.
+          </p>
+
+          <div class="grid grid-cols-2 gap-4">
+            <p class="text-white text-sm font-semibold border-l-2 border-brand-500 pl-4">Geelong</p>
+            <p class="text-white text-sm font-semibold border-l-2 border-brand-500 pl-4">Bellarine Peninsula</p>
+            <p class="text-white text-sm font-semibold border-l-2 border-brand-500 pl-4">Torquay</p>
+            <p class="text-white text-sm font-semibold border-l-2 border-brand-500 pl-4">Ocean Grove</p>
+            <p class="text-white text-sm font-semibold border-l-2 border-brand-500 pl-4">Point Lonsdale</p>
+            <p class="text-white text-sm font-semibold border-l-2 border-brand-500 pl-4">Queenscliff</p>
+            <p class="text-white text-sm font-semibold border-l-2 border-brand-500 pl-4">Leopold</p>
+            <p class="text-white text-sm font-semibold border-l-2 border-brand-500 pl-4">Surrounding Areas</p>
+          </div>
+        </div>
+
+        <div class="bg-dark-800 border border-white/10 p-10">
+          <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-2">Get in Touch</p>
+          <h3 class="heading-md text-2xl text-white mb-6">Geelong, VIC 3226</h3>
+          <div class="space-y-4 mb-8">
+            <div>
+              <p class="text-gray-500 text-xs font-bold uppercase tracking-wider mb-1">Email</p>
+              <a href="mailto:selectcivilgroupvic@outlook.com" class="text-white text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">selectcivilgroupvic@outlook.com</a>
+            </div>
+            <div>
+              <p class="text-gray-500 text-xs font-bold uppercase tracking-wider mb-1">Hours</p>
+              <p class="text-white text-sm font-medium">Monday - Friday, 7:00 AM - 5:00 PM</p>
+            </div>
+          </div>
+          <a href="#contact" class="btn-fill block text-center px-8 py-4 text-sm w-full">Request a Quote</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== CTA BANNER ========== -->
+  <section class="relative overflow-hidden py-20 lg:py-24 bg-brand-500 stripe-texture">
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="heading-lg text-3xl sm:text-4xl lg:text-5xl text-dark-950 mb-4">Ready to Start Your Project?</h2>
+      <p class="text-dark-950/70 text-lg mb-8 max-w-2xl mx-auto" style="line-height: 1.7;">
+        Concrete driveways, retaining walls, site cuts, full earthworks - whatever your project needs, reach out for an obligation-free quote.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#contact" class="bg-dark-950 text-white font-bold uppercase tracking-wider px-8 py-4 text-base text-center hover:bg-dark-800" style="transition: background 0.2s ease;">Get a Free Quote</a>
+        <a href="mailto:selectcivilgroupvic@outlook.com" class="border-2 border-dark-950 text-dark-950 font-bold uppercase tracking-wider px-8 py-4 text-base text-center hover:bg-dark-950 hover:text-white" style="transition: background 0.2s ease, color 0.2s ease;">Email Us</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== CONTACT FORM ========== -->
+  <section id="contact" class="bg-dark-900 py-20 lg:py-28 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
+
+        <div>
+          <div class="accent-bar mb-4"></div>
+          <h2 class="heading-lg text-3xl sm:text-4xl text-white mb-6">Get a Quote</h2>
+          <p class="body-text text-lg mb-8">
+            Tell us about your project and we will get back to you with a quote. Fill out the form or email us directly at <a href="mailto:selectcivilgroupvic@outlook.com" class="text-brand-500 font-medium hover:underline">selectcivilgroupvic@outlook.com</a>
+          </p>
+
+          <div class="space-y-5">
+            <div class="border-l-2 border-white/10 pl-5">
+              <p class="text-white text-sm font-bold">Email</p>
+              <a href="mailto:selectcivilgroupvic@outlook.com" class="text-gray-400 text-sm hover:text-brand-500" style="transition: color 0.2s ease;">selectcivilgroupvic@outlook.com</a>
+            </div>
+            <div class="border-l-2 border-white/10 pl-5">
+              <p class="text-white text-sm font-bold">Location</p>
+              <p class="text-gray-400 text-sm">Geelong, VIC 3226</p>
+            </div>
+            <div class="border-l-2 border-white/10 pl-5">
+              <p class="text-white text-sm font-bold">Hours</p>
+              <p class="text-gray-400 text-sm">Monday - Friday: 7:00 AM - 5:00 PM</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-dark-700 border border-white/10 p-8">
+          <form action="https://formspree.io/f/placeholder" method="POST" class="space-y-5">
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div>
+                <label for="name" class="block text-white text-sm font-bold uppercase tracking-wider mb-2">Name</label>
+                <input type="text" id="name" name="name" required placeholder="Your full name"
+                  class="w-full bg-dark-900 border border-white/10 px-4 py-3 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-brand-500"
+                  style="transition: border-color 0.2s ease;">
+              </div>
+              <div>
+                <label for="phone" class="block text-white text-sm font-bold uppercase tracking-wider mb-2">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="Your phone number"
+                  class="w-full bg-dark-900 border border-white/10 px-4 py-3 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-brand-500"
+                  style="transition: border-color 0.2s ease;">
+              </div>
+            </div>
+
+            <div>
+              <label for="email" class="block text-white text-sm font-bold uppercase tracking-wider mb-2">Email</label>
+              <input type="email" id="email" name="email" required placeholder="your@email.com"
+                class="w-full bg-dark-900 border border-white/10 px-4 py-3 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-brand-500"
+                style="transition: border-color 0.2s ease;">
+            </div>
+
+            <div>
+              <label for="service" class="block text-white text-sm font-bold uppercase tracking-wider mb-2">Service</label>
+              <select id="service" name="service"
+                class="w-full bg-dark-900 border border-white/10 px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-500"
+                style="transition: border-color 0.2s ease;">
+                <option value="">Select a service</option>
+                <option value="retaining-walls">Retaining Walls</option>
+                <option value="concrete-driveways">Concrete Driveways</option>
+                <option value="concrete-raft-slabs">Concrete Raft Slabs</option>
+                <option value="earthworks">Earthworks</option>
+                <option value="site-cuts">Site Cuts</option>
+                <option value="concrete-paving">Concrete Paving</option>
+                <option value="detail-excavation">Detail Excavation</option>
+                <option value="factory-tilt-panels">Factory Tilt Panels</option>
+                <option value="concrete-seating">Concrete Seating</option>
+                <option value="concrete-bench-drops">Concrete Bench Drops</option>
+                <option value="removal-excess-oil">Removal of Excess Oil</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="message" class="block text-white text-sm font-bold uppercase tracking-wider mb-2">Project Details</label>
+              <textarea id="message" name="message" rows="5" required placeholder="Tell us about your project - location, scope, timeline..."
+                class="w-full bg-dark-900 border border-white/10 px-4 py-3 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-brand-500 resize-none"
+                style="transition: border-color 0.2s ease;"></textarea>
+            </div>
+
+            <button type="submit" class="btn-fill w-full py-4 text-base">Send Enquiry</button>
+            <p class="text-gray-600 text-xs text-center">We respond within 24 hours on business days.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="bg-dark-950 border-t border-white/5 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <img src="Assets/Logo PNG.png" alt="Select Civil Group" class="h-10 w-10">
+            <span class="font-bold text-white text-sm uppercase tracking-wider">Select Civil Group</span>
+          </div>
+          <p class="text-gray-500 text-sm" style="line-height: 1.6;">
+            Civil contracting services across Geelong, Bellarine Peninsula, and surrounding regions. Earthworks, concrete, and site preparation.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold text-xs uppercase tracking-widest mb-4">Services</h4>
+          <ul class="space-y-2">
+            <li><a href="#services" class="text-gray-500 text-sm hover:text-brand-500" style="transition: color 0.2s ease;">Retaining Walls</a></li>
+            <li><a href="#services" class="text-gray-500 text-sm hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Driveways</a></li>
+            <li><a href="#services" class="text-gray-500 text-sm hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Raft Slabs</a></li>
+            <li><a href="#services" class="text-gray-500 text-sm hover:text-brand-500" style="transition: color 0.2s ease;">Earthworks</a></li>
+            <li><a href="#services" class="text-gray-500 text-sm hover:text-brand-500" style="transition: color 0.2s ease;">Site Cuts</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold text-xs uppercase tracking-widest mb-4">More Services</h4>
+          <ul class="space-y-2">
+            <li><a href="#services" class="text-gray-500 text-sm hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Paving</a></li>
+            <li><a href="#services" class="text-gray-500 text-sm hover:text-brand-500" style="transition: color 0.2s ease;">Detail Excavation</a></li>
+            <li><a href="#services" class="text-gray-500 text-sm hover:text-brand-500" style="transition: color 0.2s ease;">Factory Tilt Panels</a></li>
+            <li><a href="#services" class="text-gray-500 text-sm hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Seating</a></li>
+            <li><a href="#services" class="text-gray-500 text-sm hover:text-brand-500" style="transition: color 0.2s ease;">Bench Drops</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold text-xs uppercase tracking-widest mb-4">Contact</h4>
+          <ul class="space-y-2">
+            <li><a href="mailto:selectcivilgroupvic@outlook.com" class="text-gray-500 text-sm hover:text-brand-500" style="transition: color 0.2s ease;">selectcivilgroupvic@outlook.com</a></li>
+            <li class="text-gray-500 text-sm">Geelong, VIC 3226</li>
+            <li class="text-gray-500 text-sm">Mon - Fri: 7:00 AM - 5:00 PM</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-white/5 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p class="text-gray-600 text-xs">&copy; 2026 Select Civil Group Pty Ltd. All rights reserved.</p>
+        <p class="text-gray-600 text-xs">ABN registered in Victoria, Australia.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ========== SCRIPTS ========== -->
+  <script>
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const hamburger = document.getElementById('hamburger-icon');
+      const close = document.getElementById('close-icon');
+      menu.classList.toggle('open');
+      hamburger.classList.toggle('hidden');
+      close.classList.toggle('hidden');
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Fade in on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // Navbar on scroll
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+      nav.style.borderBottomColor = window.scrollY > 20 ? 'rgba(255,255,255,0.08)' : 'rgba(255,255,255,0.03)';
+    });
+  </script>
+
+</body>
+</html>
