@@ -95,6 +95,64 @@
   }
   </script>
 
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long does a typical project take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Timeline depends on scope and site conditions. A driveway might take a few days, while larger earthworks take longer. We provide a detailed schedule upfront so you know what to expect."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you handle spoil removal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We manage spoil removal as part of our service, handling disposal responsibly and efficiently. It's one less thing for you to worry about."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What areas do you service?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We work throughout Geelong and the Bellarine Peninsula. If you're in the region and need earthworks or concrete work, reach out and we'll let you know if we can help."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you provide a quote?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. We offer free site assessments and detailed quotes. Contact us with your project details and we'll arrange a time to visit and discuss your needs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you work with contractors?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We work regularly with builders and contractors on larger projects. We're reliable, professional, and deliver on schedule."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are you fully insured?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Select Civil Group carries full public liability insurance and workers compensation cover on every job. We're happy to provide certificates on request."
+        }
+      }
+    ]
+  }
+  </script>
+
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -396,28 +454,24 @@
         <!-- Right: Content -->
         <div class="lg:pl-8 lg:border-l lg:border-white/10 flex flex-col justify-center">
           <div class="accent-bar mb-4"></div>
-          <h2 class="heading-lg text-3xl sm:text-4xl text-white mb-6">Built on Hard Work</h2>
+          <h2 class="heading-lg text-3xl sm:text-4xl text-white mb-6">Earthworks and Concrete Done Right</h2>
 
           <div class="space-y-4 body-text">
             <p>
-              Select Civil Group is a locally owned and operated civil contracting business based in Geelong, Victoria. Founded by Andrew Sterling, we specialise in earthworks, concrete services, and site preparation for residential and commercial projects across the Bellarine Peninsula, Torquay, and surrounding regions.
+              Select Civil Group is a Geelong-based civil construction company proudly servicing the Bellarine Peninsula and surrounding regions throughout Victoria. We specialise in a comprehensive range of civil, concrete, and excavation works, consistently delivering reliable, high-quality results across diverse residential, commercial, and industrial projects of all sizes.
             </p>
             <p>
-              With over a decade of hands-on experience in the industry, our team brings the knowledge, equipment, and work ethic needed to get jobs done right. Whether you are a homeowner looking to pour a new driveway, a builder needing site cuts for a new build, or a developer planning a larger-scale project, we have the capability and commitment to deliver.
+              Retaining walls, concrete slabs, driveways, and site cuts demand precision and experience to ensure structural integrity and longevity. We handle factory tilt panels, concrete seating, and comprehensive excavation work with the same meticulous attention to detail and craftsmanship, whether the job is a straightforward residential driveway or a large-scale commercial infrastructure project.
             </p>
             <p>
-              We pride ourselves on clear communication, reliable timelines, and quality workmanship. Every job, large or small, gets the same attention to detail. That is the standard we hold ourselves to, and it is why our clients keep coming back.
+              We work closely with builders, developers, and project managers throughout every phase of construction to keep every job on track and moving forward smoothly. From initial site preparation and foundation work through to the final finished concrete installations, we handle all the important details that separate good work from work that truly lasts.
             </p>
           </div>
 
-          <div class="grid grid-cols-2 gap-6 mt-8 pt-8 border-t border-white/10">
+          <div class="mt-8 pt-8 border-t border-white/10">
             <div>
               <p class="text-white text-sm font-bold uppercase tracking-wider">Fully Insured</p>
               <p class="text-gray-500 text-sm mt-1">Liability and workers comp on every job.</p>
-            </div>
-            <div>
-              <p class="text-white text-sm font-bold uppercase tracking-wider">Owner on Site</p>
-              <p class="text-gray-500 text-sm mt-1">Andrew runs the jobs. No middlemen.</p>
             </div>
           </div>
         </div>
@@ -564,6 +618,80 @@
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a href="#contact" class="bg-dark-950 text-white font-bold uppercase tracking-wider px-8 py-4 text-base text-center hover:bg-dark-800" style="transition: background 0.2s ease;">Get a Free Quote</a>
         <a href="mailto:selectcivilgroupvic@outlook.com" class="border-2 border-dark-950 text-dark-950 font-bold uppercase tracking-wider px-8 py-4 text-base text-center hover:bg-dark-950 hover:text-white" style="transition: background 0.2s ease, color 0.2s ease;">Email Us</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== FAQ ========== -->
+  <section id="faq" class="bg-dark-950 py-20 lg:py-28 border-t border-white/5">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-14">
+        <div class="accent-bar mb-4"></div>
+        <h2 class="heading-lg text-3xl sm:text-4xl lg:text-5xl text-white mb-4">Frequently Asked Questions</h2>
+        <p class="body-text text-lg">Common questions about working with Select Civil Group.</p>
+      </div>
+
+      <div class="divide-y divide-white/10">
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between py-6 text-left group focus-visible:outline-2 focus-visible:outline-brand-500 focus-visible:outline-offset-2">
+            <h3 class="text-white text-lg sm:text-xl font-semibold pr-8" style="letter-spacing: -0.01em;">How long does a typical project take?</h3>
+            <svg class="faq-chevron w-5 h-5 text-gray-400 shrink-0" style="transition: transform 0.3s ease;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer overflow-hidden" style="max-height: 0; transition: max-height 0.3s ease, opacity 0.3s ease; opacity: 0;">
+            <p class="body-text text-base pb-6">Timeline depends on scope and site conditions. A driveway might take a few days, while larger earthworks take longer. We provide a detailed schedule upfront so you know what to expect.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between py-6 text-left group focus-visible:outline-2 focus-visible:outline-brand-500 focus-visible:outline-offset-2">
+            <h3 class="text-white text-lg sm:text-xl font-semibold pr-8" style="letter-spacing: -0.01em;">Do you handle spoil removal?</h3>
+            <svg class="faq-chevron w-5 h-5 text-gray-400 shrink-0" style="transition: transform 0.3s ease;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer overflow-hidden" style="max-height: 0; transition: max-height 0.3s ease, opacity 0.3s ease; opacity: 0;">
+            <p class="body-text text-base pb-6">Yes. We manage spoil removal as part of our service, handling disposal responsibly and efficiently. It's one less thing for you to worry about.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between py-6 text-left group focus-visible:outline-2 focus-visible:outline-brand-500 focus-visible:outline-offset-2">
+            <h3 class="text-white text-lg sm:text-xl font-semibold pr-8" style="letter-spacing: -0.01em;">What areas do you service?</h3>
+            <svg class="faq-chevron w-5 h-5 text-gray-400 shrink-0" style="transition: transform 0.3s ease;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer overflow-hidden" style="max-height: 0; transition: max-height 0.3s ease, opacity 0.3s ease; opacity: 0;">
+            <p class="body-text text-base pb-6">We work throughout Geelong and the Bellarine Peninsula. If you're in the region and need earthworks or concrete work, reach out and we'll let you know if we can help.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between py-6 text-left group focus-visible:outline-2 focus-visible:outline-brand-500 focus-visible:outline-offset-2">
+            <h3 class="text-white text-lg sm:text-xl font-semibold pr-8" style="letter-spacing: -0.01em;">Can you provide a quote?</h3>
+            <svg class="faq-chevron w-5 h-5 text-gray-400 shrink-0" style="transition: transform 0.3s ease;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer overflow-hidden" style="max-height: 0; transition: max-height 0.3s ease, opacity 0.3s ease; opacity: 0;">
+            <p class="body-text text-base pb-6">Absolutely. We offer free site assessments and detailed quotes. Contact us with your project details and we'll arrange a time to visit and discuss your needs.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between py-6 text-left group focus-visible:outline-2 focus-visible:outline-brand-500 focus-visible:outline-offset-2">
+            <h3 class="text-white text-lg sm:text-xl font-semibold pr-8" style="letter-spacing: -0.01em;">Do you work with contractors?</h3>
+            <svg class="faq-chevron w-5 h-5 text-gray-400 shrink-0" style="transition: transform 0.3s ease;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer overflow-hidden" style="max-height: 0; transition: max-height 0.3s ease, opacity 0.3s ease; opacity: 0;">
+            <p class="body-text text-base pb-6">Yes. We work regularly with builders and contractors on larger projects. We're reliable, professional, and deliver on schedule.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between py-6 text-left group focus-visible:outline-2 focus-visible:outline-brand-500 focus-visible:outline-offset-2">
+            <h3 class="text-white text-lg sm:text-xl font-semibold pr-8" style="letter-spacing: -0.01em;">Are you fully insured?</h3>
+            <svg class="faq-chevron w-5 h-5 text-gray-400 shrink-0" style="transition: transform 0.3s ease;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer overflow-hidden" style="max-height: 0; transition: max-height 0.3s ease, opacity 0.3s ease; opacity: 0;">
+            <p class="body-text text-base pb-6">Yes. Select Civil Group carries full public liability insurance and workers compensation cover on every job. We're happy to provide certificates on request.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -739,6 +867,29 @@
     }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // FAQ accordion
+    function toggleFaq(btn) {
+      const answer = btn.nextElementSibling;
+      const chevron = btn.querySelector('.faq-chevron');
+      const isOpen = answer.style.maxHeight !== '0px' && answer.style.maxHeight !== '';
+
+      // Close all
+      document.querySelectorAll('.faq-answer').forEach(a => {
+        a.style.maxHeight = '0px';
+        a.style.opacity = '0';
+      });
+      document.querySelectorAll('.faq-chevron').forEach(c => {
+        c.style.transform = 'rotate(0deg)';
+      });
+
+      // Open clicked if it was closed
+      if (!isOpen) {
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+        answer.style.opacity = '1';
+        chevron.style.transform = 'rotate(180deg)';
+      }
+    }
 
     // Navbar on scroll
     const nav = document.querySelector('nav');
