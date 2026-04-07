@@ -79,17 +79,29 @@
       "@type": "OfferCatalog",
       "name": "Civil Contracting Services",
       "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Retaining Walls" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Concrete Raft Slabs" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Concrete Driveways" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Earthworks" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Site Cuts" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Concrete Paving" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Detail Excavation" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Factory Tilt Panels" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Concrete Seating" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Concrete Bench Drops" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Removal of Excess Oil" } }
+        {
+          "@type": "OfferCatalog",
+          "name": "Concrete Services",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Retaining Walls" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Concrete Driveways" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Concrete Raft Slabs" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Concrete Paving" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Factory Tilt Panels" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Concrete Seating" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Concrete Bench Drops" } }
+          ]
+        },
+        {
+          "@type": "OfferCatalog",
+          "name": "Earthworks & Excavation",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Earthworks" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Site Cuts" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Detail Excavation" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Removal of Excess Oil" } }
+          ]
+        }
       ]
     }
   }
@@ -347,7 +359,7 @@
   <nav class="fixed top-0 left-0 right-0 z-50 bg-dark-950/95 backdrop-blur-sm border-b border-white/5">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
-        <a href="/" class="flex items-center">
+        <a href="index.html" class="flex items-center">
           <img src="Assets/Logo PNG.png" alt="Select Civil Group logo" class="h-10">
         </a>
 
@@ -376,67 +388,43 @@
                   </div>
                 </div>
 
-                <!-- Primary services grid -->
-                <div class="grid grid-cols-3 gap-px bg-white/5 p-px mx-6 mt-6">
-                  <a href="services.html#retaining-walls" class="mega-service-card bg-dark-900 p-4 block">
-                    <div class="relative overflow-hidden mb-3" style="aspect-ratio: 16/10;">
-                      <img src="Assets/retaining-walls.jpeg" alt="Retaining wall construction" class="absolute inset-0 w-full h-full object-cover">
-                      <div class="absolute inset-0 bg-black/25"></div>
+                <!-- Category columns -->
+                <div class="grid grid-cols-2 gap-6 p-8">
+                  <!-- Concrete Services -->
+                  <div>
+                    <a href="services.html#concrete-services" class="block relative overflow-hidden mb-4 group" style="aspect-ratio: 16/9;">
+                      <img src="Assets/concrete-driveways.jpeg" alt="Concrete services by Select Civil Group" class="absolute inset-0 w-full h-full object-cover" style="transition: transform 0.4s ease;">
+                      <div class="absolute inset-0 bg-black/40 group-hover:bg-black/30" style="transition: background 0.3s ease;"></div>
+                      <div class="absolute bottom-0 left-0 right-0 p-4 z-10">
+                        <p class="text-brand-500 text-xs font-bold uppercase tracking-widest">Concrete Services</p>
+                      </div>
+                    </a>
+                    <div class="flex flex-col gap-1.5">
+                      <a href="services.html#retaining-walls" class="text-gray-400 text-sm hover:text-brand-500 font-medium" style="transition: color 0.2s ease;">Retaining Walls</a>
+                      <a href="services.html#concrete-driveways" class="text-gray-400 text-sm hover:text-brand-500 font-medium" style="transition: color 0.2s ease;">Concrete Driveways</a>
+                      <a href="services.html#concrete-raft-slabs" class="text-gray-400 text-sm hover:text-brand-500 font-medium" style="transition: color 0.2s ease;">Concrete Raft Slabs</a>
+                      <a href="services.html#concrete-paving" class="text-gray-400 text-sm hover:text-brand-500 font-medium" style="transition: color 0.2s ease;">Concrete Paving</a>
+                      <a href="services.html#factory-tilt-panels" class="text-gray-400 text-sm hover:text-brand-500 font-medium" style="transition: color 0.2s ease;">Factory Tilt Panels</a>
+                      <a href="services.html#concrete-seating" class="text-gray-400 text-sm hover:text-brand-500 font-medium" style="transition: color 0.2s ease;">Concrete Seating</a>
+                      <a href="services.html#concrete-bench-drops" class="text-gray-400 text-sm hover:text-brand-500 font-medium" style="transition: color 0.2s ease;">Concrete Bench Drops</a>
                     </div>
-                    <p class="mega-service-title text-white text-sm font-bold" style="transition: color 0.2s ease;">Retaining Walls</p>
-                    <p class="text-gray-500 text-xs mt-1">Concrete block and poured walls</p>
-                  </a>
-                  <a href="services.html#concrete-driveways" class="mega-service-card bg-dark-900 p-4 block">
-                    <div class="relative overflow-hidden mb-3" style="aspect-ratio: 16/10;">
-                      <img src="Assets/concrete-driveways.jpeg" alt="Concrete driveway" class="absolute inset-0 w-full h-full object-cover">
-                      <div class="absolute inset-0 bg-black/25"></div>
-                    </div>
-                    <p class="mega-service-title text-white text-sm font-bold" style="transition: color 0.2s ease;">Concrete Driveways</p>
-                    <p class="text-gray-500 text-xs mt-1">Residential and commercial</p>
-                  </a>
-                  <a href="services.html#concrete-raft-slabs" class="mega-service-card bg-dark-900 p-4 block">
-                    <div class="relative overflow-hidden mb-3" style="aspect-ratio: 16/10;">
-                      <img src="Assets/concrete-raft-slabs.jpeg" alt="Concrete raft slab" class="absolute inset-0 w-full h-full object-cover">
-                      <div class="absolute inset-0 bg-black/25"></div>
-                    </div>
-                    <p class="mega-service-title text-white text-sm font-bold" style="transition: color 0.2s ease;">Concrete Raft Slabs</p>
-                    <p class="text-gray-500 text-xs mt-1">Foundations for new builds</p>
-                  </a>
-                  <a href="services.html#earthworks" class="mega-service-card bg-dark-900 p-4 block">
-                    <div class="relative overflow-hidden mb-3" style="aspect-ratio: 16/10;">
-                      <img src="Assets/earthworks.jpeg" alt="Earthworks" class="absolute inset-0 w-full h-full object-cover">
-                      <div class="absolute inset-0 bg-black/25"></div>
-                    </div>
-                    <p class="mega-service-title text-white text-sm font-bold" style="transition: color 0.2s ease;">Earthworks</p>
-                    <p class="text-gray-500 text-xs mt-1">Land clearing and grading</p>
-                  </a>
-                  <a href="services.html#site-cuts" class="mega-service-card bg-dark-900 p-4 block">
-                    <div class="relative overflow-hidden mb-3" style="aspect-ratio: 16/10;">
-                      <img src="Assets/site-cuts.jpeg" alt="Site cuts" class="absolute inset-0 w-full h-full object-cover">
-                      <div class="absolute inset-0 bg-black/25"></div>
-                    </div>
-                    <p class="mega-service-title text-white text-sm font-bold" style="transition: color 0.2s ease;">Site Cuts</p>
-                    <p class="text-gray-500 text-xs mt-1">Precision excavation work</p>
-                  </a>
-                  <a href="services.html#concrete-paving" class="mega-service-card bg-dark-900 p-4 block">
-                    <div class="relative overflow-hidden mb-3" style="aspect-ratio: 16/10;">
-                      <img src="Assets/concrete-paving.jpeg" alt="Concrete paving" class="absolute inset-0 w-full h-full object-cover">
-                      <div class="absolute inset-0 bg-black/25"></div>
-                    </div>
-                    <p class="mega-service-title text-white text-sm font-bold" style="transition: color 0.2s ease;">Concrete Paving</p>
-                    <p class="text-gray-500 text-xs mt-1">Paths, patios, and more</p>
-                  </a>
-                </div>
+                  </div>
 
-                <!-- Additional services row -->
-                <div class="px-8 py-5 border-t border-white/5 mt-6">
-                  <p class="text-gray-600 text-xs font-bold uppercase tracking-widest mb-3">Also Available</p>
-                  <div class="flex flex-wrap gap-x-6 gap-y-2">
-                    <a href="services.html#detail-excavation" class="text-gray-400 text-sm hover:text-brand-500 font-medium" style="transition: color 0.2s ease;">Detail Excavation</a>
-                    <a href="services.html#factory-tilt-panels" class="text-gray-400 text-sm hover:text-brand-500 font-medium" style="transition: color 0.2s ease;">Factory Tilt Panels</a>
-                    <a href="services.html#concrete-seating" class="text-gray-400 text-sm hover:text-brand-500 font-medium" style="transition: color 0.2s ease;">Concrete Seating</a>
-                    <a href="services.html#concrete-bench-drops" class="text-gray-400 text-sm hover:text-brand-500 font-medium" style="transition: color 0.2s ease;">Concrete Bench Drops</a>
-                    <a href="services.html#removal-of-excess-oil" class="text-gray-400 text-sm hover:text-brand-500 font-medium" style="transition: color 0.2s ease;">Removal of Excess Oil</a>
+                  <!-- Earthworks & Excavation -->
+                  <div>
+                    <a href="services.html#earthworks-excavation" class="block relative overflow-hidden mb-4 group" style="aspect-ratio: 16/9;">
+                      <img src="Assets/earthworks.jpeg" alt="Earthworks and excavation by Select Civil Group" class="absolute inset-0 w-full h-full object-cover" style="transition: transform 0.4s ease;">
+                      <div class="absolute inset-0 bg-black/40 group-hover:bg-black/30" style="transition: background 0.3s ease;"></div>
+                      <div class="absolute bottom-0 left-0 right-0 p-4 z-10">
+                        <p class="text-brand-500 text-xs font-bold uppercase tracking-widest">Earthworks & Excavation</p>
+                      </div>
+                    </a>
+                    <div class="flex flex-col gap-1.5">
+                      <a href="services.html#earthworks" class="text-gray-400 text-sm hover:text-brand-500 font-medium" style="transition: color 0.2s ease;">Earthworks</a>
+                      <a href="services.html#site-cuts" class="text-gray-400 text-sm hover:text-brand-500 font-medium" style="transition: color 0.2s ease;">Site Cuts</a>
+                      <a href="services.html#detail-excavation" class="text-gray-400 text-sm hover:text-brand-500 font-medium" style="transition: color 0.2s ease;">Detail Excavation</a>
+                      <a href="services.html#removal-of-excess-oil" class="text-gray-400 text-sm hover:text-brand-500 font-medium" style="transition: color 0.2s ease;">Removal of Excess Oil</a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -471,17 +459,19 @@
         </button>
         <div id="mobile-services-list" class="mobile-services-list pl-4">
           <div class="border-l-2 border-brand-500/30 pl-4 flex flex-col gap-1 pb-3">
-            <a href="services.html#retaining-walls" onclick="toggleMobileMenu()" class="text-gray-400 text-sm font-semibold py-2 hover:text-brand-500" style="transition: color 0.2s ease;">Retaining Walls</a>
-            <a href="services.html#concrete-driveways" onclick="toggleMobileMenu()" class="text-gray-400 text-sm font-semibold py-2 hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Driveways</a>
-            <a href="services.html#concrete-raft-slabs" onclick="toggleMobileMenu()" class="text-gray-400 text-sm font-semibold py-2 hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Raft Slabs</a>
-            <a href="services.html#earthworks" onclick="toggleMobileMenu()" class="text-gray-400 text-sm font-semibold py-2 hover:text-brand-500" style="transition: color 0.2s ease;">Earthworks</a>
-            <a href="services.html#site-cuts" onclick="toggleMobileMenu()" class="text-gray-400 text-sm font-semibold py-2 hover:text-brand-500" style="transition: color 0.2s ease;">Site Cuts</a>
-            <a href="services.html#concrete-paving" onclick="toggleMobileMenu()" class="text-gray-400 text-sm font-semibold py-2 hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Paving</a>
-            <a href="services.html#detail-excavation" onclick="toggleMobileMenu()" class="text-gray-400 text-sm font-semibold py-2 hover:text-brand-500" style="transition: color 0.2s ease;">Detail Excavation</a>
-            <a href="services.html#factory-tilt-panels" onclick="toggleMobileMenu()" class="text-gray-400 text-sm font-semibold py-2 hover:text-brand-500" style="transition: color 0.2s ease;">Factory Tilt Panels</a>
-            <a href="services.html#concrete-seating" onclick="toggleMobileMenu()" class="text-gray-400 text-sm font-semibold py-2 hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Seating</a>
-            <a href="services.html#concrete-bench-drops" onclick="toggleMobileMenu()" class="text-gray-400 text-sm font-semibold py-2 hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Bench Drops</a>
-            <a href="services.html#removal-of-excess-oil" onclick="toggleMobileMenu()" class="text-gray-400 text-sm font-semibold py-2 hover:text-brand-500" style="transition: color 0.2s ease;">Removal of Excess Oil</a>
+            <p class="text-brand-500 text-xs font-bold uppercase tracking-widest pt-2 pb-1">Concrete</p>
+            <a href="services.html#retaining-walls" onclick="toggleMobileMenu()" class="text-gray-400 text-sm font-semibold py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Retaining Walls</a>
+            <a href="services.html#concrete-driveways" onclick="toggleMobileMenu()" class="text-gray-400 text-sm font-semibold py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Driveways</a>
+            <a href="services.html#concrete-raft-slabs" onclick="toggleMobileMenu()" class="text-gray-400 text-sm font-semibold py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Raft Slabs</a>
+            <a href="services.html#concrete-paving" onclick="toggleMobileMenu()" class="text-gray-400 text-sm font-semibold py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Paving</a>
+            <a href="services.html#factory-tilt-panels" onclick="toggleMobileMenu()" class="text-gray-400 text-sm font-semibold py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Factory Tilt Panels</a>
+            <a href="services.html#concrete-seating" onclick="toggleMobileMenu()" class="text-gray-400 text-sm font-semibold py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Seating</a>
+            <a href="services.html#concrete-bench-drops" onclick="toggleMobileMenu()" class="text-gray-400 text-sm font-semibold py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Bench Drops</a>
+            <p class="text-brand-500 text-xs font-bold uppercase tracking-widest pt-4 pb-1">Earthworks & Excavation</p>
+            <a href="services.html#earthworks" onclick="toggleMobileMenu()" class="text-gray-400 text-sm font-semibold py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Earthworks</a>
+            <a href="services.html#site-cuts" onclick="toggleMobileMenu()" class="text-gray-400 text-sm font-semibold py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Site Cuts</a>
+            <a href="services.html#detail-excavation" onclick="toggleMobileMenu()" class="text-gray-400 text-sm font-semibold py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Detail Excavation</a>
+            <a href="services.html#removal-of-excess-oil" onclick="toggleMobileMenu()" class="text-gray-400 text-sm font-semibold py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Removal of Excess Oil</a>
           </div>
         </div>
 
@@ -536,76 +526,46 @@
         </p>
       </div>
 
-      <!-- Primary Services Grid - large image cards -->
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-1">
+      <!-- Service Categories -->
+      <div class="grid md:grid-cols-2 gap-1">
 
-        <a href="services.html#retaining-walls" class="service-card relative overflow-hidden block group" style="aspect-ratio: 4/3;">
-          <img src="Assets/retaining-walls.jpeg" alt="Concrete retaining wall construction by Select Civil Group in the Geelong area" class="absolute inset-0 w-full h-full object-cover">
-          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/30" style="transition: background 0.3s ease;"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-6 z-10">
-            <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-1">Service</p>
-            <h3 class="heading-md text-xl sm:text-2xl text-white">Retaining Walls</h3>
+        <!-- Concrete Services -->
+        <a href="services.html#concrete-services" class="service-card relative overflow-hidden block group" style="aspect-ratio: 3/4;">
+          <img src="Assets/concrete-driveways.jpeg" alt="Concrete services by Select Civil Group - driveways, slabs, retaining walls across Geelong" class="absolute inset-0 w-full h-full object-cover">
+          <div class="absolute inset-0 bg-black/50 group-hover:bg-black/40" style="transition: background 0.3s ease;"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-8 z-10">
+            <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-2">Category</p>
+            <h3 class="heading-lg text-2xl sm:text-3xl text-white mb-4">Concrete Services</h3>
+            <ul class="space-y-1.5">
+              <li class="text-gray-300 text-sm font-medium">Retaining Walls</li>
+              <li class="text-gray-300 text-sm font-medium">Concrete Driveways</li>
+              <li class="text-gray-300 text-sm font-medium">Concrete Raft Slabs</li>
+              <li class="text-gray-300 text-sm font-medium">Concrete Paving</li>
+              <li class="text-gray-300 text-sm font-medium">Factory Tilt Panels</li>
+              <li class="text-gray-300 text-sm font-medium">Concrete Seating</li>
+              <li class="text-gray-300 text-sm font-medium">Concrete Bench Drops</li>
+            </ul>
           </div>
         </a>
 
-        <a href="services.html#concrete-driveways" class="service-card relative overflow-hidden block group" style="aspect-ratio: 4/3;">
-          <img src="Assets/concrete-driveways.jpeg" alt="Freshly poured concrete driveway by Select Civil Group" class="absolute inset-0 w-full h-full object-cover">
-          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/30" style="transition: background 0.3s ease;"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-6 z-10">
-            <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-1">Service</p>
-            <h3 class="heading-md text-xl sm:text-2xl text-white">Concrete Driveways</h3>
+        <!-- Earthworks & Excavation -->
+        <a href="services.html#earthworks-excavation" class="service-card relative overflow-hidden block group" style="aspect-ratio: 3/4;">
+          <img src="Assets/earthworks.jpeg" alt="Earthworks and excavation services by Select Civil Group across Geelong and Bellarine" class="absolute inset-0 w-full h-full object-cover">
+          <div class="absolute inset-0 bg-black/50 group-hover:bg-black/40" style="transition: background 0.3s ease;"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-8 z-10">
+            <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-2">Category</p>
+            <h3 class="heading-lg text-2xl sm:text-3xl text-white mb-4">Earthworks & Excavation</h3>
+            <ul class="space-y-1.5">
+              <li class="text-gray-300 text-sm font-medium">Earthworks</li>
+              <li class="text-gray-300 text-sm font-medium">Site Cuts</li>
+              <li class="text-gray-300 text-sm font-medium">Detail Excavation</li>
+              <li class="text-gray-300 text-sm font-medium">Removal of Excess Oil</li>
+            </ul>
           </div>
         </a>
 
-        <a href="services.html#concrete-raft-slabs" class="service-card relative overflow-hidden block group" style="aspect-ratio: 4/3;">
-          <img src="Assets/concrete-raft-slabs.jpeg" alt="Large concrete raft slab being poured for a new build in Geelong" class="absolute inset-0 w-full h-full object-cover">
-          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/30" style="transition: background 0.3s ease;"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-6 z-10">
-            <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-1">Service</p>
-            <h3 class="heading-md text-xl sm:text-2xl text-white">Concrete Raft Slabs</h3>
-          </div>
-        </a>
-
-        <a href="services.html#earthworks" class="service-card relative overflow-hidden block group" style="aspect-ratio: 4/3;">
-          <img src="Assets/earthworks.jpeg" alt="Earthworks and land clearing on a residential site near Geelong" class="absolute inset-0 w-full h-full object-cover">
-          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/30" style="transition: background 0.3s ease;"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-6 z-10">
-            <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-1">Service</p>
-            <h3 class="heading-md text-xl sm:text-2xl text-white">Earthworks</h3>
-          </div>
-        </a>
-
-        <a href="services.html#site-cuts" class="service-card relative overflow-hidden block group" style="aspect-ratio: 4/3;">
-          <img src="Assets/site-cuts.jpeg" alt="Detail excavation and site cut in progress by Select Civil Group" class="absolute inset-0 w-full h-full object-cover">
-          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/30" style="transition: background 0.3s ease;"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-6 z-10">
-            <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-1">Service</p>
-            <h3 class="heading-md text-xl sm:text-2xl text-white">Site Cuts</h3>
-          </div>
-        </a>
-
-        <a href="services.html#concrete-paving" class="service-card relative overflow-hidden block group" style="aspect-ratio: 4/3;">
-          <img src="Assets/concrete-paving.jpeg" alt="Concrete paving work completed by Select Civil Group" class="absolute inset-0 w-full h-full object-cover">
-          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/30" style="transition: background 0.3s ease;"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-6 z-10">
-            <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-1">Service</p>
-            <h3 class="heading-md text-xl sm:text-2xl text-white">Concrete Paving</h3>
-          </div>
-        </a>
-
-      </div>
-
-      <!-- Additional Services -->
-      <div class="mt-8 border border-white/10 p-8 bg-dark-900">
-        <h3 class="heading-md text-lg text-white mb-5">We Also Do</h3>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-3">
-          <p class="text-gray-400 text-sm font-medium">Detail Excavation</p>
-          <p class="text-gray-400 text-sm font-medium">Factory Tilt Panels</p>
-          <p class="text-gray-400 text-sm font-medium">Concrete Seating</p>
-          <p class="text-gray-400 text-sm font-medium">Concrete Bench Drops</p>
-          <p class="text-gray-400 text-sm font-medium">Removal of Excess Oil</p>
-          <p class="text-gray-400 text-sm font-medium">Concrete Crossovers</p>
-        </div>
       </div>
     </div>
   </section>
@@ -936,17 +896,21 @@
                 class="w-full bg-dark-900 border border-white/10 px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-500"
                 style="transition: border-color 0.2s ease;">
                 <option value="">Select a service</option>
-                <option value="retaining-walls">Retaining Walls</option>
-                <option value="concrete-driveways">Concrete Driveways</option>
-                <option value="concrete-raft-slabs">Concrete Raft Slabs</option>
-                <option value="earthworks">Earthworks</option>
-                <option value="site-cuts">Site Cuts</option>
-                <option value="concrete-paving">Concrete Paving</option>
-                <option value="detail-excavation">Detail Excavation</option>
-                <option value="factory-tilt-panels">Factory Tilt Panels</option>
-                <option value="concrete-seating">Concrete Seating</option>
-                <option value="concrete-bench-drops">Concrete Bench Drops</option>
-                <option value="removal-excess-oil">Removal of Excess Oil</option>
+                <optgroup label="Concrete Services">
+                  <option value="retaining-walls">Retaining Walls</option>
+                  <option value="concrete-driveways">Concrete Driveways</option>
+                  <option value="concrete-raft-slabs">Concrete Raft Slabs</option>
+                  <option value="concrete-paving">Concrete Paving</option>
+                  <option value="factory-tilt-panels">Factory Tilt Panels</option>
+                  <option value="concrete-seating">Concrete Seating</option>
+                  <option value="concrete-bench-drops">Concrete Bench Drops</option>
+                </optgroup>
+                <optgroup label="Earthworks & Excavation">
+                  <option value="earthworks">Earthworks</option>
+                  <option value="site-cuts">Site Cuts</option>
+                  <option value="detail-excavation">Detail Excavation</option>
+                  <option value="removal-excess-oil">Removal of Excess Oil</option>
+                </optgroup>
                 <option value="other">Other</option>
               </select>
             </div>
@@ -982,14 +946,12 @@
         </div>
 
         <div class="grid grid-cols-2 gap-x-16 gap-y-3">
-          <a href="services.html#earthworks" class="text-white text-sm font-bold hover:text-brand-500" style="transition: color 0.2s ease;">Earthworks</a>
+          <a href="services.html#concrete-services" class="text-white text-sm font-bold hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Services</a>
           <a href="#about" class="text-white text-sm font-bold hover:text-brand-500" style="transition: color 0.2s ease;">About Us</a>
-          <a href="services.html#retaining-walls" class="text-white text-sm font-bold hover:text-brand-500" style="transition: color 0.2s ease;">Retaining Walls</a>
+          <a href="services.html#earthworks-excavation" class="text-white text-sm font-bold hover:text-brand-500" style="transition: color 0.2s ease;">Earthworks & Excavation</a>
           <a href="#contact" class="text-white text-sm font-bold hover:text-brand-500" style="transition: color 0.2s ease;">Contact</a>
-          <a href="services.html#concrete-driveways" class="text-white text-sm font-bold hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Driveways</a>
+          <a href="services.html" class="text-white text-sm font-bold hover:text-brand-500" style="transition: color 0.2s ease;">All Services</a>
           <a href="/" class="text-white text-sm font-bold hover:text-brand-500" style="transition: color 0.2s ease;">Home</a>
-          <a href="services.html#site-cuts" class="text-white text-sm font-bold hover:text-brand-500" style="transition: color 0.2s ease;">Site Cuts</a>
-          <a href="services.html#concrete-raft-slabs" class="text-white text-sm font-bold hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Slabs</a>
         </div>
       </div>
 

@@ -67,17 +67,29 @@
       "@type": "OfferCatalog",
       "name": "Civil Contracting Services",
       "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Retaining Walls", "description": "Concrete block and poured retaining walls for residential, commercial and industrial projects across Geelong." } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Concrete Raft Slabs", "description": "Raft slab foundations for new homes and commercial builds in the Geelong and Bellarine region." } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Concrete Paving", "description": "Concrete paving for paths, patios, courtyards and outdoor areas throughout Geelong." } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Concrete Driveways", "description": "Residential and commercial concrete driveways poured and finished to a high standard." } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Earthworks", "description": "Land clearing, grading and bulk earthworks for residential and commercial sites." } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Site Cuts", "description": "Precision site cuts and excavation for new builds and development sites." } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Detail Excavation", "description": "Detailed excavation for footings, trenches and underground services." } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Factory Tilt Panels", "description": "Concrete tilt panel fabrication and installation for industrial and commercial buildings." } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Concrete Seating", "description": "Custom concrete seating for public spaces, parks and commercial properties." } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Concrete Bench Drops", "description": "Concrete bench drops for retaining and level changes on residential and commercial sites." } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Removal of Excess Oil", "description": "Professional removal and disposal of excess oil from construction and industrial sites." } }
+        {
+          "@type": "OfferCatalog",
+          "name": "Concrete Services",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Retaining Walls", "description": "Concrete block and poured retaining walls for residential, commercial and industrial projects across Geelong." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Concrete Driveways", "description": "Residential and commercial concrete driveways poured and finished to a high standard." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Concrete Raft Slabs", "description": "Raft slab foundations for new homes and commercial builds in the Geelong and Bellarine region." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Concrete Paving", "description": "Concrete paving for paths, patios, courtyards and outdoor areas throughout Geelong." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Factory Tilt Panels", "description": "Concrete tilt panel fabrication and installation for industrial and commercial buildings." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Concrete Seating", "description": "Custom concrete seating for public spaces, parks and commercial properties." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Concrete Bench Drops", "description": "Concrete bench drops for retaining and level changes on residential and commercial sites." } }
+          ]
+        },
+        {
+          "@type": "OfferCatalog",
+          "name": "Earthworks & Excavation",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Earthworks", "description": "Land clearing, grading and bulk earthworks for residential and commercial sites." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Site Cuts", "description": "Precision site cuts and excavation for new builds and development sites." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Detail Excavation", "description": "Detailed excavation for footings, trenches and underground services." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Removal of Excess Oil", "description": "Professional removal and disposal of excess oil from construction and industrial sites." } }
+          ]
+        }
       ]
     }
   }
@@ -276,7 +288,7 @@
   <nav class="fixed top-0 left-0 right-0 z-50 bg-dark-950/95 backdrop-blur-sm border-b border-white/5">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
-        <a href="/" class="flex items-center">
+        <a href="index.html" class="flex items-center">
           <img src="Assets/Logo PNG.png" alt="Select Civil Group logo" class="h-10">
         </a>
 
@@ -304,65 +316,43 @@
                   </div>
                 </div>
 
-                <div class="grid grid-cols-3 gap-px bg-white/5 p-px mx-6 mt-6">
-                  <a href="services.html#retaining-walls" class="mega-service-card bg-dark-900 p-4 block">
-                    <div class="relative overflow-hidden mb-3" style="aspect-ratio: 16/10;">
-                      <img src="Assets/retaining-walls.jpeg" alt="Retaining wall construction" class="absolute inset-0 w-full h-full object-cover">
-                      <div class="absolute inset-0 bg-black/25"></div>
+                <!-- Category columns -->
+                <div class="grid grid-cols-2 gap-6 p-8">
+                  <!-- Concrete Services -->
+                  <div>
+                    <a href="#concrete-services" class="block relative overflow-hidden mb-4 group" style="aspect-ratio: 16/9;">
+                      <img src="Assets/concrete-driveways.jpeg" alt="Concrete services by Select Civil Group" class="absolute inset-0 w-full h-full object-cover" style="transition: transform 0.4s ease;">
+                      <div class="absolute inset-0 bg-black/40 group-hover:bg-black/30" style="transition: background 0.3s ease;"></div>
+                      <div class="absolute bottom-0 left-0 right-0 p-4 z-10">
+                        <p class="text-brand-500 text-xs font-bold uppercase tracking-widest">Concrete Services</p>
+                      </div>
+                    </a>
+                    <div class="flex flex-col gap-1.5">
+                      <a href="#retaining-walls" class="text-gray-400 text-sm hover:text-brand-500 font-medium" style="transition: color 0.2s ease;">Retaining Walls</a>
+                      <a href="#concrete-driveways" class="text-gray-400 text-sm hover:text-brand-500 font-medium" style="transition: color 0.2s ease;">Concrete Driveways</a>
+                      <a href="#concrete-raft-slabs" class="text-gray-400 text-sm hover:text-brand-500 font-medium" style="transition: color 0.2s ease;">Concrete Raft Slabs</a>
+                      <a href="#concrete-paving" class="text-gray-400 text-sm hover:text-brand-500 font-medium" style="transition: color 0.2s ease;">Concrete Paving</a>
+                      <a href="#factory-tilt-panels" class="text-gray-400 text-sm hover:text-brand-500 font-medium" style="transition: color 0.2s ease;">Factory Tilt Panels</a>
+                      <a href="#concrete-seating" class="text-gray-400 text-sm hover:text-brand-500 font-medium" style="transition: color 0.2s ease;">Concrete Seating</a>
+                      <a href="#concrete-bench-drops" class="text-gray-400 text-sm hover:text-brand-500 font-medium" style="transition: color 0.2s ease;">Concrete Bench Drops</a>
                     </div>
-                    <p class="mega-service-title text-white text-sm font-bold" style="transition: color 0.2s ease;">Retaining Walls</p>
-                    <p class="text-gray-500 text-xs mt-1">Concrete block and poured walls</p>
-                  </a>
-                  <a href="services.html#concrete-driveways" class="mega-service-card bg-dark-900 p-4 block">
-                    <div class="relative overflow-hidden mb-3" style="aspect-ratio: 16/10;">
-                      <img src="Assets/concrete-driveways.jpeg" alt="Concrete driveway" class="absolute inset-0 w-full h-full object-cover">
-                      <div class="absolute inset-0 bg-black/25"></div>
-                    </div>
-                    <p class="mega-service-title text-white text-sm font-bold" style="transition: color 0.2s ease;">Concrete Driveways</p>
-                    <p class="text-gray-500 text-xs mt-1">Residential and commercial</p>
-                  </a>
-                  <a href="services.html#concrete-raft-slabs" class="mega-service-card bg-dark-900 p-4 block">
-                    <div class="relative overflow-hidden mb-3" style="aspect-ratio: 16/10;">
-                      <img src="Assets/concrete-raft-slabs.jpeg" alt="Concrete raft slab" class="absolute inset-0 w-full h-full object-cover">
-                      <div class="absolute inset-0 bg-black/25"></div>
-                    </div>
-                    <p class="mega-service-title text-white text-sm font-bold" style="transition: color 0.2s ease;">Concrete Raft Slabs</p>
-                    <p class="text-gray-500 text-xs mt-1">Foundations for new builds</p>
-                  </a>
-                  <a href="services.html#earthworks" class="mega-service-card bg-dark-900 p-4 block">
-                    <div class="relative overflow-hidden mb-3" style="aspect-ratio: 16/10;">
-                      <img src="Assets/earthworks.jpeg" alt="Earthworks" class="absolute inset-0 w-full h-full object-cover">
-                      <div class="absolute inset-0 bg-black/25"></div>
-                    </div>
-                    <p class="mega-service-title text-white text-sm font-bold" style="transition: color 0.2s ease;">Earthworks</p>
-                    <p class="text-gray-500 text-xs mt-1">Land clearing and grading</p>
-                  </a>
-                  <a href="services.html#site-cuts" class="mega-service-card bg-dark-900 p-4 block">
-                    <div class="relative overflow-hidden mb-3" style="aspect-ratio: 16/10;">
-                      <img src="Assets/site-cuts.jpeg" alt="Site cuts" class="absolute inset-0 w-full h-full object-cover">
-                      <div class="absolute inset-0 bg-black/25"></div>
-                    </div>
-                    <p class="mega-service-title text-white text-sm font-bold" style="transition: color 0.2s ease;">Site Cuts</p>
-                    <p class="text-gray-500 text-xs mt-1">Precision excavation work</p>
-                  </a>
-                  <a href="services.html#concrete-paving" class="mega-service-card bg-dark-900 p-4 block">
-                    <div class="relative overflow-hidden mb-3" style="aspect-ratio: 16/10;">
-                      <img src="Assets/concrete-paving.jpeg" alt="Concrete paving" class="absolute inset-0 w-full h-full object-cover">
-                      <div class="absolute inset-0 bg-black/25"></div>
-                    </div>
-                    <p class="mega-service-title text-white text-sm font-bold" style="transition: color 0.2s ease;">Concrete Paving</p>
-                    <p class="text-gray-500 text-xs mt-1">Paths, patios, and more</p>
-                  </a>
-                </div>
+                  </div>
 
-                <div class="px-8 py-5 border-t border-white/5 mt-6">
-                  <p class="text-gray-600 text-xs font-bold uppercase tracking-widest mb-3">Also Available</p>
-                  <div class="flex flex-wrap gap-x-6 gap-y-2">
-                    <a href="services.html#detail-excavation" class="text-gray-400 text-sm hover:text-brand-500 font-medium" style="transition: color 0.2s ease;">Detail Excavation</a>
-                    <a href="services.html#factory-tilt-panels" class="text-gray-400 text-sm hover:text-brand-500 font-medium" style="transition: color 0.2s ease;">Factory Tilt Panels</a>
-                    <a href="services.html#concrete-seating" class="text-gray-400 text-sm hover:text-brand-500 font-medium" style="transition: color 0.2s ease;">Concrete Seating</a>
-                    <a href="services.html#concrete-bench-drops" class="text-gray-400 text-sm hover:text-brand-500 font-medium" style="transition: color 0.2s ease;">Concrete Bench Drops</a>
-                    <a href="services.html#removal-of-excess-oil" class="text-gray-400 text-sm hover:text-brand-500 font-medium" style="transition: color 0.2s ease;">Removal of Excess Oil</a>
+                  <!-- Earthworks & Excavation -->
+                  <div>
+                    <a href="#earthworks-excavation" class="block relative overflow-hidden mb-4 group" style="aspect-ratio: 16/9;">
+                      <img src="Assets/earthworks.jpeg" alt="Earthworks and excavation by Select Civil Group" class="absolute inset-0 w-full h-full object-cover" style="transition: transform 0.4s ease;">
+                      <div class="absolute inset-0 bg-black/40 group-hover:bg-black/30" style="transition: background 0.3s ease;"></div>
+                      <div class="absolute bottom-0 left-0 right-0 p-4 z-10">
+                        <p class="text-brand-500 text-xs font-bold uppercase tracking-widest">Earthworks & Excavation</p>
+                      </div>
+                    </a>
+                    <div class="flex flex-col gap-1.5">
+                      <a href="#earthworks" class="text-gray-400 text-sm hover:text-brand-500 font-medium" style="transition: color 0.2s ease;">Earthworks</a>
+                      <a href="#site-cuts" class="text-gray-400 text-sm hover:text-brand-500 font-medium" style="transition: color 0.2s ease;">Site Cuts</a>
+                      <a href="#detail-excavation" class="text-gray-400 text-sm hover:text-brand-500 font-medium" style="transition: color 0.2s ease;">Detail Excavation</a>
+                      <a href="#removal-of-excess-oil" class="text-gray-400 text-sm hover:text-brand-500 font-medium" style="transition: color 0.2s ease;">Removal of Excess Oil</a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -396,17 +386,19 @@
         </button>
         <div id="mobile-services-list" class="mobile-services-list pl-4">
           <div class="border-l-2 border-brand-500/30 pl-4 flex flex-col gap-1 pb-3">
-            <a href="services.html#retaining-walls" onclick="toggleMobileMenu()" class="text-gray-400 text-sm font-semibold py-2 hover:text-brand-500" style="transition: color 0.2s ease;">Retaining Walls</a>
-            <a href="services.html#concrete-driveways" onclick="toggleMobileMenu()" class="text-gray-400 text-sm font-semibold py-2 hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Driveways</a>
-            <a href="services.html#concrete-raft-slabs" onclick="toggleMobileMenu()" class="text-gray-400 text-sm font-semibold py-2 hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Raft Slabs</a>
-            <a href="services.html#earthworks" onclick="toggleMobileMenu()" class="text-gray-400 text-sm font-semibold py-2 hover:text-brand-500" style="transition: color 0.2s ease;">Earthworks</a>
-            <a href="services.html#site-cuts" onclick="toggleMobileMenu()" class="text-gray-400 text-sm font-semibold py-2 hover:text-brand-500" style="transition: color 0.2s ease;">Site Cuts</a>
-            <a href="services.html#concrete-paving" onclick="toggleMobileMenu()" class="text-gray-400 text-sm font-semibold py-2 hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Paving</a>
-            <a href="services.html#detail-excavation" onclick="toggleMobileMenu()" class="text-gray-400 text-sm font-semibold py-2 hover:text-brand-500" style="transition: color 0.2s ease;">Detail Excavation</a>
-            <a href="services.html#factory-tilt-panels" onclick="toggleMobileMenu()" class="text-gray-400 text-sm font-semibold py-2 hover:text-brand-500" style="transition: color 0.2s ease;">Factory Tilt Panels</a>
-            <a href="services.html#concrete-seating" onclick="toggleMobileMenu()" class="text-gray-400 text-sm font-semibold py-2 hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Seating</a>
-            <a href="services.html#concrete-bench-drops" onclick="toggleMobileMenu()" class="text-gray-400 text-sm font-semibold py-2 hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Bench Drops</a>
-            <a href="services.html#removal-of-excess-oil" onclick="toggleMobileMenu()" class="text-gray-400 text-sm font-semibold py-2 hover:text-brand-500" style="transition: color 0.2s ease;">Removal of Excess Oil</a>
+            <p class="text-brand-500 text-xs font-bold uppercase tracking-widest pt-2 pb-1">Concrete</p>
+            <a href="#retaining-walls" onclick="toggleMobileMenu()" class="text-gray-400 text-sm font-semibold py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Retaining Walls</a>
+            <a href="#concrete-driveways" onclick="toggleMobileMenu()" class="text-gray-400 text-sm font-semibold py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Driveways</a>
+            <a href="#concrete-raft-slabs" onclick="toggleMobileMenu()" class="text-gray-400 text-sm font-semibold py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Raft Slabs</a>
+            <a href="#concrete-paving" onclick="toggleMobileMenu()" class="text-gray-400 text-sm font-semibold py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Paving</a>
+            <a href="#factory-tilt-panels" onclick="toggleMobileMenu()" class="text-gray-400 text-sm font-semibold py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Factory Tilt Panels</a>
+            <a href="#concrete-seating" onclick="toggleMobileMenu()" class="text-gray-400 text-sm font-semibold py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Seating</a>
+            <a href="#concrete-bench-drops" onclick="toggleMobileMenu()" class="text-gray-400 text-sm font-semibold py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Bench Drops</a>
+            <p class="text-brand-500 text-xs font-bold uppercase tracking-widest pt-4 pb-1">Earthworks & Excavation</p>
+            <a href="#earthworks" onclick="toggleMobileMenu()" class="text-gray-400 text-sm font-semibold py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Earthworks</a>
+            <a href="#site-cuts" onclick="toggleMobileMenu()" class="text-gray-400 text-sm font-semibold py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Site Cuts</a>
+            <a href="#detail-excavation" onclick="toggleMobileMenu()" class="text-gray-400 text-sm font-semibold py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Detail Excavation</a>
+            <a href="#removal-of-excess-oil" onclick="toggleMobileMenu()" class="text-gray-400 text-sm font-semibold py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Removal of Excess Oil</a>
           </div>
         </div>
 
@@ -455,59 +447,42 @@
         </p>
       </div>
 
-      <!-- Primary Services Grid -->
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-1">
-        <a href="#retaining-walls" class="service-card relative overflow-hidden block group" style="aspect-ratio: 4/3;">
-          <img src="Assets/retaining-walls.jpeg" alt="Concrete retaining wall construction by Select Civil Group in Geelong" class="absolute inset-0 w-full h-full object-cover">
-          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/30" style="transition: background 0.3s ease;"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-6 z-10">
-            <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-1">Service</p>
-            <h3 class="heading-md text-xl sm:text-2xl text-white">Retaining Walls</h3>
+      <!-- Service Categories -->
+      <div class="grid md:grid-cols-2 gap-1">
+        <!-- Concrete Services -->
+        <a href="#concrete-services" class="service-card relative overflow-hidden block group" style="aspect-ratio: 3/4;">
+          <img src="Assets/concrete-driveways.jpeg" alt="Concrete services by Select Civil Group - driveways, slabs, retaining walls across Geelong" class="absolute inset-0 w-full h-full object-cover">
+          <div class="absolute inset-0 bg-black/50 group-hover:bg-black/40" style="transition: background 0.3s ease;"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-8 z-10">
+            <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-2">Category</p>
+            <h3 class="heading-lg text-2xl sm:text-3xl text-white mb-4">Concrete Services</h3>
+            <ul class="space-y-1.5">
+              <li class="text-gray-300 text-sm font-medium">Retaining Walls</li>
+              <li class="text-gray-300 text-sm font-medium">Concrete Driveways</li>
+              <li class="text-gray-300 text-sm font-medium">Concrete Raft Slabs</li>
+              <li class="text-gray-300 text-sm font-medium">Concrete Paving</li>
+              <li class="text-gray-300 text-sm font-medium">Factory Tilt Panels</li>
+              <li class="text-gray-300 text-sm font-medium">Concrete Seating</li>
+              <li class="text-gray-300 text-sm font-medium">Concrete Bench Drops</li>
+            </ul>
           </div>
         </a>
 
-        <a href="#concrete-driveways" class="service-card relative overflow-hidden block group" style="aspect-ratio: 4/3;">
-          <img src="Assets/concrete-driveways.jpeg" alt="Freshly poured concrete driveway by Select Civil Group" class="absolute inset-0 w-full h-full object-cover">
-          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/30" style="transition: background 0.3s ease;"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-6 z-10">
-            <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-1">Service</p>
-            <h3 class="heading-md text-xl sm:text-2xl text-white">Concrete Driveways</h3>
-          </div>
-        </a>
-
-        <a href="#concrete-raft-slabs" class="service-card relative overflow-hidden block group" style="aspect-ratio: 4/3;">
-          <img src="Assets/concrete-raft-slabs.jpeg" alt="Large concrete raft slab being poured for a new build in Geelong" class="absolute inset-0 w-full h-full object-cover">
-          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/30" style="transition: background 0.3s ease;"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-6 z-10">
-            <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-1">Service</p>
-            <h3 class="heading-md text-xl sm:text-2xl text-white">Concrete Raft Slabs</h3>
-          </div>
-        </a>
-
-        <a href="#earthworks" class="service-card relative overflow-hidden block group" style="aspect-ratio: 4/3;">
-          <img src="Assets/earthworks.jpeg" alt="Earthworks and land clearing on a residential site near Geelong" class="absolute inset-0 w-full h-full object-cover">
-          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/30" style="transition: background 0.3s ease;"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-6 z-10">
-            <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-1">Service</p>
-            <h3 class="heading-md text-xl sm:text-2xl text-white">Earthworks</h3>
-          </div>
-        </a>
-
-        <a href="#site-cuts" class="service-card relative overflow-hidden block group" style="aspect-ratio: 4/3;">
-          <img src="Assets/site-cuts.jpeg" alt="Site cut and excavation in progress by Select Civil Group" class="absolute inset-0 w-full h-full object-cover">
-          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/30" style="transition: background 0.3s ease;"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-6 z-10">
-            <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-1">Service</p>
-            <h3 class="heading-md text-xl sm:text-2xl text-white">Site Cuts</h3>
-          </div>
-        </a>
-
-        <a href="#concrete-paving" class="service-card relative overflow-hidden block group" style="aspect-ratio: 4/3;">
-          <img src="Assets/concrete-paving.jpeg" alt="Concrete paving work completed by Select Civil Group" class="absolute inset-0 w-full h-full object-cover">
-          <div class="absolute inset-0 bg-black/40 group-hover:bg-black/30" style="transition: background 0.3s ease;"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-6 z-10">
-            <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-1">Service</p>
-            <h3 class="heading-md text-xl sm:text-2xl text-white">Concrete Paving</h3>
+        <!-- Earthworks & Excavation -->
+        <a href="#earthworks-excavation" class="service-card relative overflow-hidden block group" style="aspect-ratio: 3/4;">
+          <img src="Assets/earthworks.jpeg" alt="Earthworks and excavation services by Select Civil Group across Geelong and Bellarine" class="absolute inset-0 w-full h-full object-cover">
+          <div class="absolute inset-0 bg-black/50 group-hover:bg-black/40" style="transition: background 0.3s ease;"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-8 z-10">
+            <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-2">Category</p>
+            <h3 class="heading-lg text-2xl sm:text-3xl text-white mb-4">Earthworks & Excavation</h3>
+            <ul class="space-y-1.5">
+              <li class="text-gray-300 text-sm font-medium">Earthworks</li>
+              <li class="text-gray-300 text-sm font-medium">Site Cuts</li>
+              <li class="text-gray-300 text-sm font-medium">Detail Excavation</li>
+              <li class="text-gray-300 text-sm font-medium">Removal of Excess Oil</li>
+            </ul>
           </div>
         </a>
       </div>
@@ -517,6 +492,15 @@
 
   <!-- ========== SERVICE DETAILS ========== -->
   <section class="bg-dark-900 border-t border-white/5">
+
+    <!-- ===== CONCRETE SERVICES ===== -->
+    <div id="concrete-services" class="scroll-mt-20 py-16 lg:py-20 border-b border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="accent-bar mb-4"></div>
+        <h2 class="heading-lg text-3xl sm:text-4xl lg:text-5xl text-white mb-3">Concrete Services</h2>
+        <p class="body-text text-lg max-w-3xl">Driveways, retaining walls, raft slabs, paving, tilt panels, and custom concrete work for residential, commercial, and industrial projects.</p>
+      </div>
+    </div>
 
     <!-- Retaining Walls -->
     <article id="retaining-walls" class="service-detail py-20 lg:py-28 border-b border-white/5 scroll-mt-20">
@@ -587,52 +571,6 @@
       </div>
     </article>
 
-    <!-- Earthworks -->
-    <article id="earthworks" class="service-detail py-20 lg:py-28 border-b border-white/5 scroll-mt-20">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="service-detail-inner flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
-          <div class="lg:w-1/2">
-            <div class="relative overflow-hidden" style="aspect-ratio: 4/3;">
-              <img src="Assets/earthworks.jpeg" alt="Earthworks and land clearing by Select Civil Group on a site in Geelong" class="w-full h-full object-cover">
-              <div class="absolute inset-0 bg-black/15"></div>
-            </div>
-          </div>
-          <div class="lg:w-1/2">
-            <div class="accent-bar mb-4"></div>
-            <h2 class="heading-lg text-3xl sm:text-4xl text-white mb-6">Earthworks</h2>
-            <div class="space-y-4 body-text">
-              <p>Every construction project starts with the ground. Select Civil Group provides earthworks services across the Geelong and Bellarine region, including land clearing, grading, levelling, bulk cut and fill, and soil compaction. Whether you are preparing a single residential lot or a multi-stage subdivision, we have the machinery and the experience to get the ground right.</p>
-              <p>Proper earthworks are the foundation of everything that follows. Poorly prepared ground leads to drainage problems, foundation issues, and costly rework down the line. We use laser-guided grading equipment and work to engineering specifications to ensure your site is prepared correctly the first time, with spoil removal and disposal handled as part of the service.</p>
-            </div>
-            <a href="/#contact" class="btn-fill inline-block px-7 py-3 text-sm mt-8">Get a Quote</a>
-          </div>
-        </div>
-      </div>
-    </article>
-
-    <!-- Site Cuts -->
-    <article id="site-cuts" class="service-detail py-20 lg:py-28 border-b border-white/5 scroll-mt-20">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="service-detail-inner flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
-          <div class="lg:w-1/2">
-            <div class="relative overflow-hidden" style="aspect-ratio: 4/3;">
-              <img src="Assets/site-cuts.jpeg" alt="Precision site cut by Select Civil Group for a new build near Geelong" class="w-full h-full object-cover">
-              <div class="absolute inset-0 bg-black/15"></div>
-            </div>
-          </div>
-          <div class="lg:w-1/2">
-            <div class="accent-bar mb-4"></div>
-            <h2 class="heading-lg text-3xl sm:text-4xl text-white mb-6">Site Cuts</h2>
-            <div class="space-y-4 body-text">
-              <p>Site cuts create the level building platform needed before any construction can begin. Select Civil Group performs precision site cuts for new homes, extensions, sheds, and commercial buildings throughout Geelong and the surrounding region. We cut to the exact levels specified by your engineer, ensuring the site is ready for footings and slabs without delays.</p>
-              <p>Our operators work with modern excavation equipment and laser levels to achieve accurate, consistent results. We handle the full scope of work including topsoil stripping, cut and fill balancing, compaction, and spoil removal. If your block has a slope, a site cut is the first step to turning it into a buildable surface, and getting it right at this stage saves time and money on everything that follows.</p>
-            </div>
-            <a href="/#contact" class="btn-fill inline-block px-7 py-3 text-sm mt-8">Get a Quote</a>
-          </div>
-        </div>
-      </div>
-    </article>
-
     <!-- Concrete Paving -->
     <article id="concrete-paving" class="service-detail py-20 lg:py-28 border-b border-white/5 scroll-mt-20">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -649,29 +587,6 @@
             <div class="space-y-4 body-text">
               <p>Concrete paving is a durable, low-maintenance solution for paths, patios, courtyards, pool surrounds, and outdoor entertaining areas. Select Civil Group delivers concrete paving work across Geelong and the Bellarine Peninsula for both residential and commercial properties, creating clean, functional surfaces that hold up to the local climate and heavy use.</p>
               <p>We work with a range of finishes including broom finish, exposed aggregate, stamped patterns, and coloured concrete to suit your design preferences and budget. Every paved area is built on a properly prepared base with appropriate falls for drainage, expansion joints to manage movement, and reinforcement where required.</p>
-            </div>
-            <a href="/#contact" class="btn-fill inline-block px-7 py-3 text-sm mt-8">Get a Quote</a>
-          </div>
-        </div>
-      </div>
-    </article>
-
-    <!-- Detail Excavation -->
-    <article id="detail-excavation" class="service-detail py-20 lg:py-28 border-b border-white/5 scroll-mt-20">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="service-detail-inner flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
-          <div class="lg:w-1/2">
-            <div class="relative overflow-hidden bg-dark-800" style="aspect-ratio: 4/3;">
-              <img src="Assets/site-cuts.jpeg" alt="Detail excavation work by Select Civil Group in Geelong" class="w-full h-full object-cover">
-              <div class="absolute inset-0 bg-black/15"></div>
-            </div>
-          </div>
-          <div class="lg:w-1/2">
-            <div class="accent-bar mb-4"></div>
-            <h2 class="heading-lg text-3xl sm:text-4xl text-white mb-6">Detail Excavation</h2>
-            <div class="space-y-4 body-text">
-              <p>Detail excavation is the precise digging work required for footings, trenches, service trenches, stormwater lines, and other below-ground structures. Select Civil Group performs detail excavation on residential and commercial sites across Geelong, working to engineering drawings and specifications to deliver accurate, clean results.</p>
-              <p>We use a range of excavators suited to tight-access sites and confined spaces, ensuring we can get the job done efficiently without damaging surrounding structures, landscaping, or services. Detail excavation demands accuracy, and our operators have the experience to dig to exact depths, widths, and profiles specified by your engineer or builder.</p>
             </div>
             <a href="/#contact" class="btn-fill inline-block px-7 py-3 text-sm mt-8">Get a Quote</a>
           </div>
@@ -748,6 +663,84 @@
       </div>
     </article>
 
+    <!-- ===== EARTHWORKS & EXCAVATION ===== -->
+    <div id="earthworks-excavation" class="scroll-mt-20 py-16 lg:py-20 border-b border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="accent-bar mb-4"></div>
+        <h2 class="heading-lg text-3xl sm:text-4xl lg:text-5xl text-white mb-3">Earthworks & Excavation</h2>
+        <p class="body-text text-lg max-w-3xl">Site preparation, land clearing, precision excavation, and environmental services to get your project started on solid ground.</p>
+      </div>
+    </div>
+
+    <!-- Earthworks -->
+    <article id="earthworks" class="service-detail py-20 lg:py-28 border-b border-white/5 scroll-mt-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="service-detail-inner flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
+          <div class="lg:w-1/2">
+            <div class="relative overflow-hidden" style="aspect-ratio: 4/3;">
+              <img src="Assets/earthworks.jpeg" alt="Earthworks and land clearing by Select Civil Group on a site in Geelong" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-black/15"></div>
+            </div>
+          </div>
+          <div class="lg:w-1/2">
+            <div class="accent-bar mb-4"></div>
+            <h2 class="heading-lg text-3xl sm:text-4xl text-white mb-6">Earthworks</h2>
+            <div class="space-y-4 body-text">
+              <p>Every construction project starts with the ground. Select Civil Group provides earthworks services across the Geelong and Bellarine region, including land clearing, grading, levelling, bulk cut and fill, and soil compaction. Whether you are preparing a single residential lot or a multi-stage subdivision, we have the machinery and the experience to get the ground right.</p>
+              <p>Proper earthworks are the foundation of everything that follows. Poorly prepared ground leads to drainage problems, foundation issues, and costly rework down the line. We use laser-guided grading equipment and work to engineering specifications to ensure your site is prepared correctly the first time, with spoil removal and disposal handled as part of the service.</p>
+            </div>
+            <a href="/#contact" class="btn-fill inline-block px-7 py-3 text-sm mt-8">Get a Quote</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Site Cuts -->
+    <article id="site-cuts" class="service-detail py-20 lg:py-28 border-b border-white/5 scroll-mt-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="service-detail-inner flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
+          <div class="lg:w-1/2">
+            <div class="relative overflow-hidden" style="aspect-ratio: 4/3;">
+              <img src="Assets/site-cuts.jpeg" alt="Precision site cut by Select Civil Group for a new build near Geelong" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-black/15"></div>
+            </div>
+          </div>
+          <div class="lg:w-1/2">
+            <div class="accent-bar mb-4"></div>
+            <h2 class="heading-lg text-3xl sm:text-4xl text-white mb-6">Site Cuts</h2>
+            <div class="space-y-4 body-text">
+              <p>Site cuts create the level building platform needed before any construction can begin. Select Civil Group performs precision site cuts for new homes, extensions, sheds, and commercial buildings throughout Geelong and the surrounding region. We cut to the exact levels specified by your engineer, ensuring the site is ready for footings and slabs without delays.</p>
+              <p>Our operators work with modern excavation equipment and laser levels to achieve accurate, consistent results. We handle the full scope of work including topsoil stripping, cut and fill balancing, compaction, and spoil removal. If your block has a slope, a site cut is the first step to turning it into a buildable surface, and getting it right at this stage saves time and money on everything that follows.</p>
+            </div>
+            <a href="/#contact" class="btn-fill inline-block px-7 py-3 text-sm mt-8">Get a Quote</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Detail Excavation -->
+    <article id="detail-excavation" class="service-detail py-20 lg:py-28 border-b border-white/5 scroll-mt-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="service-detail-inner flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
+          <div class="lg:w-1/2">
+            <div class="relative overflow-hidden bg-dark-800" style="aspect-ratio: 4/3;">
+              <img src="Assets/site-cuts.jpeg" alt="Detail excavation work by Select Civil Group in Geelong" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-black/15"></div>
+            </div>
+          </div>
+          <div class="lg:w-1/2">
+            <div class="accent-bar mb-4"></div>
+            <h2 class="heading-lg text-3xl sm:text-4xl text-white mb-6">Detail Excavation</h2>
+            <div class="space-y-4 body-text">
+              <p>Detail excavation is the precise digging work required for footings, trenches, service trenches, stormwater lines, and other below-ground structures. Select Civil Group performs detail excavation on residential and commercial sites across Geelong, working to engineering drawings and specifications to deliver accurate, clean results.</p>
+              <p>We use a range of excavators suited to tight-access sites and confined spaces, ensuring we can get the job done efficiently without damaging surrounding structures, landscaping, or services. Detail excavation demands accuracy, and our operators have the experience to dig to exact depths, widths, and profiles specified by your engineer or builder.</p>
+            </div>
+            <a href="/#contact" class="btn-fill inline-block px-7 py-3 text-sm mt-8">Get a Quote</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
     <!-- Removal of Excess Oil -->
     <article id="removal-of-excess-oil" class="service-detail py-20 lg:py-28 scroll-mt-20">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -803,14 +796,12 @@
         </div>
 
         <div class="grid grid-cols-2 gap-x-16 gap-y-3">
-          <a href="services.html#earthworks" class="text-white text-sm font-bold hover:text-brand-500" style="transition: color 0.2s ease;">Earthworks</a>
+          <a href="#concrete-services" class="text-white text-sm font-bold hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Services</a>
           <a href="/#about" class="text-white text-sm font-bold hover:text-brand-500" style="transition: color 0.2s ease;">About Us</a>
-          <a href="services.html#retaining-walls" class="text-white text-sm font-bold hover:text-brand-500" style="transition: color 0.2s ease;">Retaining Walls</a>
+          <a href="#earthworks-excavation" class="text-white text-sm font-bold hover:text-brand-500" style="transition: color 0.2s ease;">Earthworks & Excavation</a>
           <a href="/#contact" class="text-white text-sm font-bold hover:text-brand-500" style="transition: color 0.2s ease;">Contact</a>
-          <a href="services.html#concrete-driveways" class="text-white text-sm font-bold hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Driveways</a>
+          <a href="services.html" class="text-white text-sm font-bold hover:text-brand-500" style="transition: color 0.2s ease;">All Services</a>
           <a href="/" class="text-white text-sm font-bold hover:text-brand-500" style="transition: color 0.2s ease;">Home</a>
-          <a href="services.html#site-cuts" class="text-white text-sm font-bold hover:text-brand-500" style="transition: color 0.2s ease;">Site Cuts</a>
-          <a href="services.html#concrete-raft-slabs" class="text-white text-sm font-bold hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Slabs</a>
         </div>
       </div>
 
