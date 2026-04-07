@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Earthworks & Excavation Geelong - Site Cuts & Land Clearing | Select Civil Group</title>
-  <meta name="description" content="Earthworks, site cuts, detail excavation and land clearing across Geelong and the Bellarine Peninsula. Professional civil earthworks by Select Civil Group. Free quotes available.">
-  <link rel="canonical" href="https://selectcivilgroup.com.au/earthworks-excavation.html">
+  <title>About Select Civil Group - Civil Contractor Geelong | Our Story</title>
+  <meta name="description" content="Learn about Select Civil Group - a locally owned civil contractor in Geelong. Owner-operated, fully insured earthworks and concrete services across Bellarine Peninsula.">
+  <link rel="canonical" href="https://selectcivilgroup.com.au/about.html">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Earthworks & Excavation Geelong - Select Civil Group">
-  <meta property="og:description" content="Site cuts, earthworks, detail excavation and land clearing across Geelong and the Bellarine Peninsula.">
+  <meta property="og:title" content="About Select Civil Group - Civil Contractor Geelong">
+  <meta property="og:description" content="Locally owned, owner-operated civil contractor delivering earthworks and concrete across Geelong, Bellarine Peninsula and surrounding regions.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://selectcivilgroup.com.au/earthworks-excavation.html">
+  <meta property="og:url" content="https://selectcivilgroup.com.au/about.html">
   <meta property="og:image" content="https://selectcivilgroup.com.au/Assets/Logo%20PNG.png">
 
   <!-- Tailwind -->
@@ -47,44 +47,49 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <!-- JSON-LD: Service -->
+  <!-- JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": "Earthworks & Excavation",
-    "provider": {
+    "@type": "AboutPage",
+    "mainEntity": {
       "@type": "LocalBusiness",
       "@id": "https://selectcivilgroup.com.au/#business",
-      "name": "Select Civil Group Pty Ltd"
-    },
-    "areaServed": [
-      { "@type": "City", "name": "Geelong" },
-      { "@type": "Place", "name": "Bellarine Peninsula" },
-      { "@type": "City", "name": "Torquay" }
-    ],
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Earthworks & Excavation",
-      "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Earthworks", "description": "Land clearing, grading and bulk earthworks for residential and commercial sites." } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Site Cuts", "description": "Precision site cuts and excavation for new builds and development sites." } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Detail Excavation", "description": "Detailed excavation for footings, trenches and underground services." } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Removal of Excess Oil", "description": "Professional removal and disposal of excess oil from construction and industrial sites." } }
-      ]
+      "name": "Select Civil Group Pty Ltd",
+      "description": "Locally owned and operated civil contractor in Geelong delivering earthworks, concrete driveways, retaining walls, site cuts and concrete slabs across the Bellarine Peninsula and surrounding regions.",
+      "url": "https://selectcivilgroup.com.au",
+      "logo": "https://selectcivilgroup.com.au/Assets/Logo%20PNG.png",
+      "telephone": "+61483092615",
+      "email": "selectcivilgroupvic@outlook.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Geelong",
+        "addressRegion": "VIC",
+        "postalCode": "3226",
+        "addressCountry": "AU"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Geelong" },
+        { "@type": "Place", "name": "Bellarine Peninsula" },
+        { "@type": "City", "name": "Torquay" }
+      ],
+      "openingHours": "Mo-Fr 07:00-17:00",
+      "founder": {
+        "@type": "Person",
+        "name": "Andrew Sterling"
+      }
     }
   }
   </script>
 
-  <!-- JSON-LD: BreadcrumbList -->
+  <!-- BreadcrumbList Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://selectcivilgroup.com.au/" },
-      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://selectcivilgroup.com.au/services.html" },
-      { "@type": "ListItem", "position": 3, "name": "Earthworks & Excavation", "item": "https://selectcivilgroup.com.au/earthworks-excavation.html" }
+      { "@type": "ListItem", "position": 2, "name": "About", "item": "https://selectcivilgroup.com.au/about.html" }
     ]
   }
   </script>
@@ -245,16 +250,6 @@
       pointer-events: none;
       z-index: 1;
     }
-
-    /* Service detail sections alternate */
-    .service-detail:nth-child(even) .service-detail-inner {
-      flex-direction: row-reverse;
-    }
-    @media (max-width: 1023px) {
-      .service-detail:nth-child(even) .service-detail-inner {
-        flex-direction: column;
-      }
-    }
   </style>
 </head>
 <body class="bg-dark-950 text-white font-body">
@@ -268,14 +263,12 @@
         </a>
 
         <div class="hidden lg:flex items-center gap-8">
-          <!-- Services mega dropdown trigger -->
           <div class="mega-trigger">
-            <a href="services.html" class="nav-link text-brand-500 text-sm font-semibold uppercase tracking-wider flex items-center gap-1.5">
+            <a href="services.html" class="nav-link text-gray-400 text-sm font-semibold uppercase tracking-wider flex items-center gap-1.5">
               Services
               <svg class="mega-chevron w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
             </a>
 
-            <!-- Dropdown panel -->
             <div class="mega-dropdown" style="width: 340px; left: -60px;">
               <div class="bg-dark-900 border border-white/10 shadow-2xl p-3" style="box-shadow: 0 25px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.05);">
                 <a href="concrete-services.html" class="mega-service-card flex items-center gap-4 p-3 rounded-lg">
@@ -300,7 +293,7 @@
             </div>
           </div>
 
-          <a href="about.html" class="nav-link text-gray-400 text-sm font-semibold uppercase tracking-wider">About</a>
+          <a href="about.html" class="nav-link text-white text-sm font-semibold uppercase tracking-wider">About</a>
           <a href="projects.html" class="nav-link text-gray-400 text-sm font-semibold uppercase tracking-wider">Projects</a>
           <a href="tel:0483092615" class="nav-link text-gray-400 text-sm font-semibold flex items-center gap-1.5"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>0483 092 615</a>
           <a href="index.html#contact" class="btn-fill px-6 py-2.5 text-sm">Get a Quote</a>
@@ -320,7 +313,7 @@
     <!-- Mobile menu -->
     <div id="mobile-menu" class="mobile-menu fixed top-16 right-0 bottom-0 w-80 bg-dark-900 border-l border-white/5 p-8 lg:hidden z-50 overflow-y-auto">
       <div class="flex flex-col gap-1">
-        <button onclick="toggleMobileServices()" class="flex items-center justify-between w-full text-brand-500 text-lg font-bold uppercase tracking-wider py-3" style="transition: color 0.2s ease;">
+        <button onclick="toggleMobileServices()" class="flex items-center justify-between w-full text-gray-300 text-lg font-bold uppercase tracking-wider hover:text-brand-500 py-3" style="transition: color 0.2s ease;">
           Services
           <svg id="mobile-services-chevron" class="w-5 h-5" style="transition: transform 0.3s ease;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
         </button>
@@ -331,7 +324,7 @@
           </div>
         </div>
 
-        <a href="about.html" onclick="toggleMobileMenu()" class="text-gray-300 text-lg font-bold uppercase tracking-wider hover:text-brand-500 py-3" style="transition: color 0.2s ease;">About</a>
+        <a href="about.html" class="text-white text-lg font-bold uppercase tracking-wider hover:text-brand-500 py-3" style="transition: color 0.2s ease;">About</a>
         <a href="projects.html" onclick="toggleMobileMenu()" class="text-gray-300 text-lg font-bold uppercase tracking-wider hover:text-brand-500 py-3" style="transition: color 0.2s ease;">Projects</a>
         <a href="tel:0483092615" onclick="toggleMobileMenu()" class="flex items-center gap-2 text-gray-300 text-lg font-bold uppercase tracking-wider hover:text-brand-500 py-3" style="transition: color 0.2s ease;"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>0483 092 615</a>
         <a href="index.html#contact" onclick="toggleMobileMenu()" class="btn-fill text-center px-6 py-3 mt-4">Get a Quote</a>
@@ -340,154 +333,204 @@
   </nav>
 
 
-  <!-- ========== HERO ========== -->
+  <!-- ========== PAGE HERO ========== -->
   <section class="relative pt-16">
-    <div class="relative overflow-hidden" style="height: 420px;">
-      <img src="Assets/earthworks.jpeg" alt="Earthworks and excavation services by Select Civil Group in Geelong" class="w-full h-full object-cover">
+    <div class="relative h-64 sm:h-80 lg:h-96 overflow-hidden">
+      <img src="Assets/concrete-raft-slabs.jpeg" alt="Select Civil Group crew working on a concrete project in Geelong" class="w-full h-full object-cover">
       <div class="absolute inset-0 bg-black/60"></div>
-      <div class="absolute inset-0 bg-gradient-to-t from-dark-950 via-transparent to-transparent"></div>
-      <div class="absolute inset-0 flex items-center">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <!-- Breadcrumb -->
-          <nav aria-label="Breadcrumb" class="mb-4">
-            <ol class="flex items-center gap-2 text-sm">
-              <li><a href="index.html" class="text-gray-400 hover:text-brand-500" style="transition: color 0.2s ease;">Home</a></li>
-              <li class="text-gray-600">/</li>
-              <li><a href="services.html" class="text-gray-400 hover:text-brand-500" style="transition: color 0.2s ease;">Services</a></li>
-              <li class="text-gray-600">/</li>
-              <li class="text-brand-500 font-semibold">Earthworks & Excavation</li>
-            </ol>
-          </nav>
-          <h1 class="heading-xl text-4xl sm:text-5xl md:text-6xl text-white mb-4">Earthworks & Excavation</h1>
-          <p class="text-gray-300 text-lg max-w-2xl" style="line-height: 1.7;">Site preparation, land clearing, precision excavation, and environmental services to get your project started on solid ground across Geelong and the Bellarine Peninsula.</p>
+      <div class="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/20 to-transparent"></div>
+      <div class="absolute bottom-0 left-0 right-0 z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10 lg:pb-14">
+        <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-3">Geelong - Bellarine Peninsula</p>
+        <h1 class="heading-xl text-4xl sm:text-5xl lg:text-6xl text-white">About Us</h1>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== EARTHWORKS AND CONCRETE DONE RIGHT ========== -->
+  <section class="bg-dark-900 py-20 lg:py-28 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-0">
+
+        <!-- Left: Image -->
+        <div class="relative lg:pr-8">
+          <div class="relative overflow-hidden" style="aspect-ratio: 4/3;">
+            <img src="Assets/concrete-slabs.jpeg" alt="Large concrete slab pour by Select Civil Group on the Bellarine Peninsula" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/15"></div>
+          </div>
+          <div class="absolute bottom-6 left-6 bg-brand-500 px-5 py-3">
+            <p class="text-dark-950 text-xs font-black uppercase tracking-widest">Est. Geelong</p>
+          </div>
+        </div>
+
+        <!-- Right: Content -->
+        <div class="lg:pl-8 lg:border-l lg:border-white/10 flex flex-col justify-center">
+          <div class="accent-bar mb-4"></div>
+          <h2 class="heading-lg text-3xl sm:text-4xl text-white mb-6">Earthworks and Concrete Done Right</h2>
+
+          <div class="space-y-4 body-text">
+            <p>
+              Select Civil Group is a Geelong-based civil construction company proudly servicing the Bellarine Peninsula and surrounding regions throughout Victoria. We specialise in a comprehensive and wide range of civil, concrete, and excavation works, consistently delivering reliable, high-quality results across diverse residential, commercial, and industrial projects of all sizes. With our experienced team and commitment to excellence, we are dedicated to bringing your vision to life with precision and professionalism.
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
 
-  <!-- ========== INTRO ========== -->
-  <section class="bg-dark-950 py-20 lg:py-28">
+  <!-- ========== THE WORK THAT HOLDS UP EVERYTHING ELSE ========== -->
+  <section class="bg-dark-950 py-20 lg:py-28 border-t border-white/5">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-3xl">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+        <div>
+          <div class="accent-bar mb-4"></div>
+          <h2 class="heading-lg text-3xl sm:text-4xl text-white mb-6">The Work That Holds Up Everything Else</h2>
+
+          <div class="space-y-4 body-text">
+            <p>
+              Retaining walls, concrete slabs, driveways, and site cuts demand precision and experience to ensure structural integrity and longevity. We handle factory tilt panels, concrete seating, and comprehensive excavation work with the same meticulous attention to detail and craftsmanship, whether the job is a straightforward residential driveway or a large-scale commercial infrastructure project. Our team brings years of expertise to every aspect of concrete construction and site preparation, guaranteeing that each project meets the highest standards of quality and safety, regardless of scope or complexity.
+            </p>
+          </div>
+        </div>
+
+        <div class="relative overflow-hidden" style="aspect-ratio: 4/3;">
+          <img src="Assets/concrete-raft-slabs.jpeg" alt="Concrete building under construction with large open sections and construction equipment on site" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-black/15"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== BUILT ON PRECISION AND PARTNERSHIP ========== -->
+  <section class="bg-dark-900 py-20 lg:py-28 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+        <div class="relative overflow-hidden lg:order-1" style="aspect-ratio: 4/3;">
+          <img src="Assets/earthworks.jpeg" alt="Select Civil Group earthworks machinery operating on a residential site in Geelong" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-black/15"></div>
+        </div>
+
+        <div class="lg:order-2">
+          <div class="accent-bar mb-4"></div>
+          <h2 class="heading-lg text-3xl sm:text-4xl text-white mb-6">Built on Precision and Partnership</h2>
+
+          <div class="space-y-4 body-text">
+            <p>
+              We work closely with builders, developers, and project managers throughout every phase of construction to keep every job on track and moving forward smoothly. From initial site preparation and foundation work through to the final finished concrete installations, we handle all the important details and specifications that separate good work from work that truly lasts. Our comprehensive approach ensures that every project meets the highest standards of quality and durability.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== HOW WE WORK ========== -->
+  <section class="bg-dark-800 py-20 lg:py-28 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-14">
         <div class="accent-bar mb-4"></div>
-        <h2 class="heading-lg text-3xl sm:text-4xl lg:text-5xl text-white mb-6">Ground Up</h2>
+        <h2 class="heading-lg text-3xl sm:text-4xl text-white mb-4">How We Work</h2>
         <p class="body-text text-lg">
-          Every construction project starts with the ground. Select Civil Group provides earthworks and excavation services across Geelong, the Bellarine Peninsula, Torquay, and surrounding regions. From clearing raw land and cutting building platforms through to precision trenching for services and footings, we handle the site preparation work that sets the foundation for everything that follows. Our operators work with modern machinery, laser-guided grading equipment, and years of experience in local soil conditions to deliver accurate, efficient results on every job.
+          We work closely with builders, developers, and project managers throughout every phase of construction to keep every job on track and moving forward smoothly. From initial site preparation and foundation work through to the final finished concrete installations, we handle all the important details that separate good work from work that truly lasts.
         </p>
       </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-1">
+        <div class="bg-dark-900 border border-white/5 p-8">
+          <div class="text-brand-500 text-3xl font-black mb-4" style="letter-spacing: -0.03em;">01</div>
+          <h3 class="text-white text-base font-bold uppercase tracking-wide mb-2">Initial Consultation</h3>
+          <p class="text-gray-500 text-sm" style="line-height: 1.7;">We visit your site, understand the scope of the project, and provide a clear, honest quote with no hidden costs.</p>
+        </div>
+        <div class="bg-dark-900 border border-white/5 p-8">
+          <div class="text-brand-500 text-3xl font-black mb-4" style="letter-spacing: -0.03em;">02</div>
+          <h3 class="text-white text-base font-bold uppercase tracking-wide mb-2">Site Preparation</h3>
+          <p class="text-gray-500 text-sm" style="line-height: 1.7;">Earthworks, site cuts, and excavation are completed to specification. We manage all spoil removal and site cleanup.</p>
+        </div>
+        <div class="bg-dark-900 border border-white/5 p-8">
+          <div class="text-brand-500 text-3xl font-black mb-4" style="letter-spacing: -0.03em;">03</div>
+          <h3 class="text-white text-base font-bold uppercase tracking-wide mb-2">Construction</h3>
+          <p class="text-gray-500 text-sm" style="line-height: 1.7;">Concrete pours, retaining walls, slabs, and structural work are completed with precision, checked, and documented.</p>
+        </div>
+        <div class="bg-dark-900 border border-white/5 p-8">
+          <div class="text-brand-500 text-3xl font-black mb-4" style="letter-spacing: -0.03em;">04</div>
+          <h3 class="text-white text-base font-bold uppercase tracking-wide mb-2">Handover</h3>
+          <p class="text-gray-500 text-sm" style="line-height: 1.7;">Site is cleaned up, work is inspected, and the finished project is handed over ready for the next trade or for use.</p>
+        </div>
+      </div>
     </div>
   </section>
 
 
-  <!-- ========== SERVICE DETAILS ========== -->
-  <section class="bg-dark-900 border-t border-white/5">
+  <!-- ========== WHY WORK WITH US ========== -->
+  <section class="bg-dark-950 py-20 lg:py-28 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div>
+          <div class="accent-bar mb-4"></div>
+          <h2 class="heading-lg text-3xl sm:text-4xl text-white mb-6">Why Work With Us</h2>
+          <p class="body-text text-lg mb-10 max-w-xl">
+            We are not the biggest civil contractor in the region. But we consistently deliver the kind of work and service that earns repeat business.
+          </p>
 
-    <!-- Earthworks -->
-    <article id="earthworks" class="service-detail py-20 lg:py-28 border-b border-white/5 scroll-mt-20">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="service-detail-inner flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
-          <div class="lg:w-1/2">
-            <div class="relative overflow-hidden" style="aspect-ratio: 4/3;">
-              <img src="Assets/earthworks.jpeg" alt="Earthworks and land clearing by Select Civil Group on a site in Geelong" class="w-full h-full object-cover">
-              <div class="absolute inset-0 bg-black/15"></div>
+          <div class="space-y-6">
+            <div class="border-l-4 border-brand-500 pl-6">
+              <p class="text-white font-bold text-base uppercase tracking-wide">On Time, Every Time</p>
+              <p class="text-gray-500 text-sm mt-1">We show up when we say we will and keep your project on schedule.</p>
             </div>
-          </div>
-          <div class="lg:w-1/2">
-            <div class="accent-bar mb-4"></div>
-            <h2 class="heading-lg text-3xl sm:text-4xl text-white mb-6">Earthworks</h2>
-            <div class="space-y-4 body-text">
-              <p>Every construction project starts with the ground. Select Civil Group provides earthworks services across the Geelong and Bellarine region, including land clearing, grading, levelling, bulk cut and fill, and soil compaction. Whether you are preparing a single residential lot or a multi-stage subdivision, we have the machinery and the experience to get the ground right.</p>
-              <p>Proper earthworks are the foundation of everything that follows. Poorly prepared ground leads to drainage problems, foundation issues, and costly rework down the line. We use laser-guided grading equipment and work to engineering specifications to ensure your site is prepared correctly the first time, with spoil removal and disposal handled as part of the service.</p>
+            <div class="border-l-4 border-brand-500 pl-6">
+              <p class="text-white font-bold text-base uppercase tracking-wide">Owner Operated</p>
+              <p class="text-gray-500 text-sm mt-1">Andrew is on the tools and on-site. You deal directly with the person running the job.</p>
             </div>
-            <a href="index.html#contact" class="btn-fill inline-block px-7 py-3 text-sm mt-8">Get a Quote</a>
+            <div class="border-l-4 border-brand-500 pl-6">
+              <p class="text-white font-bold text-base uppercase tracking-wide">No Surprises</p>
+              <p class="text-gray-500 text-sm mt-1">Clear quotes, honest timelines, no hidden costs. We say what we mean.</p>
+            </div>
+            <div class="border-l-4 border-brand-500 pl-6">
+              <p class="text-white font-bold text-base uppercase tracking-wide">Quality Workmanship</p>
+              <p class="text-gray-500 text-sm mt-1">Every pour, every cut, every level - checked twice. We take pride in getting it right.</p>
+            </div>
           </div>
         </div>
-      </div>
-    </article>
 
-    <!-- Site Cuts -->
-    <article id="site-cuts" class="service-detail py-20 lg:py-28 border-b border-white/5 scroll-mt-20">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="service-detail-inner flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
-          <div class="lg:w-1/2">
-            <div class="relative overflow-hidden" style="aspect-ratio: 4/3;">
-              <img src="Assets/site-cuts.jpeg" alt="Precision site cut by Select Civil Group for a new build near Geelong" class="w-full h-full object-cover">
-              <div class="absolute inset-0 bg-black/15"></div>
-            </div>
-          </div>
-          <div class="lg:w-1/2">
-            <div class="accent-bar mb-4"></div>
-            <h2 class="heading-lg text-3xl sm:text-4xl text-white mb-6">Site Cuts</h2>
-            <div class="space-y-4 body-text">
-              <p>Site cuts create the level building platform needed before any construction can begin. Select Civil Group performs precision site cuts for new homes, extensions, sheds, and commercial buildings throughout Geelong and the surrounding region. We cut to the exact levels specified by your engineer, ensuring the site is ready for footings and slabs without delays.</p>
-              <p>Our operators work with modern excavation equipment and laser levels to achieve accurate, consistent results. We handle the full scope of work including topsoil stripping, cut and fill balancing, compaction, and spoil removal. If your block has a slope, a site cut is the first step to turning it into a buildable surface, and getting it right at this stage saves time and money on everything that follows.</p>
-            </div>
-            <a href="index.html#contact" class="btn-fill inline-block px-7 py-3 text-sm mt-8">Get a Quote</a>
-          </div>
+        <div class="relative overflow-hidden" style="aspect-ratio: 3/4;">
+          <img src="Assets/retaining-walls.jpeg" alt="Concrete retaining wall completed by Select Civil Group in Geelong" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-black/15"></div>
         </div>
       </div>
-    </article>
-
-    <!-- Detail Excavation -->
-    <article id="detail-excavation" class="service-detail py-20 lg:py-28 border-b border-white/5 scroll-mt-20">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="service-detail-inner flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
-          <div class="lg:w-1/2">
-            <div class="relative overflow-hidden bg-dark-800" style="aspect-ratio: 4/3;">
-              <img src="Assets/site-cuts.jpeg" alt="Detail excavation work by Select Civil Group in Geelong" class="w-full h-full object-cover">
-              <div class="absolute inset-0 bg-black/15"></div>
-            </div>
-          </div>
-          <div class="lg:w-1/2">
-            <div class="accent-bar mb-4"></div>
-            <h2 class="heading-lg text-3xl sm:text-4xl text-white mb-6">Detail Excavation</h2>
-            <div class="space-y-4 body-text">
-              <p>Detail excavation is the precise digging work required for footings, trenches, service trenches, stormwater lines, and other below-ground structures. Select Civil Group performs detail excavation on residential and commercial sites across Geelong, working to engineering drawings and specifications to deliver accurate, clean results.</p>
-              <p>We use a range of excavators suited to tight-access sites and confined spaces, ensuring we can get the job done efficiently without damaging surrounding structures, landscaping, or services. Detail excavation demands accuracy, and our operators have the experience to dig to exact depths, widths, and profiles specified by your engineer or builder.</p>
-            </div>
-            <a href="index.html#contact" class="btn-fill inline-block px-7 py-3 text-sm mt-8">Get a Quote</a>
-          </div>
-        </div>
-      </div>
-    </article>
-
-    <!-- Removal of Excess Oil -->
-    <article id="removal-of-excess-oil" class="service-detail py-20 lg:py-28 scroll-mt-20">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="service-detail-inner flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
-          <div class="lg:w-1/2">
-            <div class="relative overflow-hidden bg-dark-800" style="aspect-ratio: 4/3;">
-              <img src="Assets/earthworks.jpeg" alt="Removal of excess oil from a construction site by Select Civil Group" class="w-full h-full object-cover">
-              <div class="absolute inset-0 bg-black/15"></div>
-            </div>
-          </div>
-          <div class="lg:w-1/2">
-            <div class="accent-bar mb-4"></div>
-            <h2 class="heading-lg text-3xl sm:text-4xl text-white mb-6">Removal of Excess Oil</h2>
-            <div class="space-y-4 body-text">
-              <p>Excess oil on construction and industrial sites can create environmental hazards, compromise soil integrity, and cause compliance issues. Select Civil Group provides professional removal of excess oil from sites across the Geelong and Bellarine region, ensuring your site meets environmental and safety standards before the next phase of work begins.</p>
-              <p>We handle the assessment, removal, and responsible disposal of excess oil and contaminated materials in accordance with EPA Victoria guidelines. Whether the oil is from machinery spillage, underground tank leaks, or previous industrial use, we work efficiently to remediate the area so your project can proceed without delays or regulatory complications.</p>
-            </div>
-            <a href="index.html#contact" class="btn-fill inline-block px-7 py-3 text-sm mt-8">Get a Quote</a>
-          </div>
-        </div>
-      </div>
-    </article>
-
+    </div>
   </section>
 
 
-  <!-- ========== ALSO SEE ========== -->
-  <section class="bg-dark-950 border-t border-white/5 py-16 lg:py-20">
+  <!-- ========== TRUST FACTORS ========== -->
+  <section class="bg-dark-900 py-20 lg:py-28 border-t border-white/5">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-        <div>
-          <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-2">Also Available</p>
-          <h2 class="heading-lg text-2xl sm:text-3xl text-white">Concrete Services</h2>
-          <p class="body-text text-base mt-2">Driveways, retaining walls, raft slabs, paving, tilt panels and more.</p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-1">
+        <div class="bg-dark-800 border border-white/5 p-10">
+          <div class="w-12 h-12 flex items-center justify-center border-2 border-brand-500 mb-6">
+            <svg class="w-6 h-6 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3 class="text-white text-base font-bold uppercase tracking-wide mb-2">Fully Insured</h3>
+          <p class="text-gray-500 text-sm" style="line-height: 1.7;">Comprehensive public liability insurance and workers compensation coverage on every project. Certificates available on request.</p>
         </div>
-        <a href="concrete-services.html" class="btn-outline px-7 py-3 text-sm flex-shrink-0">View Concrete</a>
+        <div class="bg-dark-800 border border-white/5 p-10">
+          <div class="w-12 h-12 flex items-center justify-center border-2 border-brand-500 mb-6">
+            <svg class="w-6 h-6 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <h3 class="text-white text-base font-bold uppercase tracking-wide mb-2">Local Expertise</h3>
+          <p class="text-gray-500 text-sm" style="line-height: 1.7;">We know the Geelong region - the soil, the conditions, and what works best here. Local knowledge means fewer surprises and better results.</p>
+        </div>
+        <div class="bg-dark-800 border border-white/5 p-10">
+          <div class="w-12 h-12 flex items-center justify-center border-2 border-brand-500 mb-6">
+            <svg class="w-6 h-6 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+          </div>
+          <h3 class="text-white text-base font-bold uppercase tracking-wide mb-2">Builder Trusted</h3>
+          <p class="text-gray-500 text-sm" style="line-height: 1.7;">We work regularly with builders, developers, and project managers on projects of all sizes. Reliable, professional, and always on schedule.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -498,7 +541,7 @@
     <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h2 class="heading-lg text-3xl sm:text-4xl lg:text-5xl text-dark-950 mb-4">Ready to Start Your Project?</h2>
       <p class="text-dark-950/70 text-lg mb-8 max-w-2xl mx-auto" style="line-height: 1.7;">
-        Site cuts, earthworks, detail excavation - whatever your project needs, reach out for an obligation-free quote.
+        Concrete driveways, retaining walls, site cuts, full earthworks - whatever your project needs, reach out for an obligation-free quote.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a href="index.html#contact" class="bg-dark-950 text-white font-bold uppercase tracking-wider px-8 py-4 text-base text-center hover:bg-dark-800" style="transition: background 0.2s ease;">Get a Free Quote</a>
