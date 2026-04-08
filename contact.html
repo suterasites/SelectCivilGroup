@@ -288,26 +288,36 @@
             </a>
 
             <!-- Dropdown panel -->
-            <div class="mega-dropdown" style="width: 340px; left: -60px;">
-              <div class="bg-dark-900 border border-white/10 shadow-2xl p-3" style="box-shadow: 0 25px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.05);">
-                <a href="concrete-services.html" class="mega-service-card flex items-center gap-4 p-3 rounded-lg">
-                  <div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
-                    <img src="Assets/concrete-driveways.jpeg" alt="Concrete services" class="w-full h-full object-cover">
-                  </div>
+            <div class="mega-dropdown" style="width: 520px; left: -120px;">
+              <div class="bg-dark-900 border border-white/10 shadow-2xl p-5" style="box-shadow: 0 25px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.05);">
+                <div class="grid grid-cols-2 gap-6">
+                  <!-- Concrete Services -->
                   <div>
-                    <p class="mega-service-title text-white text-sm font-semibold" style="transition: color 0.2s ease;">Concrete Services</p>
-                    <p class="text-gray-500 text-xs mt-0.5">Driveways, slabs, retaining walls & more</p>
+                    <a href="concrete-services.html" class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-3 block hover:text-brand-400" style="transition: color 0.2s ease;">Concrete Services</a>
+                    <div class="flex flex-col gap-0.5">
+                      <a href="services.html#retaining-walls" class="mega-service-link text-gray-400 text-sm py-1.5 hover:text-white" style="transition: color 0.2s ease;">Retaining Walls</a>
+                      <a href="services.html#concrete-driveways" class="mega-service-link text-gray-400 text-sm py-1.5 hover:text-white" style="transition: color 0.2s ease;">Concrete Driveways</a>
+                      <a href="services.html#concrete-raft-slabs" class="mega-service-link text-gray-400 text-sm py-1.5 hover:text-white" style="transition: color 0.2s ease;">Concrete Raft Slabs</a>
+                      <a href="services.html#concrete-paving" class="mega-service-link text-gray-400 text-sm py-1.5 hover:text-white" style="transition: color 0.2s ease;">Concrete Paving</a>
+                      <a href="services.html#factory-tilt-panels" class="mega-service-link text-gray-400 text-sm py-1.5 hover:text-white" style="transition: color 0.2s ease;">Factory Tilt Panels</a>
+                      <a href="services.html#concrete-seating" class="mega-service-link text-gray-400 text-sm py-1.5 hover:text-white" style="transition: color 0.2s ease;">Concrete Seating</a>
+                      <a href="services.html#concrete-bench-drops" class="mega-service-link text-gray-400 text-sm py-1.5 hover:text-white" style="transition: color 0.2s ease;">Concrete Bench Drops</a>
+                    </div>
                   </div>
-                </a>
-                <a href="earthworks-excavation.html" class="mega-service-card flex items-center gap-4 p-3 rounded-lg">
-                  <div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
-                    <img src="Assets/earthworks.jpeg" alt="Earthworks and excavation" class="w-full h-full object-cover">
-                  </div>
+                  <!-- Earthworks & Excavation -->
                   <div>
-                    <p class="mega-service-title text-white text-sm font-semibold" style="transition: color 0.2s ease;">Earthworks & Excavation</p>
-                    <p class="text-gray-500 text-xs mt-0.5">Site cuts, earthworks & detail excavation</p>
+                    <a href="earthworks-excavation.html" class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-3 block hover:text-brand-400" style="transition: color 0.2s ease;">Earthworks & Excavation</a>
+                    <div class="flex flex-col gap-0.5">
+                      <a href="services.html#earthworks" class="mega-service-link text-gray-400 text-sm py-1.5 hover:text-white" style="transition: color 0.2s ease;">Earthworks</a>
+                      <a href="services.html#site-cuts" class="mega-service-link text-gray-400 text-sm py-1.5 hover:text-white" style="transition: color 0.2s ease;">Site Cuts</a>
+                      <a href="services.html#detail-excavation" class="mega-service-link text-gray-400 text-sm py-1.5 hover:text-white" style="transition: color 0.2s ease;">Detail Excavation</a>
+                      <a href="services.html#removal-of-excess-oil" class="mega-service-link text-gray-400 text-sm py-1.5 hover:text-white" style="transition: color 0.2s ease;">Removal of Excess Oil</a>
+                    </div>
                   </div>
-                </a>
+                </div>
+                <div class="border-t border-white/5 mt-4 pt-3">
+                  <a href="services.html" class="text-gray-500 text-xs font-semibold hover:text-brand-500 flex items-center gap-1.5" style="transition: color 0.2s ease;">View all services <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></a>
+                </div>
               </div>
             </div>
           </div>
@@ -343,9 +353,21 @@
         <svg id="mobile-services-chevron" class="w-5 h-5" style="transition: transform 0.3s ease;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
       </button>
       <div id="mobile-services-list" class="mobile-services-list pl-4">
-        <div class="border-l-2 border-brand-500/30 pl-4 flex flex-col gap-1 pb-3">
-          <a href="concrete-services.html" onclick="toggleMobileMenu()" class="text-gray-400 text-sm font-semibold py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Services</a>
-          <a href="earthworks-excavation.html" onclick="toggleMobileMenu()" class="text-gray-400 text-sm font-semibold py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Earthworks & Excavation</a>
+        <div class="border-l-2 border-brand-500/30 pl-4 flex flex-col gap-0.5 pb-3">
+          <p class="text-brand-500 text-xs font-bold uppercase tracking-widest pt-1 pb-1">Concrete Services</p>
+          <a href="services.html#retaining-walls" onclick="toggleMobileMenu()" class="text-gray-400 text-sm py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Retaining Walls</a>
+          <a href="services.html#concrete-driveways" onclick="toggleMobileMenu()" class="text-gray-400 text-sm py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Driveways</a>
+          <a href="services.html#concrete-raft-slabs" onclick="toggleMobileMenu()" class="text-gray-400 text-sm py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Raft Slabs</a>
+          <a href="services.html#concrete-paving" onclick="toggleMobileMenu()" class="text-gray-400 text-sm py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Paving</a>
+          <a href="services.html#factory-tilt-panels" onclick="toggleMobileMenu()" class="text-gray-400 text-sm py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Factory Tilt Panels</a>
+          <a href="services.html#concrete-seating" onclick="toggleMobileMenu()" class="text-gray-400 text-sm py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Seating</a>
+          <a href="services.html#concrete-bench-drops" onclick="toggleMobileMenu()" class="text-gray-400 text-sm py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Bench Drops</a>
+          <p class="text-brand-500 text-xs font-bold uppercase tracking-widest pt-3 pb-1">Earthworks & Excavation</p>
+          <a href="services.html#earthworks" onclick="toggleMobileMenu()" class="text-gray-400 text-sm py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Earthworks</a>
+          <a href="services.html#site-cuts" onclick="toggleMobileMenu()" class="text-gray-400 text-sm py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Site Cuts</a>
+          <a href="services.html#detail-excavation" onclick="toggleMobileMenu()" class="text-gray-400 text-sm py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Detail Excavation</a>
+          <a href="services.html#removal-of-excess-oil" onclick="toggleMobileMenu()" class="text-gray-400 text-sm py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Removal of Excess Oil</a>
+          <a href="services.html" onclick="toggleMobileMenu()" class="text-gray-500 text-xs font-semibold pt-3 hover:text-brand-500 flex items-center gap-1.5" style="transition: color 0.2s ease;">View all services <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></a>
         </div>
       </div>
 
