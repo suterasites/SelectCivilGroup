@@ -18,8 +18,8 @@ This site is being migrated from Webflow to a custom HTML/CSS/JS build.
 - **Current live site:** https://selectcivilgroup.com.au (hosted on Webflow)
 - **Webflow renewal deadline:** 2026-04-09 - migration must be complete before this date
 - **Target stack:** Custom HTML/CSS/JS (inline styles via Tailwind CDN)
-- **Target deployment:** Vercel (auto-deploys from `main` branch on GitHub)
-- **DNS:** GoDaddy - will need to be repointed from Webflow to Vercel after deployment
+- **Target deployment:** Cloudflare Pages (auto-deploys from `main` branch on GitHub)
+- **DNS:** GoDaddy - will need to be repointed from Webflow to Cloudflare after deployment
 - **Form submissions:** Must route to selectcivilgroupvic@outlook.com (use Formspree)
 
 The 8 Relume screenshot JPEGs in this folder are design references from the current Webflow site. Match these layouts when building the new site.
@@ -127,7 +127,7 @@ These live in `/Google Ads Optimizer/clients/Select Civil Group PTY LTD/Select C
 - **Depth:** Surfaces should have a layering system (base, elevated, floating), not all sit at the same z-plane.
 
 ## Deployment
-- **Always commit and push after making changes.** After every set of changes, commit to `main` and `git push origin main`. Vercel auto-deploys from the `main` branch on GitHub.
+- **Always commit and push after making changes.** After every set of changes, commit to `main` and `git push origin main`. Cloudflare Pages auto-deploys from the `main` branch on GitHub.
 - Do not wait for the user to ask - push is part of completing a task.
 
 ## Hard Rules
