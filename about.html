@@ -7,12 +7,29 @@
   <meta name="description" content="Learn about Select Civil Group - a locally owned civil contractor in Geelong. Owner-operated, fully insured earthworks and concrete services across Bellarine Peninsula.">
   <link rel="canonical" href="https://selectcivilgroup.com.au/about.html">
 
+  <!-- Geo meta -->
+  <meta name="geo.region" content="AU-VIC">
+  <meta name="geo.placename" content="Geelong">
+  <meta name="geo.position" content="-38.149600;144.360500">
+  <meta name="ICBM" content="-38.149600, 144.360500">
+
   <!-- Open Graph -->
   <meta property="og:title" content="About Select Civil Group - Civil Contractor Geelong">
   <meta property="og:description" content="Locally owned, owner-operated civil contractor delivering earthworks and concrete across Geelong, Bellarine Peninsula and surrounding regions.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://selectcivilgroup.com.au/about.html">
-  <meta property="og:image" content="https://selectcivilgroup.com.au/Assets/Logo%20PNG.png">
+  <meta property="og:image" content="https://selectcivilgroup.com.au/Assets/concrete-slabs.jpeg">
+  <meta property="og:site_name" content="Select Civil Group">
+  <meta property="og:locale" content="en_AU">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Select Civil Group - civil contracting in Geelong, concrete and earthworks">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About Select Civil Group - Civil Contractor Geelong">
+  <meta name="twitter:description" content="Locally owned, owner-operated civil contractor delivering earthworks and concrete across Geelong, Bellarine Peninsula and surrounding regions.">
+  <meta name="twitter:image" content="https://selectcivilgroup.com.au/Assets/concrete-slabs.jpeg">
 
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -97,6 +114,24 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
+
+    /* Skip-to-content link (visible on focus only) */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #0a0a0a;
+      color: #d4912a;
+      padding: 0.75rem 1.25rem;
+      font-weight: 700;
+      font-size: 0.875rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      z-index: 100;
+      text-decoration: none;
+      transition: top 200ms ease;
+    }
+    .skip-link:focus { top: 0; outline: 2px solid #e8a840; outline-offset: 0; }
 
     .heading-xl {
       font-weight: 900;
@@ -277,12 +312,14 @@
 </head>
 <body class="bg-dark-950 text-white font-body">
 
+  <a href="#main" class="skip-link">Skip to main content</a>
+
   <!-- ========== NAVBAR ========== -->
   <nav class="fixed top-0 left-0 right-0 z-50 bg-dark-950/95 backdrop-blur-sm border-b border-white/5">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
         <a href="index.html" class="flex items-center">
-          <img src="Assets/Logo PNG.png" alt="Select Civil Group logo" class="h-10">
+          <img src="Assets/Logo PNG.png" alt="Select Civil Group logo" width="200" height="80" class="h-10">
         </a>
 
         <div class="hidden lg:flex items-center gap-8">
@@ -383,10 +420,23 @@
   </div>
 
 
+  <main id="main">
+
+    <!-- Breadcrumbs -->
+    <nav aria-label="Breadcrumb" class="bg-dark-900 border-b border-white/5 pt-20 lg:pt-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <ol class="flex items-center gap-2 text-xs text-gray-500">
+          <li><a href="index.html" class="hover:text-brand-500" style="transition: color 0.2s ease;">Home</a></li>
+          <li aria-hidden="true" class="text-gray-700">/</li>
+          <li class="text-gray-300" aria-current="page">About</li>
+        </ol>
+      </div>
+    </nav>
+
   <!-- ========== PAGE HERO ========== -->
   <section class="relative pt-16">
     <div class="relative h-64 sm:h-80 lg:h-96 overflow-hidden">
-      <img src="Assets/concrete-raft-slabs.jpeg" alt="Select Civil Group crew working on a concrete project in Geelong" class="w-full h-full object-cover">
+      <img src="Assets/concrete-raft-slabs.jpeg" alt="Select Civil Group crew working on a concrete project in Geelong" width="1600" height="900" class="w-full h-full object-cover">
       <div class="absolute inset-0 bg-black/60"></div>
       <div class="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/20 to-transparent"></div>
       <div class="absolute bottom-0 left-0 right-0 z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10 lg:pb-14">
@@ -405,7 +455,7 @@
         <!-- Left: Image -->
         <div class="relative lg:pr-8">
           <div class="relative overflow-hidden" style="aspect-ratio: 4/3;">
-            <img src="Assets/concrete-slabs.jpeg" alt="Large concrete slab pour by Select Civil Group on the Bellarine Peninsula" class="w-full h-full object-cover">
+            <img src="Assets/concrete-slabs.jpeg" alt="Large concrete slab pour by Select Civil Group on the Bellarine Peninsula" width="800" height="600" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-black/15"></div>
           </div>
           <div class="absolute bottom-6 left-6 bg-brand-500 px-5 py-3">
@@ -446,7 +496,7 @@
         </div>
 
         <div class="relative overflow-hidden" style="aspect-ratio: 4/3;">
-          <img src="Assets/concrete-raft-slabs.jpeg" alt="Concrete building under construction with large open sections and construction equipment on site" class="w-full h-full object-cover">
+          <img src="Assets/concrete-raft-slabs.jpeg" alt="Concrete building under construction with large open sections and construction equipment on site" width="800" height="600" class="w-full h-full object-cover">
           <div class="absolute inset-0 bg-black/15"></div>
         </div>
       </div>
@@ -460,7 +510,7 @@
       <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
         <div class="relative overflow-hidden lg:order-1" style="aspect-ratio: 4/3;">
-          <img src="Assets/earthworks.jpeg" alt="Select Civil Group earthworks machinery operating on a residential site in Geelong" class="w-full h-full object-cover">
+          <img src="Assets/earthworks.jpeg" alt="Select Civil Group earthworks machinery operating on a residential site in Geelong" width="800" height="600" class="w-full h-full object-cover">
           <div class="absolute inset-0 bg-black/15"></div>
         </div>
 
@@ -548,7 +598,7 @@
         </div>
 
         <div class="relative overflow-hidden" style="aspect-ratio: 3/4;">
-          <img src="Assets/retaining-walls.jpeg" alt="Concrete retaining wall completed by Select Civil Group in Geelong" class="w-full h-full object-cover">
+          <img src="Assets/retaining-walls.jpeg" alt="Concrete retaining wall completed by Select Civil Group in Geelong" width="800" height="600" class="w-full h-full object-cover">
           <div class="absolute inset-0 bg-black/15"></div>
         </div>
       </div>
@@ -601,6 +651,8 @@
   </section>
 
 
+  </main>
+
   <!-- ========== FOOTER ========== -->
   <footer class="bg-dark-900 pt-20 pb-8">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -642,7 +694,7 @@
 
       <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
         <div class="flex items-center gap-4">
-          <img src="Assets/Logo PNG.png" alt="Select Civil Group" class="h-8">
+          <img src="Assets/Logo PNG.png" alt="Select Civil Group" width="200" height="80" class="h-8">
           <p class="text-gray-500 text-sm">&copy; 2026 Select Civil Group Pty Ltd. All rights reserved.</p>
         </div>
         <a href="https://www.instagram.com/select_civil_group_pty_ltd/" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-white" style="transition: color 0.2s ease;" aria-label="Instagram">

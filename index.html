@@ -8,12 +8,29 @@
   <meta name="google-site-verification" content="uH6CGyz8_5PyAJih_vBBeIb9Saed_FqVQzUHuAeaFTE" />
   <link rel="canonical" href="https://selectcivilgroup.com.au/">
 
+  <!-- Geo meta -->
+  <meta name="geo.region" content="AU-VIC">
+  <meta name="geo.placename" content="Geelong">
+  <meta name="geo.position" content="-38.149600;144.360500">
+  <meta name="ICBM" content="-38.149600, 144.360500">
+
   <!-- Open Graph -->
   <meta property="og:title" content="Select Civil Group - Civil Contractor Geelong">
   <meta property="og:description" content="Professional earthworks, concrete driveways, retaining walls and site cuts across Geelong, Bellarine Peninsula and surrounding regions.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://selectcivilgroup.com.au/">
-  <meta property="og:image" content="https://selectcivilgroup.com.au/Assets/Logo%20PNG.png">
+  <meta property="og:site_name" content="Select Civil Group">
+  <meta property="og:locale" content="en_AU">
+  <meta property="og:image" content="https://selectcivilgroup.com.au/Assets/concrete-driveways.jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Select Civil Group - civil contracting in Geelong, concrete and earthworks">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Select Civil Group - Civil Contractor Geelong">
+  <meta name="twitter:description" content="Earthworks, concrete driveways, retaining walls and site cuts across Geelong and the Bellarine Peninsula.">
+  <meta name="twitter:image" content="https://selectcivilgroup.com.au/Assets/concrete-driveways.jpeg">
 
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -48,119 +65,119 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <!-- JSON-LD -->
+  <!-- JSON-LD @graph -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": "https://selectcivilgroup.com.au/#business",
-    "name": "Select Civil Group Pty Ltd",
-    "description": "Professional civil contracting services including earthworks, concrete driveways, retaining walls, site cuts and concrete slabs across Geelong, Bellarine Peninsula and surrounding regions in Victoria.",
-    "url": "https://selectcivilgroup.com.au",
-    "logo": "https://selectcivilgroup.com.au/Assets/Logo%20PNG.png",
-    "image": "https://selectcivilgroup.com.au/Assets/Logo%20PNG.png",
-    "telephone": "+61483092615",
-    "email": "selectcivilgroupvic@outlook.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Geelong",
-      "addressRegion": "VIC",
-      "postalCode": "3226",
-      "addressCountry": "AU"
-    },
-    "areaServed": [
-      { "@type": "City", "name": "Geelong" },
-      { "@type": "Place", "name": "Bellarine Peninsula" },
-      { "@type": "City", "name": "Torquay" }
-    ],
-    "openingHours": "Mo-Fr 07:00-17:00",
-    "priceRange": "$$",
-    "sameAs": ["https://www.instagram.com/select_civil_group_pty_ltd/"],
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Civil Contracting Services",
-      "itemListElement": [
-        {
-          "@type": "OfferCatalog",
-          "name": "Concrete Services",
-          "itemListElement": [
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Retaining Walls" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Concrete Driveways" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Concrete Raft Slabs" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Concrete Paving" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Factory Tilt Panels" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Concrete Seating" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Concrete Bench Drops" } }
-          ]
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://selectcivilgroup.com.au/#business",
+        "name": "Select Civil Group Pty Ltd",
+        "description": "Professional civil contracting services including earthworks, concrete driveways, retaining walls, site cuts and concrete slabs across Geelong, Bellarine Peninsula and surrounding regions in Victoria.",
+        "url": "https://selectcivilgroup.com.au/",
+        "logo": "https://selectcivilgroup.com.au/Assets/Logo%20PNG.png",
+        "image": "https://selectcivilgroup.com.au/Assets/concrete-driveways.jpeg",
+        "telephone": "+61483092615",
+        "email": "selectcivilgroupvic@outlook.com",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Geelong",
+          "addressRegion": "VIC",
+          "postalCode": "3226",
+          "addressCountry": "AU"
         },
-        {
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -38.149600,
+          "longitude": 144.360500
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Geelong" },
+          { "@type": "Place", "name": "Bellarine Peninsula" },
+          { "@type": "City", "name": "Torquay" }
+        ],
+        "openingHours": "Mo-Fr 07:00-17:00",
+        "sameAs": ["https://www.instagram.com/select_civil_group_pty_ltd/"],
+        "hasOfferCatalog": {
           "@type": "OfferCatalog",
-          "name": "Earthworks & Excavation",
+          "name": "Civil Contracting Services",
           "itemListElement": [
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Earthworks" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Site Cuts" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Detail Excavation" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Removal of Excess Oil" } }
+            {
+              "@type": "OfferCatalog",
+              "name": "Concrete Services",
+              "itemListElement": [
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Retaining Walls" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Concrete Driveways" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Concrete Raft Slabs" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Concrete Paving" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Factory Tilt Panels" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Concrete Seating" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Concrete Bench Drops" } }
+              ]
+            },
+            {
+              "@type": "OfferCatalog",
+              "name": "Earthworks & Excavation",
+              "itemListElement": [
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Earthworks" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Site Cuts" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Detail Excavation" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Removal of Excess Oil" } }
+              ]
+            }
           ]
         }
-      ]
-    }
-  }
-  </script>
-
-  <!-- FAQ Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How long does a typical project take?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Timeline depends on scope and site conditions. A driveway might take a few days, while larger earthworks take longer. We provide a detailed schedule upfront so you know what to expect."
-        }
       },
       {
-        "@type": "Question",
-        "name": "Do you handle spoil removal?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. We manage spoil removal as part of our service, handling disposal responsibly and efficiently. It's one less thing for you to worry about."
-        }
+        "@type": "WebSite",
+        "@id": "https://selectcivilgroup.com.au/#website",
+        "url": "https://selectcivilgroup.com.au/",
+        "name": "Select Civil Group",
+        "publisher": { "@id": "https://selectcivilgroup.com.au/#business" },
+        "inLanguage": "en-AU"
       },
       {
-        "@type": "Question",
-        "name": "What areas do you service?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We work throughout Geelong and the Bellarine Peninsula. If you're in the region and need earthworks or concrete work, reach out and we'll let you know if we can help."
-        }
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How long does a typical project take?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Timeline depends on scope and site conditions. A driveway might take a few days, while larger earthworks take longer. We provide a detailed schedule upfront so you know what to expect." }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you handle spoil removal?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. We manage spoil removal as part of our service, handling disposal responsibly and efficiently. It's one less thing for you to worry about." }
+          },
+          {
+            "@type": "Question",
+            "name": "What areas do you service?",
+            "acceptedAnswer": { "@type": "Answer", "text": "We work throughout Geelong and the Bellarine Peninsula. If you're in the region and need earthworks or concrete work, reach out and we'll let you know if we can help." }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you provide a quote?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. We offer free site assessments and detailed quotes. Contact us with your project details and we'll arrange a time to visit and discuss your needs." }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you work with contractors?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. We work regularly with builders and contractors on larger projects. We're reliable, professional, and deliver on schedule." }
+          },
+          {
+            "@type": "Question",
+            "name": "Are you fully insured?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Select Civil Group carries full public liability insurance and workers compensation cover on every job. We're happy to provide certificates on request." }
+          }
+        ]
       },
       {
-        "@type": "Question",
-        "name": "Can you provide a quote?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Absolutely. We offer free site assessments and detailed quotes. Contact us with your project details and we'll arrange a time to visit and discuss your needs."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you work with contractors?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. We work regularly with builders and contractors on larger projects. We're reliable, professional, and deliver on schedule."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Are you fully insured?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Select Civil Group carries full public liability insurance and workers compensation cover on every job. We're happy to provide certificates on request."
-        }
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://selectcivilgroup.com.au/" }
+        ]
       }
     ]
   }
@@ -169,6 +186,24 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
+
+    /* Skip-to-content link (visible on focus only) */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #0a0a0a;
+      color: #d4912a;
+      padding: 0.75rem 1.25rem;
+      font-weight: 700;
+      font-size: 0.875rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      z-index: 100;
+      text-decoration: none;
+      transition: top 200ms ease;
+    }
+    .skip-link:focus { top: 0; outline: 2px solid #e8a840; outline-offset: 0; }
 
     /* Sharp, bold heading style */
     .heading-xl {
@@ -379,6 +414,8 @@
 </head>
 <body class="bg-dark-950 text-white font-body">
 
+  <a href="#main" class="skip-link">Skip to main content</a>
+
   <!-- ========== NAVBAR ========== -->
   <nav class="fixed top-0 left-0 right-0 z-50 bg-dark-950/95 backdrop-blur-sm border-b border-white/5">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -487,6 +524,8 @@
     </div>
   </div>
 
+
+  <main id="main">
 
   <!-- ========== HERO ========== -->
   <section class="relative min-h-screen flex items-end pt-20">
@@ -941,6 +980,8 @@
     </div>
   </section>
 
+
+  </main>
 
   <!-- ========== FOOTER ========== -->
   <footer class="bg-dark-900 pt-20 pb-8">

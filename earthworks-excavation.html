@@ -7,12 +7,29 @@
   <meta name="description" content="Earthworks, site cuts, detail excavation and land clearing across Geelong and the Bellarine Peninsula. Professional civil earthworks by Select Civil Group. Free quotes available.">
   <link rel="canonical" href="https://selectcivilgroup.com.au/earthworks-excavation.html">
 
+  <!-- Geo meta -->
+  <meta name="geo.region" content="AU-VIC">
+  <meta name="geo.placename" content="Geelong">
+  <meta name="geo.position" content="-38.149600;144.360500">
+  <meta name="ICBM" content="-38.149600, 144.360500">
+
   <!-- Open Graph -->
   <meta property="og:title" content="Earthworks & Excavation Geelong - Select Civil Group">
   <meta property="og:description" content="Site cuts, earthworks, detail excavation and land clearing across Geelong and the Bellarine Peninsula.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://selectcivilgroup.com.au/earthworks-excavation.html">
-  <meta property="og:image" content="https://selectcivilgroup.com.au/Assets/Logo%20PNG.png">
+  <meta property="og:image" content="https://selectcivilgroup.com.au/Assets/earthworks.jpeg">
+  <meta property="og:site_name" content="Select Civil Group">
+  <meta property="og:locale" content="en_AU">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Select Civil Group - civil contracting in Geelong, concrete and earthworks">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Earthworks & Excavation Geelong - Select Civil Group">
+  <meta name="twitter:description" content="Site cuts, earthworks, detail excavation and land clearing across Geelong and the Bellarine Peninsula.">
+  <meta name="twitter:image" content="https://selectcivilgroup.com.au/Assets/earthworks.jpeg">
 
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -92,6 +109,24 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
+
+    /* Skip-to-content link (visible on focus only) */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #0a0a0a;
+      color: #d4912a;
+      padding: 0.75rem 1.25rem;
+      font-weight: 700;
+      font-size: 0.875rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      z-index: 100;
+      text-decoration: none;
+      transition: top 200ms ease;
+    }
+    .skip-link:focus { top: 0; outline: 2px solid #e8a840; outline-offset: 0; }
 
     .heading-xl {
       font-weight: 900;
@@ -282,12 +317,14 @@
 </head>
 <body class="bg-dark-950 text-white font-body">
 
+  <a href="#main" class="skip-link">Skip to main content</a>
+
   <!-- ========== NAVBAR ========== -->
   <nav class="fixed top-0 left-0 right-0 z-50 bg-dark-950/95 backdrop-blur-sm border-b border-white/5">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
         <a href="index.html" class="flex items-center">
-          <img src="Assets/Logo PNG.png" alt="Select Civil Group logo" class="h-10">
+          <img src="Assets/Logo PNG.png" alt="Select Civil Group logo" width="200" height="80" class="h-10">
         </a>
 
         <div class="hidden lg:flex items-center gap-8">
@@ -390,10 +427,23 @@
   </div>
 
 
+  <main id="main">
+
+    <!-- Breadcrumbs -->
+    <nav aria-label="Breadcrumb" class="bg-dark-900 border-b border-white/5 pt-20 lg:pt-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <ol class="flex items-center gap-2 text-xs text-gray-500">
+          <li><a href="index.html" class="hover:text-brand-500" style="transition: color 0.2s ease;">Home</a></li>
+          <li aria-hidden="true" class="text-gray-700">/</li>
+          <li class="text-gray-300" aria-current="page">Earthworks &amp; Excavation</li>
+        </ol>
+      </div>
+    </nav>
+
   <!-- ========== HERO ========== -->
   <section class="relative pt-16">
     <div class="relative overflow-hidden" style="height: 420px;">
-      <img src="Assets/earthworks.jpeg" alt="Earthworks and excavation services by Select Civil Group in Geelong" class="w-full h-full object-cover">
+      <img src="Assets/earthworks.jpeg" alt="Earthworks and excavation services by Select Civil Group in Geelong" width="1600" height="900" class="w-full h-full object-cover">
       <div class="absolute inset-0 bg-black/60"></div>
       <div class="absolute inset-0 bg-gradient-to-t from-dark-950 via-transparent to-transparent"></div>
       <div class="absolute inset-0 flex items-center">
@@ -439,7 +489,7 @@
         <div class="service-detail-inner flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
           <div class="lg:w-1/2">
             <div class="relative overflow-hidden" style="aspect-ratio: 4/3;">
-              <img src="Assets/earthworks.jpeg" alt="Earthworks and land clearing by Select Civil Group on a site in Geelong" class="w-full h-full object-cover">
+              <img src="Assets/earthworks.jpeg" alt="Earthworks and land clearing by Select Civil Group on a site in Geelong" width="800" height="600" class="w-full h-full object-cover">
               <div class="absolute inset-0 bg-black/15"></div>
             </div>
           </div>
@@ -462,7 +512,7 @@
         <div class="service-detail-inner flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
           <div class="lg:w-1/2">
             <div class="relative overflow-hidden" style="aspect-ratio: 4/3;">
-              <img src="Assets/site-cuts.jpeg" alt="Precision site cut by Select Civil Group for a new build near Geelong" class="w-full h-full object-cover">
+              <img src="Assets/site-cuts.jpeg" alt="Precision site cut by Select Civil Group for a new build near Geelong" width="800" height="600" class="w-full h-full object-cover">
               <div class="absolute inset-0 bg-black/15"></div>
             </div>
           </div>
@@ -546,6 +596,8 @@
   </section>
 
 
+  </main>
+
   <!-- ========== FOOTER ========== -->
   <footer class="bg-dark-900 pt-20 pb-8">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -587,7 +639,7 @@
 
       <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
         <div class="flex items-center gap-4">
-          <img src="Assets/Logo PNG.png" alt="Select Civil Group" class="h-8">
+          <img src="Assets/Logo PNG.png" alt="Select Civil Group" width="200" height="80" class="h-8">
           <p class="text-gray-500 text-sm">&copy; 2026 Select Civil Group Pty Ltd. All rights reserved.</p>
         </div>
         <a href="https://www.instagram.com/select_civil_group_pty_ltd/" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-white" style="transition: color 0.2s ease;" aria-label="Instagram">
