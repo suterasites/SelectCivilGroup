@@ -109,6 +109,51 @@
   }
   </script>
 
+  <!-- JSON-LD: FAQPage (Phase C2) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do you do residential concrete jobs, or only commercial?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Both. We pour residential driveways, paths, slabs and retaining walls across Geelong and the Bellarine. We also handle larger commercial work including factory tilt panels and commercial slabs. Most weeks we are running a mix of both." }
+      },
+      {
+        "@type": "Question",
+        "name": "What finishes do you offer for concrete driveways?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Plain broom (the most common, cleanest look), exposed aggregate (decorative stone finish), coloured concrete (oxide added to the mix), and stencilled or stamped patterns (pressed into the surface before curing). Each has different cost, maintenance and look. We can walk you through what suits the property." }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does concrete take to cure before it can be used?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most residential pours can be walked on after 24 to 48 hours and driven on after 7 days. Full structural strength is reached at 28 days. We tell you exactly when each section is safe to use as part of the handover." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you handle the council crossover approval for new driveways?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Where a new or upgraded crossover is required, we coordinate the application with the City of Greater Geelong and pour the crossover to council spec. Existing compliant crossovers we can work with as they are." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between a raft slab and a regular slab?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A raft slab is a thick, reinforced concrete slab that sits on the ground and acts as the entire foundation of the building. It is the most common foundation type for new homes in Geelong. A regular slab is thinner and used for floors, paths or non-structural surfaces. We pour both, and the engineer's specs determine which is right for the project." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you provide a warranty on your concrete work?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. All workmanship is backed by our written warranty, and we work to Australian Standards (including AS 2870 for residential slabs and AS 3600 for concrete structures) on every job. Concrete itself has a manufacturer's warranty through the supplier." }
+      },
+      {
+        "@type": "Question",
+        "name": "Are you fully insured?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Select Civil Group carries full public liability insurance and workers compensation cover on every job. Certificates of currency are available on request." }
+      }
+    ]
+  }
+  </script>
+
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -479,6 +524,38 @@
           Concrete is the backbone of every durable build. Select Civil Group delivers concrete services across Geelong, the Bellarine Peninsula, and surrounding regions - from driveways and retaining walls through to raft slabs, paving, and commercial tilt panel work. We handle the full process on every job: excavation, base preparation, formwork, reinforcement, pouring, and finishing. No shortcuts, no subcontracting the critical stages. Our crew does the work, and we stand behind the result.
         </p>
       </div>
+
+      <!-- Factors affecting concrete cost (Phase C2) -->
+      <div class="max-w-4xl mt-16">
+        <h3 class="heading-md text-xl sm:text-2xl text-white mb-5" style="letter-spacing: -0.02em;">What Affects the Cost of a Concrete Job</h3>
+        <p class="body-text text-base mb-6">Every concrete quote is built from the same handful of variables. Knowing what drives cost up or down helps you plan a project that fits the budget without compromising the result.</p>
+        <div class="grid sm:grid-cols-2 gap-x-10 gap-y-5">
+          <div class="border-l-2 border-brand-500/40 pl-5">
+            <p class="text-white text-sm font-bold mb-1">Volume and area</p>
+            <p class="body-text text-sm">Cubic metres of concrete and total square metres are the biggest drivers. Bigger pour, higher cost - but per-square-metre rates drop with scale.</p>
+          </div>
+          <div class="border-l-2 border-brand-500/40 pl-5">
+            <p class="text-white text-sm font-bold mb-1">Finish</p>
+            <p class="body-text text-sm">Plain broom is the cheapest. Exposed aggregate, coloured oxide, stencilled and stamped finishes each step up in cost.</p>
+          </div>
+          <div class="border-l-2 border-brand-500/40 pl-5">
+            <p class="text-white text-sm font-bold mb-1">Site access</p>
+            <p class="body-text text-sm">Easy access for trucks and pumps keeps cost down. Tight access, long pump distance or hand-barrow runs add labour.</p>
+          </div>
+          <div class="border-l-2 border-brand-500/40 pl-5">
+            <p class="text-white text-sm font-bold mb-1">Reinforcement &amp; engineering</p>
+            <p class="body-text text-sm">A driveway needs lighter mesh than a raft slab. Heavier engineering specs mean more steel, more depth, more cost.</p>
+          </div>
+          <div class="border-l-2 border-brand-500/40 pl-5">
+            <p class="text-white text-sm font-bold mb-1">Site preparation</p>
+            <p class="body-text text-sm">A flat, prepped block costs less than one needing excavation, fill, compaction or a level platform.</p>
+          </div>
+          <div class="border-l-2 border-brand-500/40 pl-5">
+            <p class="text-white text-sm font-bold mb-1">Council &amp; crossovers</p>
+            <p class="body-text text-sm">New crossovers require council approval and inspection. Always built into the quote where relevant.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -524,8 +601,17 @@
             <h2 class="heading-lg text-3xl sm:text-4xl text-white mb-6">Concrete Driveways</h2>
             <div class="space-y-4 body-text">
               <p>A well-built concrete driveway adds value to your property and stands up to years of daily use. Select Civil Group pours and finishes concrete driveways for homes and businesses across the Geelong region, from simple single-car entries to large multi-vehicle driveways and turnaround areas.</p>
-              <p>We handle the full process - excavation, base preparation, formwork, steel reinforcement, pouring, and finishing. We offer plain, exposed aggregate, and coloured concrete finishes to match your property and preferences. Every driveway is built on properly compacted base material with adequate drainage to prevent cracking and movement over time.</p>
+              <p>We handle the full process - excavation, base preparation, formwork, steel reinforcement, pouring, and finishing. Every driveway is built on properly compacted base material with adequate drainage to prevent cracking and movement over time.</p>
             </div>
+
+            <h3 class="heading-md text-base text-brand-500 mt-8 mb-3" style="letter-spacing: 0.05em; text-transform: uppercase;">Driveway Finishes Available</h3>
+            <ul class="body-text text-sm space-y-2">
+              <li><span class="text-white font-semibold">Plain broom finish</span> - the most common, cleanest look. Lowest cost. Hides minor surface marks.</li>
+              <li><span class="text-white font-semibold">Exposed aggregate</span> - decorative stone exposed through the surface. Premium look, higher slip resistance, higher cost.</li>
+              <li><span class="text-white font-semibold">Coloured concrete</span> - oxide added to the mix. A range of colours to match the property. Mid-range cost.</li>
+              <li><span class="text-white font-semibold">Stencilled or stamped</span> - patterns pressed into the surface before curing. Brick, slate or tile effects. Higher cost.</li>
+            </ul>
+
             <a href="contact.html" class="btn-fill inline-block px-7 py-3 text-sm mt-8">Get a Quote</a>
           </div>
         </div>
@@ -549,6 +635,17 @@
               <p>Raft slabs are the foundation of most new residential and light commercial builds in the Geelong and Bellarine region. Select Civil Group delivers concrete raft slab foundations engineered to suit local soil conditions and building requirements, providing a stable, level base for your construction project.</p>
               <p>Our team manages the complete slab process from site preparation and formwork through to reinforcement placement, concrete pouring, and finishing. We work with your builder and engineer to ensure the slab meets all specifications, is poured on schedule, and is finished to the required tolerances. Coordination with plumbers, electricians, and other trades for in-slab services is part of how we operate.</p>
             </div>
+
+            <h3 class="heading-md text-base text-brand-500 mt-8 mb-3" style="letter-spacing: 0.05em; text-transform: uppercase;">What's Included in a Slab Pour</h3>
+            <ul class="body-text text-sm space-y-2">
+              <li>Site set-out from engineer's drawings, formwork to required dimensions</li>
+              <li>Termite barriers, vapour barrier and sand bedding where specified</li>
+              <li>Steel reinforcement (mesh and bars) to AS 2870 and the engineer's design</li>
+              <li>Coordination with plumbers and electricians for in-slab services</li>
+              <li>Concrete pour, screeding, levelling and finish to specified tolerances</li>
+              <li>Curing program and handover to the next trade</li>
+            </ul>
+
             <a href="contact.html" class="btn-fill inline-block px-7 py-3 text-sm mt-8">Get a Quote</a>
           </div>
         </div>
@@ -638,6 +735,92 @@
   </section>
 
 
+  <!-- ========== FAQ (Phase C2) ========== -->
+  <section id="faq" class="bg-dark-950 border-t border-white/5 py-20 lg:py-28">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-12">
+        <div class="accent-bar mb-4"></div>
+        <h2 class="heading-lg text-3xl sm:text-4xl lg:text-5xl text-white mb-4">Concrete Services FAQ</h2>
+        <p class="body-text text-lg">The questions we get most often before quoting a concrete job.</p>
+      </div>
+
+      <div class="divide-y divide-white/5 border-y border-white/5">
+
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between py-6 text-left group focus-visible:outline-2 focus-visible:outline-brand-500 focus-visible:outline-offset-2">
+            <h3 class="text-white text-lg sm:text-xl font-semibold pr-8" style="letter-spacing: -0.01em;">Do you do residential concrete jobs, or only commercial?</h3>
+            <svg class="faq-chevron w-5 h-5 text-gray-400 shrink-0" style="transition: transform 0.3s ease;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer overflow-hidden" style="max-height: 0; transition: max-height 0.3s ease, opacity 0.3s ease; opacity: 0;">
+            <p class="body-text text-base pb-6">Both. We pour residential driveways, paths, slabs and retaining walls across Geelong and the Bellarine. We also handle larger commercial work including factory tilt panels and commercial slabs. Most weeks we are running a mix of both.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between py-6 text-left group focus-visible:outline-2 focus-visible:outline-brand-500 focus-visible:outline-offset-2">
+            <h3 class="text-white text-lg sm:text-xl font-semibold pr-8" style="letter-spacing: -0.01em;">What finishes do you offer for concrete driveways?</h3>
+            <svg class="faq-chevron w-5 h-5 text-gray-400 shrink-0" style="transition: transform 0.3s ease;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer overflow-hidden" style="max-height: 0; transition: max-height 0.3s ease, opacity 0.3s ease; opacity: 0;">
+            <p class="body-text text-base pb-6">Plain broom (the most common, cleanest look), exposed aggregate (decorative stone finish), coloured concrete (oxide added to the mix), and stencilled or stamped patterns (pressed into the surface before curing). Each has different cost, maintenance and look. We can walk you through what suits the property.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between py-6 text-left group focus-visible:outline-2 focus-visible:outline-brand-500 focus-visible:outline-offset-2">
+            <h3 class="text-white text-lg sm:text-xl font-semibold pr-8" style="letter-spacing: -0.01em;">How long does concrete take to cure before it can be used?</h3>
+            <svg class="faq-chevron w-5 h-5 text-gray-400 shrink-0" style="transition: transform 0.3s ease;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer overflow-hidden" style="max-height: 0; transition: max-height 0.3s ease, opacity 0.3s ease; opacity: 0;">
+            <p class="body-text text-base pb-6">Most residential pours can be walked on after 24 to 48 hours and driven on after 7 days. Full structural strength is reached at 28 days. We tell you exactly when each section is safe to use as part of the handover.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between py-6 text-left group focus-visible:outline-2 focus-visible:outline-brand-500 focus-visible:outline-offset-2">
+            <h3 class="text-white text-lg sm:text-xl font-semibold pr-8" style="letter-spacing: -0.01em;">Do you handle the council crossover approval for new driveways?</h3>
+            <svg class="faq-chevron w-5 h-5 text-gray-400 shrink-0" style="transition: transform 0.3s ease;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer overflow-hidden" style="max-height: 0; transition: max-height 0.3s ease, opacity 0.3s ease; opacity: 0;">
+            <p class="body-text text-base pb-6">Yes. Where a new or upgraded crossover is required, we coordinate the application with the City of Greater Geelong and pour the crossover to council spec. Existing compliant crossovers we can work with as they are.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between py-6 text-left group focus-visible:outline-2 focus-visible:outline-brand-500 focus-visible:outline-offset-2">
+            <h3 class="text-white text-lg sm:text-xl font-semibold pr-8" style="letter-spacing: -0.01em;">What is the difference between a raft slab and a regular slab?</h3>
+            <svg class="faq-chevron w-5 h-5 text-gray-400 shrink-0" style="transition: transform 0.3s ease;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer overflow-hidden" style="max-height: 0; transition: max-height 0.3s ease, opacity 0.3s ease; opacity: 0;">
+            <p class="body-text text-base pb-6">A raft slab is a thick, reinforced concrete slab that sits on the ground and acts as the entire foundation of the building. It is the most common foundation type for new homes in Geelong. A regular slab is thinner and used for floors, paths or non-structural surfaces. We pour both, and the engineer's specs determine which is right for the project.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between py-6 text-left group focus-visible:outline-2 focus-visible:outline-brand-500 focus-visible:outline-offset-2">
+            <h3 class="text-white text-lg sm:text-xl font-semibold pr-8" style="letter-spacing: -0.01em;">Do you provide a warranty on your concrete work?</h3>
+            <svg class="faq-chevron w-5 h-5 text-gray-400 shrink-0" style="transition: transform 0.3s ease;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer overflow-hidden" style="max-height: 0; transition: max-height 0.3s ease, opacity 0.3s ease; opacity: 0;">
+            <p class="body-text text-base pb-6">Yes. All workmanship is backed by our written warranty, and we work to Australian Standards (including AS 2870 for residential slabs and AS 3600 for concrete structures) on every job. Concrete itself has a manufacturer's warranty through the supplier.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between py-6 text-left group focus-visible:outline-2 focus-visible:outline-brand-500 focus-visible:outline-offset-2">
+            <h3 class="text-white text-lg sm:text-xl font-semibold pr-8" style="letter-spacing: -0.01em;">Are you fully insured?</h3>
+            <svg class="faq-chevron w-5 h-5 text-gray-400 shrink-0" style="transition: transform 0.3s ease;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer overflow-hidden" style="max-height: 0; transition: max-height 0.3s ease, opacity 0.3s ease; opacity: 0;">
+            <p class="body-text text-base pb-6">Yes. Select Civil Group carries full public liability insurance and workers compensation cover on every job. Certificates of currency are available on request.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
   <!-- ========== ALSO SEE ========== -->
   <section class="bg-dark-950 border-t border-white/5 py-16 lg:py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -663,6 +846,50 @@
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a href="contact.html" class="bg-dark-950 text-white font-bold uppercase tracking-wider px-8 py-4 text-base text-center hover:bg-dark-800" style="transition: background 0.2s ease;">Get a Free Quote</a>
         <a href="mailto:selectcivilgroupvic@outlook.com" class="border-2 border-dark-950 text-dark-950 font-bold uppercase tracking-wider px-8 py-4 text-base text-center hover:bg-dark-950 hover:text-white" style="transition: background 0.2s ease, color 0.2s ease;">Email Us</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== LOCAL SERVICE AREAS (Phase C2) ========== -->
+  <section class="bg-dark-950 border-t border-white/5 py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-12">
+        <div class="accent-bar mb-4"></div>
+        <h2 class="heading-lg text-3xl sm:text-4xl lg:text-5xl text-white mb-6">Concrete Across Geelong &amp; the Bellarine</h2>
+        <p class="body-text text-lg">Pick the suburb closest to your site for service-specific details and a local quote.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <a href="excavation-drysdale.html" class="bg-dark-900 border border-white/5 hover:border-brand-500/30 p-6 group" style="transition: border-color 0.3s ease;">
+          <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-2">Bellarine Peninsula</p>
+          <h3 class="heading-md text-xl text-white mb-1 group-hover:text-brand-500" style="transition: color 0.2s ease;">Excavation Drysdale</h3>
+          <p class="body-text text-sm">Site cuts, earthworks &amp; retaining walls</p>
+        </a>
+        <a href="retaining-walls-leopold.html" class="bg-dark-900 border border-white/5 hover:border-brand-500/30 p-6 group" style="transition: border-color 0.3s ease;">
+          <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-2">Geelong East</p>
+          <h3 class="heading-md text-xl text-white mb-1 group-hover:text-brand-500" style="transition: color 0.2s ease;">Retaining Walls Leopold</h3>
+          <p class="body-text text-sm">Engineered concrete retaining walls</p>
+        </a>
+        <a href="concrete-driveway-ocean-grove.html" class="bg-dark-900 border border-white/5 hover:border-brand-500/30 p-6 group" style="transition: border-color 0.3s ease;">
+          <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-2">Bellarine Peninsula</p>
+          <h3 class="heading-md text-xl text-white mb-1 group-hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Driveways Ocean Grove</h3>
+          <p class="body-text text-sm">Driveways &amp; crossovers for coastal homes</p>
+        </a>
+        <a href="civil-contractor-torquay.html" class="bg-dark-900 border border-white/5 hover:border-brand-500/30 p-6 group" style="transition: border-color 0.3s ease;">
+          <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-2">Surf Coast</p>
+          <h3 class="heading-md text-xl text-white mb-1 group-hover:text-brand-500" style="transition: color 0.2s ease;">Civil Contractor Torquay</h3>
+          <p class="body-text text-sm">Earthworks, concrete &amp; site cuts</p>
+        </a>
+        <a href="concrete-driveway-highton.html" class="bg-dark-900 border border-white/5 hover:border-brand-500/30 p-6 group" style="transition: border-color 0.3s ease;">
+          <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-2">Geelong West</p>
+          <h3 class="heading-md text-xl text-white mb-1 group-hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Driveways Highton</h3>
+          <p class="body-text text-sm">Driveways &amp; crossovers across western Geelong</p>
+        </a>
+        <a href="civil-works-lara.html" class="bg-dark-900 border border-white/5 hover:border-brand-500/30 p-6 group" style="transition: border-color 0.3s ease;">
+          <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-2">Geelong North</p>
+          <h3 class="heading-md text-xl text-white mb-1 group-hover:text-brand-500" style="transition: color 0.2s ease;">Civil Contractor Lara</h3>
+          <p class="body-text text-sm">Earthworks, concrete &amp; civil works</p>
+        </a>
       </div>
     </div>
   </section>
@@ -841,6 +1068,16 @@
       const chevron = document.getElementById('mobile-services-chevron');
       list.classList.toggle('open');
       chevron.style.transform = list.classList.contains('open') ? 'rotate(180deg)' : 'rotate(0deg)';
+    }
+
+    // FAQ accordion (Phase C2)
+    function toggleFaq(btn) {
+      const answer = btn.nextElementSibling;
+      const chevron = btn.querySelector('.faq-chevron');
+      const isOpen = answer.style.maxHeight !== '0px' && answer.style.maxHeight !== '';
+      document.querySelectorAll('.faq-answer').forEach(a => { a.style.maxHeight = '0px'; a.style.opacity = '0'; });
+      document.querySelectorAll('.faq-chevron').forEach(c => { c.style.transform = 'rotate(0deg)'; });
+      if (!isOpen) { answer.style.maxHeight = answer.scrollHeight + 'px'; answer.style.opacity = '1'; chevron.style.transform = 'rotate(180deg)'; }
     }
 
     // Fade in on scroll
