@@ -8,7 +8,7 @@
 **Industry:** Civil contracting - earthworks and concrete services
 **Location:** Geelong / Bellarine Peninsula, VIC (postcode 3226)
 **Domain:** selectcivilgroup.com.au (registered via GoDaddy)
-**Email:** selectcivilgroupvic@outlook.com
+**Email:** andrew@selectcivilgroup.com.au (primary, owner) + admin@selectcivilgroup.com.au (Tara)
 **Google Business Profile:** Verified (Select civil group pty ltd, Construction Company, Geelong VIC, 07:00-17:00)
 
 ## Migration Context
@@ -20,7 +20,7 @@ This site is being migrated from Webflow to a custom HTML/CSS/JS build.
 - **Target stack:** Custom HTML/CSS/JS (inline styles via Tailwind CDN)
 - **Target deployment:** Cloudflare Pages (auto-deploys from `main` branch on GitHub)
 - **DNS:** GoDaddy - will need to be repointed from Webflow to Cloudflare after deployment
-- **Form submissions:** Must route to selectcivilgroupvic@outlook.com (use Formspree)
+- **Form submissions:** Must route to andrew@selectcivilgroup.com.au (primary, owner) + admin@selectcivilgroup.com.au (Tara) (use Formspree)
 
 The 8 Relume screenshot JPEGs in this folder are design references from the current Webflow site. Match these layouts when building the new site.
 
