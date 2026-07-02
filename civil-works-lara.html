@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Civil Contractor Lara - Earthworks, Site Cuts & Concrete | Select Civil Group</title>
   <meta name="description" content="Local civil contractor in Lara and across the Geelong north corridor. Earthworks, site cuts, retaining walls, concrete driveways and slabs. Free quotes within 24 hours.">
-  <link rel="canonical" href="https://selectcivilgroup.com.au/civil-works-lara.html">
+  <link rel="canonical" href="https://selectcivilgroup.com.au/civil-works-lara">
 
   <!-- Geo meta -->
   <meta name="geo.region" content="AU-VIC">
@@ -17,7 +17,7 @@
   <meta property="og:title" content="Civil Contractor Lara - Select Civil Group">
   <meta property="og:description" content="Local civil contractor in Lara and across the Geelong north corridor. Earthworks, site cuts, retaining walls, concrete driveways and slabs. Free quotes within 24 hours.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://selectcivilgroup.com.au/civil-works-lara.html">
+  <meta property="og:url" content="https://selectcivilgroup.com.au/civil-works-lara">
   <meta property="og:site_name" content="Select Civil Group">
   <meta property="og:locale" content="en_AU">
   <meta property="og:image" content="https://selectcivilgroup.com.au/Assets/earthworks.jpeg">
@@ -31,26 +31,12 @@
   <meta name="twitter:description" content="Earthworks, site cuts, retaining walls and concrete in Lara and across the Geelong north corridor.">
   <meta name="twitter:image" content="https://selectcivilgroup.com.au/Assets/earthworks.jpeg">
 
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            dark: { 950: '#0a0a0a', 900: '#111111', 800: '#1a1a1a', 700: '#242424', 600: '#2e2e2e' },
-            brand: { 500: '#d4912a', 400: '#e8a840' }
-          },
-          fontFamily: { heading: ['"Inter"', 'system-ui', 'sans-serif'], body: ['"Inter"', 'system-ui', 'sans-serif'] }
-        }
-      }
-    }
-  </script>
+  <!-- Styles (compiled Tailwind, was CDN runtime) -->
+  <link rel="stylesheet" href="/styles.css">
 
   <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preload" href="/Assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/Assets/fonts/fonts.css">
 
   <!-- JSON-LD: @graph (Service + BreadcrumbList + FAQPage) -->
   <script type="application/ld+json">
@@ -94,8 +80,8 @@
         "@type": "BreadcrumbList",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://selectcivilgroup.com.au/" },
-          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://selectcivilgroup.com.au/services.html" },
-          { "@type": "ListItem", "position": 3, "name": "Lara", "item": "https://selectcivilgroup.com.au/civil-works-lara.html" }
+          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://selectcivilgroup.com.au/services" },
+          { "@type": "ListItem", "position": 3, "name": "Lara", "item": "https://selectcivilgroup.com.au/civil-works-lara" }
         ]
       },
       {
@@ -192,6 +178,8 @@
     .accent-bar { width: 48px; height: 4px; background: #d4912a; }
     .stripe-texture::before { content: ''; position: absolute; inset: 0; background-image: repeating-linear-gradient(90deg, transparent, transparent 3px, rgba(255,255,255,0.015) 3px, rgba(255,255,255,0.015) 4px); pointer-events: none; z-index: 1; }
   </style>
+  <!-- Analytics + lead tracking (Sutera Sites) -->
+  <script defer src="/js/analytics.js"></script>
 </head>
 <body class="bg-dark-950 text-white font-body">
 
@@ -216,13 +204,13 @@
 
           <!-- Desktop links -->
           <div class="hidden lg:flex items-center gap-8">
-            <a href="projects.html" class="nav-link text-gray-700 text-[15px] font-medium">Projects</a>
-            <a href="about.html" class="nav-link text-gray-700 text-[15px] font-medium">About</a>
-            <a href="contact.html" class="nav-link text-gray-700 text-[15px] font-medium">Contact</a>
+            <a href="projects" class="nav-link text-gray-700 text-[15px] font-medium">Projects</a>
+            <a href="about" class="nav-link text-gray-700 text-[15px] font-medium">About</a>
+            <a href="contact" class="nav-link text-gray-700 text-[15px] font-medium">Contact</a>
 
             <!-- Services mega dropdown trigger -->
             <div class="mega-trigger">
-              <a href="services.html" class="nav-link text-gray-700 text-[15px] font-medium flex items-center gap-1.5">
+              <a href="services" class="nav-link text-gray-700 text-[15px] font-medium flex items-center gap-1.5">
                 Services
                 <svg class="mega-chevron w-3 h-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
               </a>
@@ -233,30 +221,30 @@
                   <div class="grid grid-cols-2 gap-6">
                     <!-- Concrete Services -->
                     <div>
-                      <a href="concrete-services.html" class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-3 block hover:text-brand-400" style="transition: color 0.2s ease;">Concrete Services</a>
+                      <a href="concrete-services" class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-3 block hover:text-brand-400" style="transition: color 0.2s ease;">Concrete Services</a>
                       <div class="flex flex-col gap-0.5">
-                        <a href="services.html#retaining-walls" class="mega-service-link text-gray-600 text-sm py-1.5 hover:text-dark-950" style="transition: color 0.2s ease;">Retaining Walls</a>
-                        <a href="services.html#concrete-driveways" class="mega-service-link text-gray-600 text-sm py-1.5 hover:text-dark-950" style="transition: color 0.2s ease;">Concrete Driveways</a>
-                        <a href="services.html#concrete-raft-slabs" class="mega-service-link text-gray-600 text-sm py-1.5 hover:text-dark-950" style="transition: color 0.2s ease;">Concrete Raft Slabs</a>
-                        <a href="services.html#concrete-paving" class="mega-service-link text-gray-600 text-sm py-1.5 hover:text-dark-950" style="transition: color 0.2s ease;">Concrete Paving</a>
-                        <a href="services.html#factory-tilt-panels" class="mega-service-link text-gray-600 text-sm py-1.5 hover:text-dark-950" style="transition: color 0.2s ease;">Factory Tilt Panels</a>
-                        <a href="services.html#concrete-seating" class="mega-service-link text-gray-600 text-sm py-1.5 hover:text-dark-950" style="transition: color 0.2s ease;">Concrete Seating</a>
-                        <a href="services.html#concrete-bench-drops" class="mega-service-link text-gray-600 text-sm py-1.5 hover:text-dark-950" style="transition: color 0.2s ease;">Concrete Bench Drops</a>
+                        <a href="services#retaining-walls" class="mega-service-link text-gray-600 text-sm py-1.5 hover:text-dark-950" style="transition: color 0.2s ease;">Retaining Walls</a>
+                        <a href="services#concrete-driveways" class="mega-service-link text-gray-600 text-sm py-1.5 hover:text-dark-950" style="transition: color 0.2s ease;">Concrete Driveways</a>
+                        <a href="services#concrete-raft-slabs" class="mega-service-link text-gray-600 text-sm py-1.5 hover:text-dark-950" style="transition: color 0.2s ease;">Concrete Raft Slabs</a>
+                        <a href="services#concrete-paving" class="mega-service-link text-gray-600 text-sm py-1.5 hover:text-dark-950" style="transition: color 0.2s ease;">Concrete Paving</a>
+                        <a href="services#factory-tilt-panels" class="mega-service-link text-gray-600 text-sm py-1.5 hover:text-dark-950" style="transition: color 0.2s ease;">Factory Tilt Panels</a>
+                        <a href="services#concrete-seating" class="mega-service-link text-gray-600 text-sm py-1.5 hover:text-dark-950" style="transition: color 0.2s ease;">Concrete Seating</a>
+                        <a href="services#concrete-bench-drops" class="mega-service-link text-gray-600 text-sm py-1.5 hover:text-dark-950" style="transition: color 0.2s ease;">Concrete Bench Drops</a>
                       </div>
                     </div>
                     <!-- Earthworks & Excavation -->
                     <div>
-                      <a href="earthworks-excavation.html" class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-3 block hover:text-brand-400" style="transition: color 0.2s ease;">Earthworks & Excavation</a>
+                      <a href="earthworks-excavation" class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-3 block hover:text-brand-400" style="transition: color 0.2s ease;">Earthworks & Excavation</a>
                       <div class="flex flex-col gap-0.5">
-                        <a href="services.html#earthworks" class="mega-service-link text-gray-600 text-sm py-1.5 hover:text-dark-950" style="transition: color 0.2s ease;">Earthworks</a>
-                        <a href="services.html#site-cuts" class="mega-service-link text-gray-600 text-sm py-1.5 hover:text-dark-950" style="transition: color 0.2s ease;">Site Cuts</a>
-                        <a href="services.html#detail-excavation" class="mega-service-link text-gray-600 text-sm py-1.5 hover:text-dark-950" style="transition: color 0.2s ease;">Detail Excavation</a>
-                        <a href="services.html#removal-of-excess-oil" class="mega-service-link text-gray-600 text-sm py-1.5 hover:text-dark-950" style="transition: color 0.2s ease;">Removal of Excess Oil</a>
+                        <a href="services#earthworks" class="mega-service-link text-gray-600 text-sm py-1.5 hover:text-dark-950" style="transition: color 0.2s ease;">Earthworks</a>
+                        <a href="services#site-cuts" class="mega-service-link text-gray-600 text-sm py-1.5 hover:text-dark-950" style="transition: color 0.2s ease;">Site Cuts</a>
+                        <a href="services#detail-excavation" class="mega-service-link text-gray-600 text-sm py-1.5 hover:text-dark-950" style="transition: color 0.2s ease;">Detail Excavation</a>
+                        <a href="services#removal-of-excess-oil" class="mega-service-link text-gray-600 text-sm py-1.5 hover:text-dark-950" style="transition: color 0.2s ease;">Removal of Excess Oil</a>
                       </div>
                     </div>
                   </div>
                   <div class="border-t border-black/5 mt-4 pt-3">
-                    <a href="services.html" class="text-gray-500 text-xs font-semibold hover:text-brand-500 flex items-center gap-1.5" style="transition: color 0.2s ease;">View all services <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></a>
+                    <a href="services" class="text-gray-500 text-xs font-semibold hover:text-brand-500 flex items-center gap-1.5" style="transition: color 0.2s ease;">View all services <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></a>
                   </div>
                 </div>
               </div>
@@ -265,7 +253,7 @@
         </div>
 
         <!-- CENTER: logo -->
-        <a href="index.html" class="flex items-center justify-center">
+        <a href="/" class="flex items-center justify-center">
           <img src="Assets/Logo PNG.png" alt="Select Civil Group logo" width="2667" height="2106" class="h-11 w-auto">
         </a>
 
@@ -273,7 +261,7 @@
         <div class="flex items-center justify-end gap-5">
           <a href="tel:0483092615" class="hidden lg:inline nav-link text-gray-700 text-[15px] font-medium">0483 092 615</a>
           <span class="hidden lg:inline-block w-px h-5 bg-black/15" aria-hidden="true"></span>
-          <a href="contact.html" class="btn-nav-fill text-[15px] px-4 py-2 lg:px-5 lg:py-2.5">Get a Quote</a>
+          <a href="contact" class="btn-nav-fill text-[15px] px-4 py-2 lg:px-5 lg:py-2.5">Get a Quote</a>
         </div>
 
       </div>
@@ -285,9 +273,9 @@
   <!-- Mobile menu -->
   <div id="mobile-menu" class="mobile-menu fixed top-16 left-0 bottom-0 w-full sm:w-80 bg-white sm:border-r border-black/5 p-8 lg:hidden z-50 overflow-y-auto">
     <div class="flex flex-col gap-1">
-      <a href="projects.html" onclick="toggleMobileMenu()" class="text-gray-800 text-lg font-semibold hover:text-brand-500 py-3" style="transition: color 0.2s ease;">Projects</a>
-      <a href="about.html" onclick="toggleMobileMenu()" class="text-gray-800 text-lg font-semibold hover:text-brand-500 py-3" style="transition: color 0.2s ease;">About</a>
-      <a href="contact.html" onclick="toggleMobileMenu()" class="text-gray-800 text-lg font-semibold hover:text-brand-500 py-3" style="transition: color 0.2s ease;">Contact</a>
+      <a href="projects" onclick="toggleMobileMenu()" class="text-gray-800 text-lg font-semibold hover:text-brand-500 py-3" style="transition: color 0.2s ease;">Projects</a>
+      <a href="about" onclick="toggleMobileMenu()" class="text-gray-800 text-lg font-semibold hover:text-brand-500 py-3" style="transition: color 0.2s ease;">About</a>
+      <a href="contact" onclick="toggleMobileMenu()" class="text-gray-800 text-lg font-semibold hover:text-brand-500 py-3" style="transition: color 0.2s ease;">Contact</a>
 
       <!-- Services with expandable sub-menu -->
       <button onclick="toggleMobileServices()" class="flex items-center justify-between w-full text-gray-800 text-lg font-semibold hover:text-brand-500 py-3" style="transition: color 0.2s ease;">
@@ -297,25 +285,25 @@
       <div id="mobile-services-list" class="mobile-services-list pl-4">
         <div class="border-l-2 border-brand-500/30 pl-4 flex flex-col gap-0.5 pb-3">
           <p class="text-brand-500 text-xs font-bold uppercase tracking-widest pt-1 pb-1">Concrete Services</p>
-          <a href="services.html#retaining-walls" onclick="toggleMobileMenu()" class="text-gray-600 text-sm py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Retaining Walls</a>
-          <a href="services.html#concrete-driveways" onclick="toggleMobileMenu()" class="text-gray-600 text-sm py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Driveways</a>
-          <a href="services.html#concrete-raft-slabs" onclick="toggleMobileMenu()" class="text-gray-600 text-sm py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Raft Slabs</a>
-          <a href="services.html#concrete-paving" onclick="toggleMobileMenu()" class="text-gray-600 text-sm py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Paving</a>
-          <a href="services.html#factory-tilt-panels" onclick="toggleMobileMenu()" class="text-gray-600 text-sm py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Factory Tilt Panels</a>
-          <a href="services.html#concrete-seating" onclick="toggleMobileMenu()" class="text-gray-600 text-sm py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Seating</a>
-          <a href="services.html#concrete-bench-drops" onclick="toggleMobileMenu()" class="text-gray-600 text-sm py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Bench Drops</a>
+          <a href="services#retaining-walls" onclick="toggleMobileMenu()" class="text-gray-600 text-sm py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Retaining Walls</a>
+          <a href="services#concrete-driveways" onclick="toggleMobileMenu()" class="text-gray-600 text-sm py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Driveways</a>
+          <a href="services#concrete-raft-slabs" onclick="toggleMobileMenu()" class="text-gray-600 text-sm py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Raft Slabs</a>
+          <a href="services#concrete-paving" onclick="toggleMobileMenu()" class="text-gray-600 text-sm py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Paving</a>
+          <a href="services#factory-tilt-panels" onclick="toggleMobileMenu()" class="text-gray-600 text-sm py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Factory Tilt Panels</a>
+          <a href="services#concrete-seating" onclick="toggleMobileMenu()" class="text-gray-600 text-sm py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Seating</a>
+          <a href="services#concrete-bench-drops" onclick="toggleMobileMenu()" class="text-gray-600 text-sm py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Concrete Bench Drops</a>
           <p class="text-brand-500 text-xs font-bold uppercase tracking-widest pt-3 pb-1">Earthworks & Excavation</p>
-          <a href="services.html#earthworks" onclick="toggleMobileMenu()" class="text-gray-600 text-sm py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Earthworks</a>
-          <a href="services.html#site-cuts" onclick="toggleMobileMenu()" class="text-gray-600 text-sm py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Site Cuts</a>
-          <a href="services.html#detail-excavation" onclick="toggleMobileMenu()" class="text-gray-600 text-sm py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Detail Excavation</a>
-          <a href="services.html#removal-of-excess-oil" onclick="toggleMobileMenu()" class="text-gray-600 text-sm py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Removal of Excess Oil</a>
-          <a href="services.html" onclick="toggleMobileMenu()" class="text-gray-500 text-xs font-semibold pt-3 hover:text-brand-500 flex items-center gap-1.5" style="transition: color 0.2s ease;">View all services <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></a>
+          <a href="services#earthworks" onclick="toggleMobileMenu()" class="text-gray-600 text-sm py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Earthworks</a>
+          <a href="services#site-cuts" onclick="toggleMobileMenu()" class="text-gray-600 text-sm py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Site Cuts</a>
+          <a href="services#detail-excavation" onclick="toggleMobileMenu()" class="text-gray-600 text-sm py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Detail Excavation</a>
+          <a href="services#removal-of-excess-oil" onclick="toggleMobileMenu()" class="text-gray-600 text-sm py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Removal of Excess Oil</a>
+          <a href="services" onclick="toggleMobileMenu()" class="text-gray-500 text-xs font-semibold pt-3 hover:text-brand-500 flex items-center gap-1.5" style="transition: color 0.2s ease;">View all services <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></a>
         </div>
       </div>
 
       <div class="border-t border-black/10 mt-4 pt-4 flex flex-col gap-3">
         <a href="tel:0483092615" onclick="toggleMobileMenu()" class="text-gray-800 text-base font-medium text-center py-2">0483 092 615</a>
-        <a href="contact.html" onclick="toggleMobileMenu()" class="btn-nav-fill text-center px-6 py-3">Get a Quote</a>
+        <a href="contact" onclick="toggleMobileMenu()" class="btn-nav-fill text-center px-6 py-3">Get a Quote</a>
       </div>
     </div>
   </div>
@@ -327,9 +315,9 @@
     <nav aria-label="Breadcrumb" class="bg-dark-900 border-b border-white/5 pt-20 lg:pt-24">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <ol class="flex items-center gap-2 text-xs text-gray-500">
-          <li><a href="index.html" class="hover:text-brand-500" style="transition: color 0.2s ease;">Home</a></li>
+          <li><a href="/" class="hover:text-brand-500" style="transition: color 0.2s ease;">Home</a></li>
           <li aria-hidden="true" class="text-gray-700">/</li>
-          <li><a href="services.html" class="hover:text-brand-500" style="transition: color 0.2s ease;">Services</a></li>
+          <li><a href="services" class="hover:text-brand-500" style="transition: color 0.2s ease;">Services</a></li>
           <li aria-hidden="true" class="text-gray-700">/</li>
           <li class="text-gray-300" aria-current="page">Lara</li>
         </ol>
@@ -339,7 +327,7 @@
     <!-- ========== HERO ========== -->
     <section class="relative">
       <div class="relative overflow-hidden" style="height: 420px;">
-        <img src="Assets/earthworks.jpeg" alt="Civil contracting and earthworks by Select Civil Group on a Lara development site" width="1600" height="900" class="w-full h-full object-cover">
+        <img src="Assets/earthworks.jpeg" alt="Civil contracting and earthworks by Select Civil Group on a Lara development site" width="1600" height="900" class="w-full h-full object-cover" fetchpriority="high">
         <div class="absolute inset-0 bg-black/60"></div>
         <div class="absolute inset-0 bg-gradient-to-t from-dark-950 via-transparent to-transparent"></div>
         <div class="absolute inset-0 flex items-center">
@@ -382,7 +370,7 @@
         <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
           <article class="bg-dark-800 border border-white/5 p-8 hover:border-brand-500/30" style="transition: border-color 0.3s ease;">
             <div class="relative overflow-hidden mb-6" style="aspect-ratio: 4/3;">
-              <img src="Assets/site-cut-1.jpg" alt="Precision site cut on a Lara residential block" width="800" height="600" class="w-full h-full object-cover">
+              <img src="Assets/site-cut-1.jpg" alt="Precision site cut on a Lara residential block" width="800" height="600" class="w-full h-full object-cover" loading="lazy" decoding="async">
             </div>
             <h3 class="heading-md text-xl sm:text-2xl text-white mb-3">Site Cuts</h3>
             <p class="body-text text-sm mb-4">Precision cut and fill to engineering levels, ready for footings and slabs. Lara's mix of flat estate lots and undulating rural-residential blocks both fit our setup, with laser levels and spoil cartage included.</p>
@@ -390,7 +378,7 @@
           </article>
           <article class="bg-dark-800 border border-white/5 p-8 hover:border-brand-500/30" style="transition: border-color 0.3s ease;">
             <div class="relative overflow-hidden mb-6" style="aspect-ratio: 4/3;">
-              <img src="Assets/earthworks-1.jpg" alt="Bulk earthworks on a Lara development site" width="800" height="600" class="w-full h-full object-cover">
+              <img src="Assets/earthworks-1.jpg" alt="Bulk earthworks on a Lara development site" width="800" height="600" class="w-full h-full object-cover" loading="lazy" decoding="async">
             </div>
             <h3 class="heading-md text-xl sm:text-2xl text-white mb-3">Earthworks & Land Clearing</h3>
             <p class="body-text text-sm mb-4">Bulk earthworks, grading, levelling and land clearing for residential lots, rural-residential blocks and subdivisions across Lara and the northern corridor.</p>
@@ -398,7 +386,7 @@
           </article>
           <article class="bg-dark-800 border border-white/5 p-8 hover:border-brand-500/30" style="transition: border-color 0.3s ease;">
             <div class="relative overflow-hidden mb-6" style="aspect-ratio: 4/3;">
-              <img src="Assets/concrete-driveways.jpeg" alt="Concrete driveway poured at a Lara property" width="800" height="600" class="w-full h-full object-cover">
+              <img src="Assets/concrete-driveways.jpeg" alt="Concrete driveway poured at a Lara property" width="800" height="600" class="w-full h-full object-cover" loading="lazy" decoding="async">
             </div>
             <h3 class="heading-md text-xl sm:text-2xl text-white mb-3">Concrete Driveways</h3>
             <p class="body-text text-sm mb-4">Plain, exposed aggregate, coloured or stencilled driveways and crossovers across Lara and surrounding suburbs. Built for the weight of utes and trades, with proper drainage and finish.</p>
@@ -406,7 +394,7 @@
           </article>
           <article class="bg-dark-800 border border-white/5 p-8 hover:border-brand-500/30" style="transition: border-color 0.3s ease;">
             <div class="relative overflow-hidden mb-6" style="aspect-ratio: 4/3;">
-              <img src="Assets/retaining-wall-1.jpg" alt="Concrete retaining wall on a Lara block" width="800" height="600" class="w-full h-full object-cover">
+              <img src="Assets/retaining-wall-1.jpg" alt="Concrete retaining wall on a Lara block" width="800" height="600" class="w-full h-full object-cover" loading="lazy" decoding="async">
             </div>
             <h3 class="heading-md text-xl sm:text-2xl text-white mb-3">Retaining Walls</h3>
             <p class="body-text text-sm mb-4">Concrete retaining walls for residential and commercial blocks. Designed to engineering specs and built to last, often paired with site cuts when a level platform is the end goal.</p>
@@ -556,7 +544,7 @@
           </div>
           <div class="bg-dark-700 border border-white/10 p-8">
             <form action="https://formspree.io/f/xdawnnyp" method="POST" class="space-y-5">
-              <input type="hidden" name="_next" value="https://selectcivilgroup.com.au/thank-you.html">
+              <input type="hidden" name="_next" value="https://selectcivilgroup.com.au/thank-you">
               <input type="hidden" name="_subject" value="New enquiry from selectcivilgroup.com.au - Civil Contractor Lara page">
               <input type="hidden" name="_source_page" value="civil-works-lara.html">
               <div class="grid sm:grid-cols-2 gap-5">
@@ -602,7 +590,7 @@
           <h2 class="heading-xl text-4xl sm:text-5xl lg:text-6xl text-white mb-6">Let's Build Something Solid Together</h2>
           <p class="text-gray-400 text-base mb-8" style="line-height: 1.7;">From initial site assessment to final cleanup, we're here for your project.</p>
           <div class="flex flex-wrap gap-3">
-            <a href="contact.html" class="btn-fill px-7 py-3 text-sm">Get a Quote</a>
+            <a href="contact" class="btn-fill px-7 py-3 text-sm">Get a Quote</a>
             <a href="tel:0483092615" class="btn-outline px-7 py-3 text-sm">Call</a>
           </div>
         </div>
@@ -610,11 +598,11 @@
           <div>
             <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-4">Site</p>
             <div class="flex flex-col gap-3">
-              <a href="index.html" class="text-white text-sm font-bold hover:text-brand-500" style="transition: color 0.2s ease;">Home</a>
-              <a href="services.html" class="text-white text-sm font-bold hover:text-brand-500" style="transition: color 0.2s ease;">Services</a>
-              <a href="about.html" class="text-white text-sm font-bold hover:text-brand-500" style="transition: color 0.2s ease;">About</a>
-              <a href="projects.html" class="text-white text-sm font-bold hover:text-brand-500" style="transition: color 0.2s ease;">Projects</a>
-              <a href="contact.html" class="text-white text-sm font-bold hover:text-brand-500" style="transition: color 0.2s ease;">Contact</a>
+              <a href="/" class="text-white text-sm font-bold hover:text-brand-500" style="transition: color 0.2s ease;">Home</a>
+              <a href="services" class="text-white text-sm font-bold hover:text-brand-500" style="transition: color 0.2s ease;">Services</a>
+              <a href="about" class="text-white text-sm font-bold hover:text-brand-500" style="transition: color 0.2s ease;">About</a>
+              <a href="projects" class="text-white text-sm font-bold hover:text-brand-500" style="transition: color 0.2s ease;">Projects</a>
+              <a href="contact" class="text-white text-sm font-bold hover:text-brand-500" style="transition: color 0.2s ease;">Contact</a>
             </div>
           </div>
           <div>
@@ -632,7 +620,7 @@
       <div class="border-t border-white/5 pt-8 flex flex-col sm:flex-row justify-between items-center gap-6">
         <div class="flex items-center gap-4">
           <p class="text-gray-600 text-xs">&copy; 2026 Select Civil Group Pty Ltd. All rights reserved.</p>
-          <a href="privacy.html" class="text-gray-500 text-xs hover:text-white" style="transition: color 0.2s ease;">Privacy Policy</a>
+          <a href="privacy" class="text-gray-500 text-xs hover:text-white" style="transition: color 0.2s ease;">Privacy Policy</a>
         </div>
         <a href="https://www.instagram.com/select_civil_group_pty_ltd/" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-white" style="transition: color 0.2s ease;" aria-label="Instagram">
           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
