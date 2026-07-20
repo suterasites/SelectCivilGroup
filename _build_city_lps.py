@@ -118,7 +118,7 @@ NAV_AND_MOBILE_MENU = r"""
                       <a href="services.html#earthworks" class="text-gray-400 text-sm py-1.5 hover:text-white" style="transition: color 0.2s ease;">Earthworks</a>
                       <a href="services.html#site-cuts" class="text-gray-400 text-sm py-1.5 hover:text-white" style="transition: color 0.2s ease;">Site Cuts</a>
                       <a href="services.html#detail-excavation" class="text-gray-400 text-sm py-1.5 hover:text-white" style="transition: color 0.2s ease;">Detail Excavation</a>
-                      <a href="services.html#removal-of-excess-oil" class="text-gray-400 text-sm py-1.5 hover:text-white" style="transition: color 0.2s ease;">Removal of Excess Oil</a>
+                      <a href="services.html#excess-soil-removal" class="text-gray-400 text-sm py-1.5 hover:text-white" style="transition: color 0.2s ease;">Excess Soil Removal</a>
                     </div>
                   </div>
                 </div>
@@ -162,7 +162,7 @@ NAV_AND_MOBILE_MENU = r"""
           <a href="services.html#earthworks" onclick="toggleMobileMenu()" class="text-gray-400 text-sm py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Earthworks</a>
           <a href="services.html#site-cuts" onclick="toggleMobileMenu()" class="text-gray-400 text-sm py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Site Cuts</a>
           <a href="services.html#detail-excavation" onclick="toggleMobileMenu()" class="text-gray-400 text-sm py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Detail Excavation</a>
-          <a href="services.html#removal-of-excess-oil" onclick="toggleMobileMenu()" class="text-gray-400 text-sm py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Removal of Excess Oil</a>
+          <a href="services.html#excess-soil-removal" onclick="toggleMobileMenu()" class="text-gray-400 text-sm py-1.5 hover:text-brand-500" style="transition: color 0.2s ease;">Excess Soil Removal</a>
           <a href="services.html" onclick="toggleMobileMenu()" class="text-gray-500 text-xs font-semibold pt-3 hover:text-brand-500 flex items-center gap-1.5" style="transition: color 0.2s ease;">View all services <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></a>
         </div>
       </div>
@@ -686,7 +686,7 @@ EARTHWORKS_OPTIONS = """                  <optgroup label="Earthworks &amp; Exca
                     <option value="earthworks"{earthworks_sel}>Earthworks</option>
                     <option value="site-cuts">Site Cuts</option>
                     <option value="detail-excavation">Detail Excavation</option>
-                    <option value="removal-excess-oil">Removal of Excess Oil</option>
+                    <option value="removal-excess-oil">Excess Soil Removal</option>
                   </optgroup>"""
 
 
