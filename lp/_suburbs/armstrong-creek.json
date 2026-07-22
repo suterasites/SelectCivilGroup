@@ -1,0 +1,14 @@
+{
+  "name": "Armstrong Creek",
+  "slug": "armstrong-creek",
+  "postcode": "3217",
+  "lat": "-38.2380",
+  "lng": "144.3230",
+  "lastmod": "2026-07-22",
+  "region_eyebrow": "Geelong Growth Corridor",
+  "region_name": "Geelong",
+  "region_short": "the Surf Coast",
+  "catchment": ["Armstrong Creek", "Charlemont", "Mount Duneed", "Marshall", "Grovedale", "Waurn Ponds", "Belmont", "Connewarre", "Torquay", "Leopold", "Geelong", "Barwon Heads"],
+  "intro_context": "Armstrong Creek is the fastest-growing part of Geelong, a vast new-housing corridor south of the city where thousands of homes are being built on former farmland. Almost every block starts as a bare estate lot that needs cut and fill, retaining and a driveway before and after the build, and the flat-to-gently-falling ground and reactive clay soils make getting the levels and drainage right the difference between a smooth build and an expensive one.",
+  "chips_lede": "Armstrong Creek sits at the centre of Geelong's biggest growth corridor. Most weeks we are working across the surrounding estates and the wider region."
+}
