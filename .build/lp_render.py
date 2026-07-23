@@ -138,6 +138,29 @@ SHARED_FAQ = [
     ("Are you fully insured?", "Yes. Select Civil Group carries full public liability insurance and workers compensation cover on every job. Certificates of currency are available on request."),
 ]
 
+# Per-suburb hub ("civil contractor <suburb>"): the broad landing page that links to the 4
+# service pages as spokes. Same config shape as a SERVICES entry.
+HUB = {
+    "label": "Civil Contractor",
+    "category": "Services", "category_slug": "services",
+    "hero_img": "Assets/earthworks.jpeg",
+    "og_img": "Assets/earthworks.jpeg",
+    "title": "Civil Contractor {S} - Earthworks, Concrete & Retaining | Select Civil Group",
+    "meta": "Civil contractor in {S}. Earthworks, site cuts, retaining walls and concrete driveways for {S} homes and builders. Free quotes within 24 hours.",
+    "hero_lede": "Earthworks, site cuts, retaining walls and concrete driveways for {S} homeowners and builders. One local team from the first site cut to the final pour. Quotes back within 24 hours.",
+    "intro_h2": "Civil Works Across {S}",
+    "intro_delivery": "Select Civil Group is based in Geelong and works across {S} regularly, handling the earthworks, retaining and concrete on residential, commercial and civil projects. One team and one point of contact, from site preparation through to the finished driveway.",
+    "cta_h2": "Got a Project in {S}?",
+    "cta_lede": "Send the address and a quick description of the work. We will come back with an obligation-free quote within 24 hours.",
+    "grid_heading": "Our {S} Civil Services",
+    "faq": [
+        ("Do you work across {S} and around {region_name}?", "Yes. {catchment} are all within our regular service area. We are across {region_name} most weeks."),
+        ("What civil services do you offer in {S}?", "Retaining walls, concrete driveways, earthworks and site cuts are the services {S} homeowners and builders ask for most. We also handle raft slabs, paving, detail excavation and excess soil removal. If it is earthworks, concrete or retaining, we can quote it."),
+        ("Do you do the whole job, or just one part?", "Either. Many {S} jobs pair a site cut with retaining and a driveway, and we can run the lot as one coordinated job. If you only need a single service, that is fine too."),
+        ("How fast do you get a quote back?", "Most quotes come back within 24 hours once we have the site address and a description of the work. For larger jobs we walk the block first to check access, soil and levels."),
+    ],
+}
+
 # --------------------------------------------------------------------------- chrome (verbatim from the live template; plain strings, no f-substitution)
 
 STYLE = """  <style>
@@ -452,17 +475,28 @@ def head(*, title, meta, canonical, sub, og_img, schema):
 
 # --------------------------------------------------------------------------- section builders
 
-def services_grid(svc_key, sub):
-    order = [svc_key] + [k for k in CARD_ORDER if k != svc_key]
+def services_grid(page_key, sub, hub=False):
+    """4-service grid. On a hub every card links to its <service>-<suburb> spoke. On a service
+    page the own-service card goes to #contact and siblings link to their <service>-<suburb> page
+    (when that page exists for the suburb), so the suburb's pages interlink."""
+    slug = sub["slug"]
+    generated = set(sub.get("services", list(SERVICES.keys())))
+    order = CARD_ORDER if hub else [page_key] + [k for k in CARD_ORDER if k != page_key]
     cards = []
     for k in order:
         title, img, desc = CARDS[k]
         desc = esc(desc.replace("{S}", sub["name"]))
+        if not hub and k == page_key:
+            href, cta = "#contact", "Quote my job &rarr;"
+        elif k in generated:
+            href, cta = f"{k}-{slug}.html", f"{esc(title)} in {esc(sub['name'])} &rarr;"
+        else:
+            href, cta = "#contact", "Quote my job &rarr;"
         cards.append(f"""          <article class="bg-white border border-black/10 p-8 hover:border-brand-500/30" style="transition: border-color 0.3s ease;">
             <div class="relative overflow-hidden mb-6" style="aspect-ratio: 4/3;"><img src="{img}" alt="{esc(title)} by Select Civil Group in {esc(sub['name'])}" width="800" height="600" class="w-full h-full object-cover" loading="lazy" decoding="async"></div>
             <h3 class="heading-md text-xl sm:text-2xl text-dark-950 mb-3">{esc(title)}</h3>
             <p class="body-text text-sm mb-4">{desc}</p>
-            <a href="#contact" class="text-brand-500 text-sm font-bold uppercase tracking-wider hover:text-brand-400" style="transition: color 0.2s ease;">Quote my job &rarr;</a>
+            <a href="{href}" class="text-brand-500 text-sm font-bold uppercase tracking-wider hover:text-brand-400" style="transition: color 0.2s ease;">{cta}</a>
           </article>""")
     return "\n".join(cards)
 
@@ -596,6 +630,7 @@ def render(svc_key, sub):
           <div class="accent-bar mb-4"></div>
           <h2 class="heading-lg text-3xl sm:text-4xl lg:text-5xl text-dark-950 mb-6">Wall, Slab and Site Services for {esc(S)} Projects</h2>
           <p class="body-text text-lg">The four services {esc(S)} homeowners and builders pair most often. Every job is quoted on the specifics of your site.</p>
+          <p class="mt-3"><a href="civil-contractor-{sub['slug']}.html" class="text-brand-500 text-sm font-bold uppercase tracking-wider hover:text-brand-400" style="transition: color 0.2s ease;">All civil services in {esc(S)} &rarr;</a></p>
         </div>
         <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
 {services_grid(svc_key, sub)}
@@ -700,6 +735,182 @@ def render(svc_key, sub):
     return nd(doc)
 
 
+# --------------------------------------------------------------------------- hub page
+
+def render_hub(sub):
+    S = sub["name"]
+    slug = f"civil-contractor-{sub['slug']}"
+    canonical = f"{SITE}/{slug}"
+    ctx = {"S": S, "region_name": sub["region_name"], "region_short": sub["region_short"],
+           "catchment": catchment_sentence(sub["catchment"])}
+
+    def fill(t):
+        return t.format(**ctx)
+
+    faqs = [(fill(q), fill(a)) for q, a in HUB["faq"]] + SHARED_FAQ
+    title = fill(HUB["title"])
+    meta = fill(HUB["meta"])
+    schema = build_schema(HUB, sub, canonical, faqs)
+
+    doc = head(title=title, meta=meta, canonical=canonical, sub=sub, og_img=HUB["og_img"], schema=schema)
+    doc += NAV
+    doc += '\n  <main id="main">\n'
+    doc += f"""
+    <nav aria-label="Breadcrumb" class="bg-sand border-b border-black/5 pt-20 lg:pt-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <ol class="flex items-center gap-2 text-xs text-gray-500">
+          <li><a href="/" class="hover:text-brand-500" style="transition: color 0.2s ease;">Home</a></li>
+          <li aria-hidden="true" class="text-gray-400">/</li>
+          <li><a href="services" class="hover:text-brand-500" style="transition: color 0.2s ease;">Services</a></li>
+          <li aria-hidden="true" class="text-gray-400">/</li>
+          <li class="text-gray-700" aria-current="page">{esc(S)}</li>
+        </ol>
+      </div>
+    </nav>
+
+    <section class="relative">
+      <div class="relative overflow-hidden" style="height: 420px;">
+        <img src="{HUB['hero_img']}" alt="Civil contracting by Select Civil Group in {esc(S)}" width="1600" height="900" class="w-full h-full object-cover" fetchpriority="high">
+        <div class="absolute inset-0 bg-black/60"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-dark-950 via-transparent to-transparent"></div>
+        <div class="absolute inset-0 flex items-center">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="accent-bar mb-4"></div>
+            <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-3">{esc(sub['region_eyebrow'])}</p>
+            <h1 class="heading-xl text-4xl sm:text-5xl md:text-6xl text-white mb-4">Civil Contractor in {esc(S)}</h1>
+            <p class="text-gray-300 text-lg max-w-2xl" style="line-height: 1.7;">{esc(fill(HUB['hero_lede']))}</p>
+            <div class="flex flex-col sm:flex-row gap-3 mt-6">
+              <a href="#contact" class="btn-fill px-7 py-3 text-sm">Get a {esc(S)} Quote</a>
+              <a href="tel:{PHONE_TEL}" class="btn-outline px-7 py-3 text-sm">Call {PHONE_DISPLAY}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-20 lg:py-28">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <div class="accent-bar mb-4"></div>
+          <h2 class="heading-lg text-3xl sm:text-4xl lg:text-5xl text-dark-950 mb-6">{esc(fill(HUB['intro_h2']))}</h2>
+          <div class="space-y-4 body-text text-lg">
+            <p>{esc(sub['intro_context'])}</p>
+            <p>{esc(fill(HUB['intro_delivery']))}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-sand border-t border-black/5 py-20 lg:py-28">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mb-12">
+          <div class="accent-bar mb-4"></div>
+          <h2 class="heading-lg text-3xl sm:text-4xl lg:text-5xl text-dark-950 mb-6">{esc(fill(HUB['grid_heading']))}</h2>
+          <p class="body-text text-lg">Every service we run in {esc(S)}, from the site cut to the final pour. Pick a service for the detail, or send us the whole job.</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
+{services_grid(None, sub, hub=True)}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white border-t border-black/5 py-20 lg:py-28">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mb-12">
+          <div class="accent-bar mb-4"></div>
+          <h2 class="heading-lg text-3xl sm:text-4xl lg:text-5xl text-dark-950 mb-6">How a {esc(S)} Job Runs</h2>
+          <p class="body-text text-lg">Quote to handover, the same six steps on every job. No surprises, no scope creep, no chasing for updates.</p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          {process_section(S)}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-sand border-t border-black/5 py-16 lg:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mb-10">
+          <div class="accent-bar mb-4"></div>
+          <h2 class="heading-lg text-2xl sm:text-3xl lg:text-4xl text-dark-950 mb-4">Around {esc(S)}</h2>
+          <p class="body-text text-base">{esc(sub['chips_lede'])}</p>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+          {chips_section(sub)}
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="bg-white border-t border-black/5 py-20 lg:py-28">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-12">
+          <div class="accent-bar mb-4"></div>
+          <h2 class="heading-lg text-3xl sm:text-4xl lg:text-5xl text-dark-950 mb-4">Frequently Asked</h2>
+          <p class="body-text text-lg">The questions we get most from {esc(S)} homeowners and builders.</p>
+        </div>
+        <div class="divide-y divide-black/10 border-y border-black/10">
+{faq_section(faqs)}
+        </div>
+      </div>
+    </section>
+
+    <section class="relative overflow-hidden py-20 lg:py-24 bg-brand-500 stripe-texture">
+      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="heading-lg text-3xl sm:text-4xl lg:text-5xl text-dark-950 mb-4">{esc(fill(HUB['cta_h2']))}</h2>
+        <p class="text-dark-950/70 text-lg mb-8 max-w-2xl mx-auto" style="line-height: 1.7;">{esc(fill(HUB['cta_lede']))}</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="#contact" class="bg-dark-950 text-white font-bold uppercase tracking-wider px-8 py-4 text-base text-center hover:bg-dark-800" style="transition: background 0.2s ease;">Get a Free Quote</a>
+          <a href="tel:{PHONE_TEL}" class="border-2 border-dark-950 text-dark-950 font-bold uppercase tracking-wider px-8 py-4 text-base text-center hover:bg-dark-950 hover:text-white" style="transition: background 0.2s ease, color 0.2s ease;">Call {PHONE_DISPLAY}</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="bg-sand py-20 lg:py-28 border-t border-black/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
+          <div>
+            <div class="accent-bar mb-4"></div>
+            <h2 class="heading-lg text-3xl sm:text-4xl text-dark-950 mb-6">Get a {esc(S)} Quote</h2>
+            <p class="body-text text-lg mb-8">Tell us about your site and we will get back to you within 24 hours. Fill out the form, call us on <a href="tel:{PHONE_TEL}" class="text-brand-500 font-medium hover:underline">{PHONE_DISPLAY}</a>, or email <a href="mailto:andrew@selectcivilgroup.com.au" class="text-brand-500 font-medium hover:underline">andrew@selectcivilgroup.com.au</a> or <a href="mailto:admin@selectcivilgroup.com.au" class="text-brand-500 font-medium hover:underline">admin@selectcivilgroup.com.au</a></p>
+            <div class="space-y-5">
+              <div class="border-l-2 border-black/10 pl-5"><p class="text-dark-950 text-sm font-bold">Phone</p><a href="tel:{PHONE_TEL}" class="text-gray-600 text-sm hover:text-brand-500" style="transition: color 0.2s ease;">{PHONE_DISPLAY}</a></div>
+              <div class="border-l-2 border-black/10 pl-5"><p class="text-dark-950 text-sm font-bold">Email</p><a href="mailto:andrew@selectcivilgroup.com.au" class="text-gray-600 text-sm hover:text-brand-500 block" style="transition: color 0.2s ease;">andrew@selectcivilgroup.com.au</a><a href="mailto:admin@selectcivilgroup.com.au" class="text-gray-600 text-sm hover:text-brand-500 block" style="transition: color 0.2s ease;">admin@selectcivilgroup.com.au</a></div>
+              <div class="border-l-2 border-black/10 pl-5"><p class="text-dark-950 text-sm font-bold">Service Area</p><p class="text-gray-600 text-sm">{esc(S)}, Geelong, {esc(sub['region_short'])}</p></div>
+              <div class="border-l-2 border-black/10 pl-5"><p class="text-dark-950 text-sm font-bold">Hours</p><p class="text-gray-600 text-sm">Monday - Friday: 7:00 AM - 5:00 PM</p></div>
+            </div>
+          </div>
+          <div class="bg-white border border-black/10 p-8" style="box-shadow: 0 1px 2px rgba(0,0,0,0.04), 0 12px 32px rgba(0,0,0,0.06);">
+            <form action="https://formspree.io/f/xdawnnyp" method="POST" class="space-y-5">
+              <input type="hidden" name="_next" value="https://selectcivilgroup.com.au/thank-you">
+              <input type="hidden" name="_subject" value="New enquiry from selectcivilgroup.com.au - Civil Contractor {esc(S)} page">
+              <input type="hidden" name="_source_page" value="{slug}.html">
+              <div class="grid sm:grid-cols-2 gap-5">
+                <div><label for="name" class="block text-dark-950 text-sm font-bold uppercase tracking-wider mb-2">Name</label><input type="text" id="name" name="name" required placeholder="Your full name" class="w-full bg-white border border-black/10 px-4 py-3 text-dark-950 text-sm placeholder-gray-600 focus:outline-none focus:border-brand-500" style="transition: border-color 0.2s ease;"></div>
+                <div><label for="phone" class="block text-dark-950 text-sm font-bold uppercase tracking-wider mb-2">Phone</label><input type="tel" id="phone" name="phone" placeholder="Your phone number" class="w-full bg-white border border-black/10 px-4 py-3 text-dark-950 text-sm placeholder-gray-600 focus:outline-none focus:border-brand-500" style="transition: border-color 0.2s ease;"></div>
+              </div>
+              <div><label for="email" class="block text-dark-950 text-sm font-bold uppercase tracking-wider mb-2">Email</label><input type="email" id="email" name="email" required placeholder="your@email.com" class="w-full bg-white border border-black/10 px-4 py-3 text-dark-950 text-sm placeholder-gray-600 focus:outline-none focus:border-brand-500" style="transition: border-color 0.2s ease;"></div>
+              <div><label for="suburb" class="block text-dark-950 text-sm font-bold uppercase tracking-wider mb-2">Suburb</label><input type="text" id="suburb" name="suburb" placeholder="{esc(S)}, surrounding suburbs..." value="{esc(S)}" class="w-full bg-white border border-black/10 px-4 py-3 text-dark-950 text-sm placeholder-gray-600 focus:outline-none focus:border-brand-500" style="transition: border-color 0.2s ease;"></div>
+              <div><label for="service" class="block text-dark-950 text-sm font-bold uppercase tracking-wider mb-2">Service</label><select id="service" name="service" class="w-full bg-white border border-black/10 px-4 py-3 text-dark-950 text-sm focus:outline-none focus:border-brand-500" style="transition: border-color 0.2s ease;"><option value="">Select a service</option>
+                  {service_options("")}
+                <option value="other">Other</option>
+              </select></div>
+              <div><label for="message" class="block text-dark-950 text-sm font-bold uppercase tracking-wider mb-2">Project Details</label><textarea id="message" name="message" rows="5" required placeholder="Tell us about your project - location, scope, timeline..." class="w-full bg-white border border-black/10 px-4 py-3 text-dark-950 text-sm placeholder-gray-600 focus:outline-none focus:border-brand-500 resize-none" style="transition: border-color 0.2s ease;"></textarea></div>
+              <button type="submit" class="btn-fill w-full py-4 text-base">Send Enquiry</button>
+              <p class="text-gray-600 text-xs text-center">We respond within 24 hours on business days.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+"""
+    doc += FOOTER
+    doc += SCRIPTS
+    doc += "\n</body>\n</html>\n"
+    return nd(doc)
+
+
 # --------------------------------------------------------------------------- sitemap
 
 def update_sitemap(slugs):
@@ -727,12 +938,19 @@ def main():
 
     slugs = []
     for sub in subs:
+        lastmod = sub.get("lastmod", "2026-07-22")
+        if sub.get("hub", True):
+            fn = f"civil-contractor-{sub['slug']}.html"
+            with open(os.path.join(ROOT, fn), "w", encoding="utf-8") as f:
+                f.write(render_hub(sub))
+            print(f"[lp_render] wrote {fn}")
+            slugs.append((fn[:-5], lastmod))
         for svc_key in sub.get("services", list(SERVICES.keys())):
             fn = f"{svc_key}-{sub['slug']}.html"
             with open(os.path.join(ROOT, fn), "w", encoding="utf-8") as f:
                 f.write(render(svc_key, sub))
             print(f"[lp_render] wrote {fn}")
-            slugs.append((fn[:-5], sub.get("lastmod", "2026-07-22")))
+            slugs.append((fn[:-5], lastmod))
 
     update_sitemap(slugs)
     print(f"[lp_render] updated sitemap.xml ({len(slugs)} LP url(s))")
