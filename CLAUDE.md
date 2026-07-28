@@ -42,7 +42,7 @@ The 8 Relume screenshot JPEGs in this folder are design references from the curr
 - Factory Tilt Panels
 - Concrete Seating
 - Concrete Bench Drops
-- Removal of Excess Oil
+- Excess Soil Removal
 
 **Service area:** Geelong, Bellarine Peninsula, Torquay, and surrounding regions, VIC.
 
