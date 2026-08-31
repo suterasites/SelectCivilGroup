@@ -192,6 +192,18 @@
     .stripe-texture::before { content: ''; position: absolute; inset: 0; background-image: repeating-linear-gradient(90deg, transparent, transparent 3px, rgba(255,255,255,0.015) 3px, rgba(255,255,255,0.015) 4px); pointer-events: none; z-index: 1; }
     .svc-card img { transition: transform 0.5s ease; }
     .svc-card:hover img { transform: scale(1.05); }
+
+    /* Finished-wall video (vertical phone footage, lazy-loaded) */
+    .wall-video-frame { position: relative; width: 100%; max-width: 340px; margin: 0 auto; border-radius: 14px; overflow: hidden; border: 1px solid rgba(255,255,255,0.12); background: #111111; box-shadow: 0 30px 60px -25px rgba(0,0,0,0.9); }
+    .wall-video-frame video { display: block; width: 100%; height: auto; aspect-ratio: 9 / 16; object-fit: cover; background: #111111; }
+    .body-text-invert { line-height: 1.7; color: #d4d4d8; }
+    .wall-video-toggle { position: absolute; right: 12px; bottom: 12px; width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; border: 1px solid rgba(255,255,255,0.25); background: rgba(10,10,10,0.6); color: #ffffff; cursor: pointer; transition: background-color 0.2s ease, transform 0.2s ease; }
+    .wall-video-toggle:hover { background: rgba(10,10,10,0.85); }
+    .wall-video-toggle:active { transform: scale(0.95); }
+    .wall-video-toggle:focus-visible { outline: 2px solid #e8a840; outline-offset: 2px; }
+    .wall-video-frame .icon-pause { display: none; }
+    .wall-video-frame.is-playing .icon-pause { display: block; }
+    .wall-video-frame.is-playing .icon-play { display: none; }
   </style>
   <!-- Analytics + lead tracking (Sutera Sites) -->
   <script defer src="/js/analytics.js"></script>
@@ -387,6 +399,37 @@
             <p>Retaining walls are one of the most critical structural elements on any sloped or tiered property. Select Civil Group builds concrete retaining walls designed to hold, support and stabilise soil on residential, commercial and industrial sites across Geelong and the Bellarine Peninsula. Whether you need a single wall to manage a level change in your backyard or a series of engineered walls on a multi-lot development, we deliver work that lasts.</p>
             <p>We work with concrete block, poured concrete and reinforced designs depending on the site conditions, engineering requirements and your budget. Every retaining wall we build is constructed to meet relevant Australian standards and local council requirements, with proper drainage, footings and reinforcement included as standard.</p>
             <p>Andrew is on the tools and on site, so you deal directly with the person running the job from the first quote through to the final level check. No subbie chains, no chasing the office for an update.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FINISHED WALL VIDEO ========== -->
+    <section class="bg-dark-950 border-t border-black/5 py-20 lg:py-28">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div class="wall-video-frame" id="wall-video-frame">
+            <video id="wall-video" width="540" height="960"
+                   poster="Assets/retaining-wall-walkthrough-poster.jpg"
+                   preload="none" muted loop playsinline disablepictureinpicture
+                   aria-label="Walkthrough of a finished concrete sleeper retaining wall built by Select Civil Group">
+              <source data-src="Assets/retaining-wall-walkthrough.mp4" type="video/mp4">
+            </video>
+            <button type="button" id="wall-video-toggle" class="wall-video-toggle" aria-label="Play video" aria-pressed="true">
+              <svg class="icon-play" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              <svg class="icon-pause" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 5h4v14H6zm8 0h4v14h-4z"/></svg>
+            </button>
+          </div>
+          <div>
+            <div class="accent-bar mb-4"></div>
+            <h2 class="heading-lg text-3xl sm:text-4xl lg:text-5xl text-white mb-6">See a Finished Wall</h2>
+            <div class="space-y-4 body-text-invert text-lg">
+              <p>A concrete sleeper retaining wall on a recent residential job. Timber-look sleepers set into galvanised steel posts, stepped along a curved boundary and finished hard up against the existing paving.</p>
+              <p>Filmed on site on handover day. No renders, no stock footage, no other company's work.</p>
+            </div>
+            <div class="mt-8">
+              <a href="#contact" class="btn-fill px-7 py-3 text-sm">Get a Quote</a>
+            </div>
           </div>
         </div>
       </div>
@@ -737,6 +780,55 @@
       nav.style.borderBottomColor = currentScrollY > 20 ? 'rgba(0,0,0,0.08)' : 'rgba(0,0,0,0.04)';
       lastScrollY = currentScrollY;
     });
+  </script>
+
+  <script>/* Finished-wall video: lazy source, autoplay in view, pausable (WCAG 2.2.2) */
+  (function () {
+    var v = document.getElementById('wall-video');
+    var frame = document.getElementById('wall-video-frame');
+    var btn = document.getElementById('wall-video-toggle');
+    if (!v || !frame || !btn) return;
+    var source = v.querySelector('source[data-src]');
+    var loaded = false;
+
+    function load() {
+      if (loaded || !source) return;
+      loaded = true;
+      source.src = source.getAttribute('data-src');
+      v.load();
+    }
+    function play() {
+      load();
+      var p = v.play();
+      if (p && p.catch) p.catch(function () {});
+    }
+
+    v.addEventListener('play', function () {
+      frame.classList.add('is-playing');
+      btn.setAttribute('aria-label', 'Pause video');
+      btn.setAttribute('aria-pressed', 'false');
+    });
+    v.addEventListener('pause', function () {
+      frame.classList.remove('is-playing');
+      btn.setAttribute('aria-label', 'Play video');
+      btn.setAttribute('aria-pressed', 'true');
+    });
+    btn.addEventListener('click', function () {
+      if (v.paused) { play(); } else { v.pause(); }
+    });
+
+    // Respect reduced motion: leave it on the poster, the button still plays it.
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce || !('IntersectionObserver' in window)) return;
+
+    // Only fetch the file once it is actually on screen, and stop it when it is not.
+    new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { play(); }
+        else if (loaded && !v.paused) { v.pause(); }
+      });
+    }, { threshold: 0.25 }).observe(v);
+  })();
   </script>
 
 </body>
