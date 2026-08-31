@@ -4,3 +4,5 @@ screenshot-section.mjs
 
 # HEVC/HDR camera masters - kept local, web versions live in Assets/
 Assets/Video/
+.DS_Store
+**/.DS_Store
