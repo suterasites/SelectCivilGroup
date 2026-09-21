@@ -233,6 +233,8 @@
     .btn-fill:hover { transform: translateY(-2px); opacity: 0.9; }
     .btn-fill:active { transform: translateY(0); }
     .btn-fill:focus-visible { outline: 2px solid #e8a840; outline-offset: 2px; }
+    /* Suburb index: the closing card takes the two cells 13 suburb cards leave empty on a 3-col grid */
+    @media (min-width: 1024px) { .suburb-cta { grid-column: span 2 / span 2; } }
 
     .btn-outline {
       border: 2px solid #d4912a;
@@ -833,6 +835,153 @@
           <a href="#contact" class="btn-fill block text-center px-8 py-4 text-sm w-full">Request a Quote</a>
         </div>
       </div>
+
+      <!-- SUBURB-INDEX:START - one card per suburb, every service x suburb page linked. Regenerate when a page is added. -->
+      <div class="mt-16 pt-16 border-t border-black/10">
+        <div class="max-w-3xl mb-10">
+          <h3 class="heading-md text-2xl text-dark-950 mb-3">Find Your Suburb</h3>
+          <p class="body-text text-base">Every area has its own ground conditions, council requirements and access challenges. Pick your suburb for local detail on the work we do there, from concrete driveways and retaining walls to site cuts and earthworks.</p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div class="bg-sand border border-black/10 p-6">
+            <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-2">Central Geelong</p>
+            <h4 class="heading-md text-xl text-dark-950 mb-3">Geelong</h4>
+            <div class="flex flex-wrap gap-x-4 gap-y-2">
+              <a href="civil-contractor-geelong" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Civil contractor</a>
+              <a href="concrete-driveway-geelong" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Concrete driveways</a>
+              <a href="retaining-walls-geelong" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Retaining walls</a>
+              <a href="earthworks-geelong" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Earthworks</a>
+              <a href="site-cuts-geelong" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Site cuts</a>
+            </div>
+          </div>
+          <div class="bg-sand border border-black/10 p-6">
+            <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-2">Geelong West</p>
+            <h4 class="heading-md text-xl text-dark-950 mb-3">Highton</h4>
+            <div class="flex flex-wrap gap-x-4 gap-y-2">
+              <a href="civil-contractor-highton" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Civil contractor</a>
+              <a href="concrete-driveway-highton" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Concrete driveways</a>
+              <a href="retaining-walls-highton" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Retaining walls</a>
+            </div>
+          </div>
+          <div class="bg-sand border border-black/10 p-6">
+            <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-2">Geelong South</p>
+            <h4 class="heading-md text-xl text-dark-950 mb-3">Armstrong Creek</h4>
+            <div class="flex flex-wrap gap-x-4 gap-y-2">
+              <a href="civil-contractor-armstrong-creek" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Civil contractor</a>
+              <a href="concrete-driveway-armstrong-creek" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Concrete driveways</a>
+              <a href="retaining-walls-armstrong-creek" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Retaining walls</a>
+              <a href="earthworks-armstrong-creek" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Earthworks</a>
+              <a href="site-cuts-armstrong-creek" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Site cuts</a>
+            </div>
+          </div>
+          <div class="bg-sand border border-black/10 p-6">
+            <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-2">Geelong North</p>
+            <h4 class="heading-md text-xl text-dark-950 mb-3">Lara</h4>
+            <div class="flex flex-wrap gap-x-4 gap-y-2">
+              <a href="civil-works-lara" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Civil contractor</a>
+              <a href="retaining-walls-lara" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Retaining walls</a>
+            </div>
+          </div>
+          <div class="bg-sand border border-black/10 p-6">
+            <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-2">Bellarine Gateway</p>
+            <h4 class="heading-md text-xl text-dark-950 mb-3">Leopold</h4>
+            <div class="flex flex-wrap gap-x-4 gap-y-2">
+              <a href="civil-contractor-leopold" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Civil contractor</a>
+              <a href="retaining-walls-leopold" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Retaining walls</a>
+            </div>
+          </div>
+          <div class="bg-sand border border-black/10 p-6">
+            <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-2">Bellarine Wide</p>
+            <h4 class="heading-md text-xl text-dark-950 mb-3">Bellarine Peninsula</h4>
+            <div class="flex flex-wrap gap-x-4 gap-y-2">
+              <a href="civil-contractor-bellarine" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Civil contractor</a>
+              <a href="retaining-walls-bellarine" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Retaining walls</a>
+              <a href="excavation-bellarine" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Excavation</a>
+            </div>
+          </div>
+          <div class="bg-sand border border-black/10 p-6">
+            <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-2">Central Bellarine</p>
+            <h4 class="heading-md text-xl text-dark-950 mb-3">Drysdale</h4>
+            <div class="flex flex-wrap gap-x-4 gap-y-2">
+              <a href="civil-contractor-drysdale" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Civil contractor</a>
+              <a href="retaining-walls-drysdale" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Retaining walls</a>
+              <a href="excavation-drysdale" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Excavation</a>
+            </div>
+          </div>
+          <div class="bg-sand border border-black/10 p-6">
+            <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-2">Bellarine Peninsula</p>
+            <h4 class="heading-md text-xl text-dark-950 mb-3">Ocean Grove</h4>
+            <div class="flex flex-wrap gap-x-4 gap-y-2">
+              <a href="civil-contractor-ocean-grove" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Civil contractor</a>
+              <a href="concrete-driveway-ocean-grove" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Concrete driveways</a>
+              <a href="retaining-walls-ocean-grove" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Retaining walls</a>
+              <a href="earthworks-ocean-grove" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Earthworks</a>
+              <a href="site-cuts-ocean-grove" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Site cuts</a>
+            </div>
+          </div>
+          <div class="bg-sand border border-black/10 p-6">
+            <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-2">Bellarine Peninsula</p>
+            <h4 class="heading-md text-xl text-dark-950 mb-3">Barwon Heads</h4>
+            <div class="flex flex-wrap gap-x-4 gap-y-2">
+              <a href="civil-contractor-barwon-heads" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Civil contractor</a>
+              <a href="concrete-driveway-barwon-heads" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Concrete driveways</a>
+              <a href="retaining-walls-barwon-heads" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Retaining walls</a>
+              <a href="earthworks-barwon-heads" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Earthworks</a>
+              <a href="site-cuts-barwon-heads" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Site cuts</a>
+            </div>
+          </div>
+          <div class="bg-sand border border-black/10 p-6">
+            <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-2">Bellarine Peninsula</p>
+            <h4 class="heading-md text-xl text-dark-950 mb-3">Point Lonsdale</h4>
+            <div class="flex flex-wrap gap-x-4 gap-y-2">
+              <a href="civil-contractor-point-lonsdale" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Civil contractor</a>
+              <a href="concrete-driveway-point-lonsdale" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Concrete driveways</a>
+              <a href="retaining-walls-point-lonsdale" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Retaining walls</a>
+              <a href="earthworks-point-lonsdale" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Earthworks</a>
+              <a href="site-cuts-point-lonsdale" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Site cuts</a>
+            </div>
+          </div>
+          <div class="bg-sand border border-black/10 p-6">
+            <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-2">Bellarine Peninsula</p>
+            <h4 class="heading-md text-xl text-dark-950 mb-3">Queenscliff</h4>
+            <div class="flex flex-wrap gap-x-4 gap-y-2">
+              <a href="civil-contractor-queenscliff" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Civil contractor</a>
+              <a href="concrete-driveway-queenscliff" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Concrete driveways</a>
+              <a href="retaining-walls-queenscliff" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Retaining walls</a>
+              <a href="earthworks-queenscliff" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Earthworks</a>
+              <a href="site-cuts-queenscliff" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Site cuts</a>
+            </div>
+          </div>
+          <div class="bg-sand border border-black/10 p-6">
+            <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-2">Bellarine Peninsula</p>
+            <h4 class="heading-md text-xl text-dark-950 mb-3">Portarlington</h4>
+            <div class="flex flex-wrap gap-x-4 gap-y-2">
+              <a href="civil-contractor-portarlington" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Civil contractor</a>
+              <a href="concrete-driveway-portarlington" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Concrete driveways</a>
+              <a href="retaining-walls-portarlington" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Retaining walls</a>
+              <a href="earthworks-portarlington" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Earthworks</a>
+              <a href="site-cuts-portarlington" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Site cuts</a>
+            </div>
+          </div>
+          <div class="bg-sand border border-black/10 p-6">
+            <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-2">Surf Coast</p>
+            <h4 class="heading-md text-xl text-dark-950 mb-3">Torquay</h4>
+            <div class="flex flex-wrap gap-x-4 gap-y-2">
+              <a href="civil-contractor-torquay" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Civil contractor</a>
+              <a href="retaining-walls-torquay" class="text-gray-700 text-sm font-medium hover:text-brand-500" style="transition: color 0.2s ease;">Retaining walls</a>
+            </div>
+          </div>
+          <div class="suburb-cta bg-dark-950 p-6 flex flex-col sm:flex-row sm:items-center gap-6">
+            <div>
+              <p class="text-brand-500 text-xs font-bold uppercase tracking-widest mb-2">Surrounding Areas</p>
+              <h4 class="heading-md text-xl text-white mb-1">Somewhere Else?</h4>
+              <p class="text-gray-300 text-sm">We regularly work outside these suburbs. Tell us where the job is and we will let you know.</p>
+            </div>
+            <a href="#contact" class="btn-fill inline-block text-center px-6 py-3 text-sm shrink-0">Request a Quote</a>
+          </div>
+        </div>
+      </div>
+      <!-- SUBURB-INDEX:END -->
     </div>
   </section>
 
