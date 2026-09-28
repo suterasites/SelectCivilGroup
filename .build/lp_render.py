@@ -43,6 +43,42 @@ def catchment_sentence(items):
     return ", ".join(items[:-1]) + " and " + items[-1]
 
 
+# GA4 + lead events, copied verbatim from the live pages (their patch passes added these after
+# the generator was written; a re-render without them ships pages GA4 cannot see).
+GA4_TAG = """  <!-- Google tag (gtag.js) - GA4 G-R71LED1J87 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R71LED1J87"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-R71LED1J87');
+  </script>
+"""
+
+LEAD_EVENTS = """  <!-- Sutera lead events (GA4) -->
+  <script>/* SUTERA_LEAD_EVENTS */
+  (function(){
+    function ev(n, p){ if (typeof window.gtag === 'function') { window.gtag('event', n, Object.assign({transport_type:'beacon'}, p||{})); } }
+    document.addEventListener('click', function(e){
+      var a = e.target.closest ? e.target.closest('a[href^="tel:"]') : null;
+      if (a) ev('click_to_call', { link_url: a.getAttribute('href') });
+    }, true);
+    document.addEventListener('submit', function(e){
+      var f = e.target;
+      if (!f || f.tagName !== 'FORM' || f.hasAttribute('data-no-lead')) return;
+      var action = f.getAttribute('action') || '';
+      var isLead = /formspree/i.test(action) || f.querySelector('input[type="email"], input[type="tel"], textarea');
+      if (isLead) ev('generate_lead', { form_id: f.id || f.getAttribute('name') || 'contact' });
+    }, true);
+  })();
+  </script>
+"""
+
+
+def a_an(word):
+    return "an" if word[:1].lower() in "aeiou" else "a"
+
+
 # --------------------------------------------------------------------------- service configs
 
 SERVICES = {
@@ -207,7 +243,7 @@ STYLE = """  <style>
 
 NAV = """  <a href="#main" class="skip-link">Skip to main content</a>
 
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-black/5">
+  <header><nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-black/5">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-3 items-center h-16">
         <div class="flex items-center justify-start">
@@ -262,7 +298,7 @@ NAV = """  <a href="#main" class="skip-link">Skip to main content</a>
         </div>
       </div>
     </div>
-  </nav>
+  </nav></header>
   <div id="mobile-backdrop" class="mobile-backdrop lg:hidden" onclick="toggleMobileMenu()"></div>
   <div id="mobile-menu" class="mobile-menu fixed top-16 left-0 bottom-0 w-full sm:w-80 bg-white sm:border-r border-black/5 p-8 lg:hidden z-50 overflow-y-auto">
     <div class="flex flex-col gap-1">
@@ -427,7 +463,7 @@ def head(*, title, meta, canonical, sub, og_img, schema):
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+{GA4_TAG}  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{esc(title)}</title>
   <meta name="description" content="{esc(meta)}">
@@ -467,7 +503,7 @@ def head(*, title, meta, canonical, sub, og_img, schema):
   </script>
 
 {STYLE}  <script defer src="/js/analytics.js"></script>
-</head>
+{LEAD_EVENTS}</head>
 <body class="bg-white text-dark-950 font-body">
 
 """
@@ -489,7 +525,7 @@ def services_grid(page_key, sub, hub=False):
         if not hub and k == page_key:
             href, cta = "#contact", "Quote my job &rarr;"
         elif k in generated:
-            href, cta = f"{k}-{slug}.html", f"{esc(title)} in {esc(sub['name'])} &rarr;"
+            href, cta = f"{k}-{slug}", f"{esc(title)} in {esc(sub['name'])} &rarr;"
         else:
             href, cta = "#contact", "Quote my job &rarr;"
         cards.append(f"""          <article class="bg-white border border-black/10 p-8 hover:border-brand-500/30" style="transition: border-color 0.3s ease;">
@@ -603,7 +639,7 @@ def render(svc_key, sub):
             <h1 class="heading-xl text-4xl sm:text-5xl md:text-6xl text-white mb-4">{esc(svc['label'])} in {esc(S)}</h1>
             <p class="text-gray-300 text-lg max-w-2xl" style="line-height: 1.7;">{esc(fill(svc['hero_lede']))}</p>
             <div class="flex flex-col sm:flex-row gap-3 mt-6">
-              <a href="#contact" class="btn-fill px-7 py-3 text-sm">Get a {esc(S)} Quote</a>
+              <a href="#contact" class="btn-fill px-7 py-3 text-sm">Get {a_an(S)} {esc(S)} Quote</a>
               <a href="tel:{PHONE_TEL}" class="btn-outline px-7 py-3 text-sm">Call {PHONE_DISPLAY}</a>
             </div>
           </div>
@@ -630,7 +666,7 @@ def render(svc_key, sub):
           <div class="accent-bar mb-4"></div>
           <h2 class="heading-lg text-3xl sm:text-4xl lg:text-5xl text-dark-950 mb-6">Wall, Slab and Site Services for {esc(S)} Projects</h2>
           <p class="body-text text-lg">The four services {esc(S)} homeowners and builders pair most often. Every job is quoted on the specifics of your site.</p>
-          <p class="mt-3"><a href="civil-contractor-{sub['slug']}.html" class="text-brand-500 text-sm font-bold uppercase tracking-wider hover:text-brand-400" style="transition: color 0.2s ease;">All civil services in {esc(S)} &rarr;</a></p>
+          <p class="mt-3"><a href="civil-contractor-{sub['slug']}" class="text-brand-500 text-sm font-bold uppercase tracking-wider hover:text-brand-400" style="transition: color 0.2s ease;">All civil services in {esc(S)} &rarr;</a></p>
         </div>
         <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
 {services_grid(svc_key, sub)}
@@ -642,7 +678,7 @@ def render(svc_key, sub):
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-3xl mb-12">
           <div class="accent-bar mb-4"></div>
-          <h2 class="heading-lg text-3xl sm:text-4xl lg:text-5xl text-dark-950 mb-6">How a {esc(S)} Job Runs</h2>
+          <h2 class="heading-lg text-3xl sm:text-4xl lg:text-5xl text-dark-950 mb-6">How {a_an(S)} {esc(S)} Job Runs</h2>
           <p class="body-text text-lg">Quote to handover, the same six steps on every job. No surprises, no scope creep, no chasing for updates.</p>
         </div>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
@@ -693,7 +729,7 @@ def render(svc_key, sub):
         <div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
           <div>
             <div class="accent-bar mb-4"></div>
-            <h2 class="heading-lg text-3xl sm:text-4xl text-dark-950 mb-6">Get a {esc(S)} Quote</h2>
+            <h2 class="heading-lg text-3xl sm:text-4xl text-dark-950 mb-6">Get {a_an(S)} {esc(S)} Quote</h2>
             <p class="body-text text-lg mb-8">Tell us about your site and we will get back to you within 24 hours. Fill out the form, call us on <a href="tel:{PHONE_TEL}" class="text-brand-500 font-medium hover:underline">{PHONE_DISPLAY}</a>, or email <a href="mailto:andrew@selectcivilgroup.com.au" class="text-brand-500 font-medium hover:underline">andrew@selectcivilgroup.com.au</a> or <a href="mailto:admin@selectcivilgroup.com.au" class="text-brand-500 font-medium hover:underline">admin@selectcivilgroup.com.au</a></p>
             <div class="space-y-5">
               <div class="border-l-2 border-black/10 pl-5"><p class="text-dark-950 text-sm font-bold">Phone</p><a href="tel:{PHONE_TEL}" class="text-gray-600 text-sm hover:text-brand-500" style="transition: color 0.2s ease;">{PHONE_DISPLAY}</a></div>
@@ -781,7 +817,7 @@ def render_hub(sub):
             <h1 class="heading-xl text-4xl sm:text-5xl md:text-6xl text-white mb-4">Civil Contractor in {esc(S)}</h1>
             <p class="text-gray-300 text-lg max-w-2xl" style="line-height: 1.7;">{esc(fill(HUB['hero_lede']))}</p>
             <div class="flex flex-col sm:flex-row gap-3 mt-6">
-              <a href="#contact" class="btn-fill px-7 py-3 text-sm">Get a {esc(S)} Quote</a>
+              <a href="#contact" class="btn-fill px-7 py-3 text-sm">Get {a_an(S)} {esc(S)} Quote</a>
               <a href="tel:{PHONE_TEL}" class="btn-outline px-7 py-3 text-sm">Call {PHONE_DISPLAY}</a>
             </div>
           </div>
@@ -819,7 +855,7 @@ def render_hub(sub):
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-3xl mb-12">
           <div class="accent-bar mb-4"></div>
-          <h2 class="heading-lg text-3xl sm:text-4xl lg:text-5xl text-dark-950 mb-6">How a {esc(S)} Job Runs</h2>
+          <h2 class="heading-lg text-3xl sm:text-4xl lg:text-5xl text-dark-950 mb-6">How {a_an(S)} {esc(S)} Job Runs</h2>
           <p class="body-text text-lg">Quote to handover, the same six steps on every job. No surprises, no scope creep, no chasing for updates.</p>
         </div>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
@@ -870,7 +906,7 @@ def render_hub(sub):
         <div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
           <div>
             <div class="accent-bar mb-4"></div>
-            <h2 class="heading-lg text-3xl sm:text-4xl text-dark-950 mb-6">Get a {esc(S)} Quote</h2>
+            <h2 class="heading-lg text-3xl sm:text-4xl text-dark-950 mb-6">Get {a_an(S)} {esc(S)} Quote</h2>
             <p class="body-text text-lg mb-8">Tell us about your site and we will get back to you within 24 hours. Fill out the form, call us on <a href="tel:{PHONE_TEL}" class="text-brand-500 font-medium hover:underline">{PHONE_DISPLAY}</a>, or email <a href="mailto:andrew@selectcivilgroup.com.au" class="text-brand-500 font-medium hover:underline">andrew@selectcivilgroup.com.au</a> or <a href="mailto:admin@selectcivilgroup.com.au" class="text-brand-500 font-medium hover:underline">admin@selectcivilgroup.com.au</a></p>
             <div class="space-y-5">
               <div class="border-l-2 border-black/10 pl-5"><p class="text-dark-950 text-sm font-bold">Phone</p><a href="tel:{PHONE_TEL}" class="text-gray-600 text-sm hover:text-brand-500" style="transition: color 0.2s ease;">{PHONE_DISPLAY}</a></div>
@@ -918,12 +954,17 @@ def render_hub(sub):
 def update_sitemap(slugs):
     with open(SITEMAP, encoding="utf-8") as f:
         xml = f.read()
-    xml = re.sub(r"\n  <!-- LP:START -->.*?<!-- LP:END -->", "", xml, flags=re.DOTALL)
     lines = ["\n  <!-- LP:START -->"]
     for slug, lastmod in slugs:
         lines.append(f"  <url>\n    <loc>{SITE}/{slug}</loc>\n    <lastmod>{lastmod}</lastmod>\n    <priority>0.7</priority>\n  </url>")
     lines.append("  <!-- LP:END -->")
-    xml = xml.replace("</urlset>", "\n".join(lines) + "\n</urlset>")
+    block = "\n".join(lines)
+    pat = re.compile(r"\n  <!-- LP:START -->.*?<!-- LP:END -->", re.DOTALL)
+    if pat.search(xml):
+        # Replace in place: moving the block to the end churns the sitemap diff on every re-render.
+        xml = pat.sub(lambda _m: block, xml, count=1)
+    else:
+        xml = xml.replace("</urlset>", block + "\n</urlset>")
     with open(SITEMAP, "w", encoding="utf-8") as f:
         f.write(xml)
 
