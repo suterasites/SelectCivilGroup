@@ -4,10 +4,18 @@
  *   <script defer src="/js/analytics.js"></script>
  *
  * What fires from here:
- *   - GA4 events  : generate_lead (form) + click_to_call (tel: click)
+ *   - GA4 events  : generate_lead, ONCE per lead, on the thank-you page only
  *   - Google Ads  : native conversions on AW-17941564943 (quote form + call click)
  *                   plus the call-from-ads forwarding number swap
- *   - Clarity     : the same two events, once a Clarity project ID is pasted below
+ *   - Clarity     : click_to_call + generate_lead, once a Clarity project ID is
+ *                   pasted below
+ *
+ * Count each lead once. The GA4 click_to_call event comes from the inline
+ * SUTERA_LEAD_EVENTS snippet in each page <head>, so it is NOT sent from here
+ * as well. Every Formspree form carries data-no-lead, which tells that snippet
+ * not to fire generate_lead on submit: the thank-you page below is the one
+ * confirmed signal. Until 2026-10-27 each submission sent generate_lead three
+ * times (snippet, a submit listener here, thank-you) and each tap twice.
  *
  * The GA4 library (gtag.js, G-R71LED1J87) is loaded by an inline snippet in the
  * <head> of every page, so window.gtag already exists by the time this runs. The
@@ -85,24 +93,16 @@
   }
 
   document.addEventListener("DOMContentLoaded", function () {
-    // 1. Click-to-call: any tel: link. GA4 event + Google Ads conversion.
+    // 1. Click-to-call: any tel: link. Google Ads conversion (+ Clarity).
     document.querySelectorAll('a[href^="tel:"]').forEach(function (a) {
       a.addEventListener("click", function () {
-        track("click_to_call", { phone: a.getAttribute("href").replace("tel:", "") });
+        // GA4 click_to_call is sent by the inline SUTERA_LEAD_EVENTS snippet.
+        try { if (window.clarity) window.clarity("event", "click_to_call"); } catch (e) {}
         adsConversion(ADS_CONV.call_click);
       });
     });
 
-    // 2. Form submit - GA4 backup signal only. The Google Ads conversion is held
-    //    back to the thank-you page below so a failed post never counts as a lead.
-    document.querySelectorAll('form[action*="formspree.io"]').forEach(function (f) {
-      f.addEventListener("submit", function () {
-        var src = (f.querySelector('[name="_source_page"]') || {}).value || location.pathname;
-        track("generate_lead", { method: "form", source_page: src });
-      });
-    });
-
-    // 3. Confirmed conversion: the thank-you page only loads after a successful
+    // 2. Confirmed conversion: the thank-you page only loads after a successful
     //    Formspree submit. This is the signal Google Ads bids against.
     if (/\/thank-you(\.html)?$/.test(location.pathname)) {
       track("generate_lead", { method: "form_confirmed" });

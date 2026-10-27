@@ -1013,7 +1013,7 @@ def build_page(s):
             </div>
           </div>
           <div class="bg-dark-700 border border-white/10 p-8">
-            <form action="https://formspree.io/f/xdawnnyp" method="POST" class="space-y-5">
+            <form action="https://formspree.io/f/xdawnnyp" method="POST" data-no-lead class="space-y-5">
               <input type="hidden" name="_next" value="https://selectcivilgroup.com.au/thank-you.html">
               <input type="hidden" name="_subject" value="{s['form_subject']}">
               <input type="hidden" name="_source_page" value="{s['slug']}.html">
